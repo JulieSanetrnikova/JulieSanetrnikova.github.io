@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Poznámka k výpůjčce</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../../assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="../prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="../prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="../prehled/historie.html">Historie</a></li>
+                                <li><a href="../prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../kalendar.html"><span
+                                class="icon-dot-border icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                                class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../spravci.html"><span
+                                class="icon-dot-border icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        <header>
+            <h1>Přidat poznámku k výpůjčce</h1>
+            <a href="#" onclick="window.history.back()">Zrušit</a>
+        </header>
+
+        <main>
+            <div class="vypujcka-item-layout vypujcka-item">
+                <div class="vypujcka-item-info-layout vypujcka-item-info">
+                    <p class="vypujcka-jmeno"><a href="../../admin/zakaznik-detail.html">Novák František</a>
+                    </p>
+                    <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
+                    <details class="vypujcka-stav budouci uppercase">
+                        <summary>Budoucí</summary>
+                        <ul>
+                            <li class="vypujceno-stav"><a href="#">Vypůjčeno</a></li>
+                            <li class="nevypujceno-stav"><a href="#">Nevypůjčeno</a></li>
+                            <li class="vraceno-stav"><a href="#">Vráceno</a></li>
+                        </ul>
+                    </details>
+                    <details class="detail-vypujcky-layout detail-vypujcky">
+                        <summary><span class="icon-plus"></span></summary>
+                        <div class="detail-vypujcky-item">
+                            <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                            <div class="kosik-texty">
+                                <p class="kosik-nazev-produktu"><a href="../../zakaznik/predmet-detail.html">Objektiv
+                                        SIGMA
+                                        17-50
+                                        mm 1:2.8</a></p>
+                                <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
+                                <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
+                                <p class="kosik-pocet-kusu">1</p>
+                                <dl>
+                                    <dt>Poznámka:</dt>
+                                    <dd class="poznamka">Poznámka k dané výpůjčce...</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </details>
+                    <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
+                    <a href="#"><span class="icon-delete"></span></a>
+                </div>
+
+            </div>
+
+            <label for="poznamka" class="h2">Přidat poznámku</label>
+            <input id="poznamka" type="text" name="poznamka">
+
+            <a href="#" class="ulozit-btn" onclick="window.history.back()">Uložit</a>
+
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

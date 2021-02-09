@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Úprava předmětu</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../../assets/styles/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="../prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="../prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="../prehled/historie.html">Historie</a></li>
+                                <li><a href="../prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../kalendar.html"><span
+                                class="icon-dot-border icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                                class="icon-dot-blue icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../spravci.html"><span
+                                class="icon-dot-border icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav class="main-nav-layout main-nav">
+            <ul class="nav-ul uppercase">
+                <li><a href="#"><span class="icon-dot-border icon"></span>Vše</a></li>
+                <li><a href="#"><span class="icon-dot-border icon"></span>Skladem</a></li>
+                <li><a href="#"><span class="icon-dot-border icon"></span>Vypůjčené</a></li>
+                <li><a href="../predmety/novy-predmet.html"><span class="icon-dot-border icon"></span>Nový předmět</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <a href="#" onclick="window.history.back()">Zrušit</a>
+            <h1 class="h1">Objektiv SIGMA 17-50 mm 1:2.8</h1>
+        </header>
+
+        <main>
+            <div class="uprava-predmetu-info">
+                <div>
+                    <label class="h2" for="nazev">Název předmětu:</label>
+                    <input id="nazev" type="text" placeholder="Objektiv SIGMA 17-50 mm 1:2.8">
+                </div>
+                <div>
+                    <label class="h2" for="pocet">Počet předmětů:</label>
+                    <input id="pocet" type="number" min="1" placeholder="2">
+                </div>
+                <div>
+                    <label class="h2" for="popisek">Popisek předmětu:</label>
+                    <input id="popisek" type="text">
+                </div>
+                <div>
+                    <label class="h2" for="nahled-obr">Náhledový obrázek:</label>
+                    <input id="nahled-obr" type="file">
+                    <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                    <a href="#"><span class="icon-close"></span></a>
+                </div>
+            </div>
+            <div class="uprava-predmetu-detail">
+                <h2 class="h2 text-blue">17-50mm2.8_1</h2>
+                <div>
+                    <label class="h2" for="zmenit-obr">Změnit obrázek:</label>
+                    <input id="zmenit-obr" type="file">
+                    <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                    <a href="#"><span class="icon-close"></span></a>
+                </div>
+                <div>
+                    <label class="h2" for="specifikace">Specifikace kusu předmětu:</label>
+                    <input id="specifikace" type="text">
+                </div>
+                <div>
+                    <label class="h2" for="identifikator">Unikátní identifikátor:</label>
+                    <input id="identifikator" type="text" placeholder="17-50mm2.8_1">
+                </div>
+                <p><a href="#">Smazat</a></p>
+            </div>
+            <div class="prislusenstvi-vyber">
+                <!-- <label class="h2" for="prislusenstvi-k-predmetu">Příslušenství k tomuto předmětu:</label>
+                <select id="prislusenstvi-k-predmetu" name="" multiple>
+                    <option value="Fotoaparát Canon EOS 650D">Fotoaparát Canon EOS 650D</option>
+                    <option value="SD karta SanDisk 64 GB">SD karta SanDisk 64 GB</option>
+                    <option value="Fotoaparát Canon EOS 350D">Fotoaparát Canon EOS 350D</option>
+                    <option value="Objektiv Canon ULTRASONIC 70-200 mm F4">Objektiv Canon ULTRASONIC 70-200 mm F4
+                    </option>
+                </select>
+                <input type="submit">
+                <label class="h2" for="je-prislusenstvim-k">Tento předmět je příslušenstvím k:</label>
+                <select id="je-prislusenstvim-k" name="" multiple>
+                    <option value="Fotoaparát Canon EOS 650D">Fotoaparát Canon EOS 650D</option>
+                    <option value="SD karta SanDisk 64 GB">SD karta SanDisk 64 GB</option>
+                    <option value="Fotoaparát Canon EOS 350D">Fotoaparát Canon EOS 350D</option>
+                    <option value="Objektiv Canon ULTRASONIC 70-200 mm F4">Objektiv Canon ULTRASONIC 70-200 mm F4
+                    </option>
+                </select>
+                <input type="submit"> -->
+                <div>
+                    <div>
+                        <h2 class="h2">Příslušenství k tomuto předmětu</h2>
+                        <ul>
+                            <li><a href="../../zakaznik/predmet-detail.html">Objektiv Canon ULTRASONIC 70-200 mm
+                                    F4</a><a href="#"><span class="icon-delete"></span></a></li>
+                            <li><a href="../../zakaznik/predmet-detail.html">SD karta Lexar 64GB</a><a href="#"><span
+                                        class="icon-delete"></span></a></li>
+                            <li><a href="../../zakaznik/predmet-detail.html">Objektiv Canon 50 mm F1.8</a><a
+                                    href="#"><span class="icon-delete"></span></a></li>
+                        </ul>
+                    </div>
+                    <details class="prislusenstvi-k-predmetu">
+                        <summary><span class="icon-arrow-down icon"></span>Přidat příslušenství k tomuto předmětu:
+                        </summary>
+                        <ul>
+                            <li><span class="icon-dot-border icon"></span>Canon EOS 70D tělo</li>
+                            <li><span class="icon-dot-fill icon"></span>Objektiv Canon ULTRASONIC 70-200 mm F4</li>
+                            <li><span class="icon-dot-border icon"></span>Nabíječka baterií Canon LC E6E</li>
+                            <li><span class="icon-dot-fill icon"></span>SD karta Lexar 64GB</li>
+                            <li><span class="icon-dot-fill icon"></span>Objektiv Canon 50 mm F1.8</li>
+                            <li><span class="icon-dot-border icon"></span>Bateriový grip Phottix BG 70D</li>
+                        </ul>
+                    </details>
+                </div>
+                <div>
+                    <div>
+                        <h2 class="h2">Tento předmět je příslušenstvím pro</h2>
+                        <ul>
+                            <li><a href="../../zakaznik/predmet-detail.html">Nabíječka baterií Canon LC E6E</a><a
+                                    href="#"><span class="icon-delete"></span></a></li>
+                            <li><a href="../../zakaznik/predmet-detail.html">Bateriový grip Phottix BG 70D</a><a
+                                    href="#"><span class="icon-delete"></span></a></li>
+                        </ul>
+                    </div>
+                    <details class="prislusenstvi-k-predmetu">
+                        <summary><span class="icon-arrow-down icon"></span>Přidat příslušenství k tomuto předmětu:
+                        </summary>
+                        <ul>
+                            <li><span class="icon-dot-border icon"></span>Canon EOS 70D tělo</li>
+                            <li><span class="icon-dot-border icon"></span>Objektiv Canon ULTRASONIC 70-200 mm F4</li>
+                            <li><span class="icon-dot-fill icon"></span>Nabíječka baterií Canon LC E6E</li>
+                            <li><span class="icon-dot-border icon"></span>SD karta Lexar 64GB</li>
+                            <li><span class="icon-dot-border icon"></span>Objektiv Canon 50 mm F1.8</li>
+                            <li><span class="icon-dot-fill icon"></span>Bateriový grip Phottix BG 70D</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+
+            <a href="#" class="ulozit-btn" onclick="window.history.back()">Uložit</a>
+
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

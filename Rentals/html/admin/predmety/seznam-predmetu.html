@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Seznam předmětů</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../../assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="../prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="../prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="../prehled/historie.html">Historie</a></li>
+                                <li><a href="../prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../kalendar.html"><span
+                                class="icon-dot-border icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                                class="icon-dot-blue icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../spravci.html"><span
+                                class="icon-dot-border icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav class="main-nav-layout main-nav">
+            <ul class="nav-ul uppercase">
+                <li><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
+                <li><a href="#"><span class="icon-dot-border icon"></span>Skladem</a></li>
+                <li><a href="#"><span class="icon-dot-border icon"></span>Vypůjčené</a></li>
+                <li><a href="../predmety/novy-predmet.html"><span class="icon-dot-border icon"></span>Nový předmět</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container-layout">
+
+                <div class="product-item product-item-layout">
+                    <header class="product-image">
+                        <a href="../predmety/uprava-predmetu.html"><span class="icon-edit-pen"></span></a>
+                        <a href="../predmety/historie-predmetu-souhrn.html"><img
+                                src="../../../assets/img/Sigma18-50_f918-min.jpg" alt=""></a>
+                    </header>
+                    <div class="product-description">
+                        <h2 class="product-title"><a href="../predmety/historie-predmetu-souhrn.html">Objektiv SIGMA 17-50 mm
+                                1:2.8</a></h2>
+                    </div>
+                    <footer class="pridat-do-kosiku-btn uppercase">
+                        <a href="../predmety/historie-predmetu-souhrn.html">Historie předmětu</a>
+                    </footer>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

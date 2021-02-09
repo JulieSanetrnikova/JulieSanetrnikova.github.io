@@ -1,0 +1,224 @@
+:root {
+  --bg: #f7f7f7;
+  --blue: #007784;
+  --red: #d05555;
+  --green: #00ae7c;
+  --yellow: #d0b055;
+  --blue-classic: #5586d0;
+  --box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+
+  --baseFontSize: 1rem;
+  --smallFontSize: 0.8rem;
+  --smallestFontSize: 0.64rem;
+  --heading-1: 1.953rem;
+  --heading-2: 1.563rem;
+  --heading-3: 1.25rem;
+}
+
+html * {
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  
+  .logo {
+    font-family: "Playfair Display", serif;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+.icon {
+  padding: 5px;
+}
+
+
+.icon-wishlist::before {
+    content: url(../icon/min/heart-border-black-mobile.svg);
+  }
+
+  .icon-wishlist-blue::before {
+    content: url(../icon/min/heart-border-blue-mobile.svg);
+  }
+
+  .icon-cart-black::before {
+    content: url(../icon/min/cart-black-mobile.svg);
+  }
+
+  .icon-cart-white::before {
+    content: url(../icon/min/cart-white-mobile.svg);
+  }
+
+  .icon-cart-blue::before {
+    content: url(../icon/min/cart-blue-mobile.svg);
+  }
+
+  .icon-user-black::before {
+    content: url(../icon/min/user-black-mobile.svg);
+  }
+
+  .icon-user-blue::before {
+    content: url(../icon/min/user-blue-mobile.svg);
+  }
+
+  .icon-settings::before {
+    content: url(../icon/min/settings-mobile.svg);
+  }
+
+  .icon-search::before {
+    content: url(../icon/min/search-mobile.svg);
+  }
+
+  .icon-delete::before {
+    content: url(../icon/min/delete-mobile.svg);
+  }
+
+  .icon-heart-border-black::before {
+    content: url(../icon/min/heart-border-black-mobile.svg);
+  }
+
+  .icon-heart-border-blue::before {
+    content: url(../icon/min/heart-border-blue-mobile.svg);
+  }
+
+  .icon-heart-fill-blue::before {
+    content: url(../icon/min/heart-fill-blue-mobile.svg);
+  }
+
+  .icon-filter::before {
+    content: url(../icon/min/filter-mobile.svg);
+  }
+
+
+
+
+.icon-arrow-down::before {
+  content: url(../icon/arrow-down.svg);
+}
+
+.icon-arrow-left::after {
+  content: url(../icon/arrow-left.svg);
+}
+
+.icon-arrow-right::after {
+  content: url(../icon/arrow-right.svg);
+}
+
+.icon-login-arrow-right::before {
+  content: url(../icon/login-arrow-right.svg);
+}
+
+.icon-login-arrow-right-min::before {
+  content: url(../icon/login-arrow-right-min.svg);
+}
+
+.icon-edit-pen::before {
+  content: url(../icon/edit-pen.svg);
+}
+
+.icon-plus::before {
+  content: url(../icon/plus.svg);
+}
+
+.icon-plus-min::before {
+  content: url(../icon/plus-min.svg);
+}
+
+.icon-minus::before {
+  content: url(../icon/minus.svg);
+}
+
+.icon-minus-min::before {
+  content: url(../icon/minus-min.svg);
+}
+
+.icon-dot-border::before {
+  content: url(../icon/dot-border.svg);
+}
+
+.icon-dot-fill::before {
+  content: url(../icon/dot-fill.svg);
+}
+
+.icon-dot-blue::before {
+  content: url(../icon/dot-blue.svg);
+}
+
+.icon-order::after {
+  content: url(../icon/order.svg);
+}
+
+.icon-notification::before {
+  content: url(../icon/notification.svg);
+}
+
+.icon-close::before {
+  content: url(../icon/close.svg);
+}
+
+/* !! desktop nav icons (width: 25px;) */
+@media only screen and (min-width: 600px) {
+  .icon-wishlist::before {
+    content: url(../icon/heart-border-black.svg);
+  }
+
+  .icon-wishlist-blue::before {
+    content: url(../icon/heart-border-blue.svg);
+  }
+
+  .icon-cart-black::before {
+    width: 25px;
+    height: 25px;
+    content: url(../icon/cart-black.svg);
+  }
+
+  .icon-cart-white::before {
+    width: 25px;
+    height: 25px;
+    content: url(../icon/cart-white.svg);
+  }
+
+  .icon-cart-blue::before {
+    width: 25px;
+    height: 25px;
+    content: url(../icon/cart-blue.svg);
+  }
+
+  .icon-user-black::before {
+    content: url(../icon/user-black.svg);
+  }
+
+  .icon-user-blue::before {
+    content: url(../icon/user-blue.svg);
+  }
+
+  .icon-settings::before {
+    content: url(../icon/settings.svg);
+  }
+
+  .icon-search::before {
+    content: url(../icon/search.svg);
+  }
+
+  .icon-delete::before {
+    content: url(../icon/delete.svg);
+  }
+
+  .icon-heart-border-black::before {
+    content: url(../icon/heart-border-black.svg);
+  }
+
+  .icon-heart-border-blue::before {
+    content: url(../icon/heart-border-blue.svg);
+  }
+
+  .icon-heart-fill-blue::before {
+    content: url(../icon/heart-fill-blue.svg);
+  }
+
+  .icon-filter::before {
+    content: url(../icon/filter.svg);
+  }
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Kalendář</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href='../../assets/fullcalendar-5.5.0/lib/main.css' rel='stylesheet' />
+    <script src='../../assets/fullcalendar-5.5.0/lib/main.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="./predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="./vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="./prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="./prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="./prehled/historie.html">Historie</a></li>
+                                <li><a href="./prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="./vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../admin/kalendar.html"><span
+                                class="icon-dot-blue icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../admin/predmety/seznam-predmetu.html"><span
+                                class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../admin/zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../admin/spravci.html"><span
+                                class="icon-dot-border icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        <header>
+            <h1 class="h1">Kalendář</h1>
+        </header>
+
+        <main>
+            <div id='calendar'></div>
+            <!-- jak celý kalendář zmenšit? -->
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>

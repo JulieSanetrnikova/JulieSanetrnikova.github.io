@@ -1,0 +1,38 @@
+html *{
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a{
+  color: #000;
+}
+
+
+summary {
+  cursor: pointer;
+  /* width: max-content; */
+}
+
+details > summary:first-of-type {
+  list-style-type: none;
+}
+
+.active-mobile{
+  display: block;
+}
+.active-desktop{
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .active-mobile{
+    display: none;
+  }
+  .active-desktop{
+    display: block;
+  }
+}
+
+
+/* * navigace s ikonkama */

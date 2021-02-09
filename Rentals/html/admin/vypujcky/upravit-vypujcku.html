@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Upravit výpůjčku</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../../assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="../prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="../prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="../prehled/historie.html">Historie</a></li>
+                                <li><a href="../prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../kalendar.html"><span
+                                class="icon-dot-border icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                                class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../spravci.html"><span
+                                class="icon-dot-border icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        <header>
+            <h1 class="h1">Upravit výpůjčku</h1>
+            <a href="#" onclick="window.history.back()">Zrušit</a>
+        </header>
+
+        <main>
+
+            <div class="obsah-kosiku-layout">
+
+                <div class="kosik-item-layout">
+                    <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                    <div class="kosik-texty">
+                        <p class="kosik-nazev-produktu"><a href="../../zakaznik/predmet-detail.html">Objektiv SIGMA 17-50
+                                mm 1:2.8</a></p>
+                        <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
+                        <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
+                        <p class="kosik-pocet-kusu">1</p>
+                    </div>
+                    <div class="kosik-mnozstvi"><span class="icon-minus-min icon"></span> 1 <span
+                            class="icon-plus-min icon"></span></div>
+                    <a href="#"><span class="icon-delete"></span></a>
+                </div>
+
+            </div>
+
+            <label class="h2">Začátek a konec výpůjčky</label>
+            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+
+            <h2 class="h2">Dostupnost předmětů</h2>
+            <div class="calendar" id="calendar"></div>
+
+            <!-- <div class="vyber-predmetu">
+                <label for="predmety">Přidat předměty</label>
+                <select id="predmety">
+                    <option value="Předmět 1">Předmět 1</option>
+                    <option value="Předmět 2">Předmět 2</option>
+                    <option value="Předmět 3">Předmět 3</option>
+                    <option value="Předmět 4">Předmět 4</option>
+                    <option value="Předmět 5">Předmět 5</option>
+                </select>
+            </div> -->
+            <div class="vyber-predmetu">
+                <details>
+                    <summary>Zobrazit dostupné předměty</summary>
+                    <ul>
+                        <li><span class="icon-minus-min icon"></span>Canon EOS 70D tělo
+                            <ul>
+                                <li><span class="icon-dot-border icon"></span>Fotoaparát Canon EOS 70D (1)</li>
+                                <li><span class="icon-dot-border icon"></span>Fotoaparát Canon EOS 70D (2)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span class="icon-dot-border icon"></span>Objektiv Canon ULTRASONIC
+                            70-200 mm F4</li>
+                    </ul>
+                    <ul>
+                        <li><span class="icon-dot-fill icon"></span>Gimbal Moza Air 2</li>
+                    </ul>
+                    <ul>
+                        <li><span class="icon-dot-border icon"></span>Fotoaparát Canon EOS RP</li>
+                    </ul>
+                    <ul>
+                        <li><span class="icon-minus-min icon"></span>Objektiv SIGMA 17-50 mm 1:2.8
+                            <ul>
+                                <li><span class="icon-dot-border icon"></span>Objektiv SIGMA 17-50 mm 1:2.8 (1)</li>
+                                <li><span class="icon-dot-fill icon"></span>Objektiv SIGMA 17-50 mm 1:2.8 (2)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span class="icon-plus-min icon"></span>SD karta SanDisk 64 GB</li>
+                    </ul>
+                </details>
+
+            </div>
+
+
+            <div class="vyber-zakaznika">
+                <label for="name">Autor výpůjčky</label>
+                <input id="name" list="name" type="text" placeholder="Příjmení Jméno">
+                <datalist id="name">
+                    <option value="Novák František">
+                    <option value="Černý Lukáš">
+                    <option value="Dvořáková Alice">
+                    <option value="Růžička Květoslav">
+                </datalist>
+            </div>
+            <div class="vyber-stav-vypujcky">
+                <label for="stav">Stav výpůjčky</label>
+                <select id="stav">
+                    <option value="Nezapůjčeno">Nezapůjčeno</option>
+                    <option value="Vráceno">Vráceno</option>
+                    <option value="Vypůjčeno">Vypůjčeno</option>
+                    <option value="Budoucí">Budoucí</option>
+                </select>
+            </div>
+           
+            <label for="poznamka" class="h2">Přidat poznámku</label>
+            <input id="poznamka" type="text" name="poznamka">
+
+            <a href="#" class="ulozit-btn" onclick="window.history.back()">Uložit</a>
+
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script>
+        $(function () {
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'left'
+            }, function (start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

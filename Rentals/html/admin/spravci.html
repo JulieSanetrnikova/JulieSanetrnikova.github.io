@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Správci</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="../../assets/styles/typography.css">
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../assets/styles/components.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container-layout">
+
+        <nav class="main-nav-layout main-nav">
+            <div class="logo">
+                <a href="../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+            </div>
+            <nav class="nav-menu-layout">
+                <ul class="nav-ul uppercase">
+                    <li>
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                            <ul class="nav-ul">
+                                <li><a href="#">Odeslat upozornění</a></li>
+                                <li><a href="./predmety/novy-predmet.html">Nový předmět</a></li>
+                                <li><a href="./vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-prehled">
+                        <details class="nav-dropdown-layout">
+                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
+                            <ul class="nav-ul">
+                                <li><a href="./prehled/probihajici.html">Probíhajíjcí</a></li>
+                                <li><a href="./prehled/budoucnost.html">Budoucnost</a></li>
+                                <li><a href="./prehled/historie.html">Historie</a></li>
+                                <li><a href="./prehled/nevracene.html">Nevrácené</a></li>
+                                <li><a href="./vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="nav-kalendar"><a href="../admin/kalendar.html"><span
+                                class="icon-dot-border icon"></span>Kalendář</a></li>
+                    <li class="nav-predmety"><a href="../admin/predmety/seznam-predmetu.html"><span
+                                class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                    <li class="nav-zakaznici"><a href="../admin/zakaznici.html"><span
+                                class="icon-dot-border icon"></span>Zákazníci</a></li>
+                    <li class="nav-spravci"><a href="../admin/spravci.html"><span
+                                class="icon-dot-blue icon"></span>Správci</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        <header>
+            <h1>Správci</h1>
+            <a href="../admin/nova-pozvanka.html">Vytvořit novou pozvánku</a>
+        </header>
+
+        <main>
+
+            <div class="spravci-layout">
+
+                <div class="spravci-item-layout spravci-item">
+                    <p><a href="../admin/zakaznik-detail.html">Novák František</a></p>
+                    <p><a href="#">frantisek.novak@pslib.cz</a></p>
+                    <p>Správce <a href="#"><span class="icon-delete"></span></a></p>
+                    <p>Admin <a href="#"><span class="icon-delete"></span></a></p>
+                    <p>Zákazník <a href="#"><span class="icon-delete"></span></a></p>
+                </div>
+                <div class="spravci-item-layout spravci-item">
+                    <p><a href="../admin/zakaznik-detail.html">Černý Lukáš</a></p>
+                    <p><a href="#">lukas.cerny@pslib.cz</a></p>
+                    <p>Správce <a href="#"><span class="icon-delete"></span></a></p>
+                    <p>Zákazník <a href="#"><span class="icon-delete"></span></a></p>
+                </div>
+
+            </div>
+
+
+            <!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th>Jméno<span class="icon-order icon"></span></th>
+                        <th>Mail<span class="icon-order icon"></span></th>
+                        <th>Role<span class="icon-order icon"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3"><a href="#">Novák František</a></th>
+                        <td rowspan="3">frantisek.novak@pslib.cz</td>
+                        <td>Správce <a href="#"><span class="icon-delete"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Admin <a href="#"><span class="icon-delete"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Zákazník <a href="#"><span class="icon-delete"></span></a></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2"><a href="#">Černý Lukáš</a></th>
+                        <td rowspan="2">lukas.cerny@pslib.cz</td>
+                        <td>Správce <a href="#"><span class="icon-delete"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Zákazník <a href="#"><span class="icon-delete"></span></a></td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </main>
+
+        <footer class="main-footer-layout main-footer">
+            <p>© Aplikace pro půjčovaní školního vybavení</p>
+            <div class="logout-btn uppercase">
+                <a href="../../zakaznik/login.html">Odhlásit se</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
