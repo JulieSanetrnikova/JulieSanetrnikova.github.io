@@ -1,17 +1,22 @@
-html *{
+html * {
   margin: 0;
   padding: 0;
 }
-html, body{
+
+html,
+body {
   overflow-x: hidden;
 }
+
 ul {
   list-style-type: none;
 }
-a{
+
+a {
   color: #000;
 }
-.logo{
+
+.logo {
   padding-left: 5px;
 }
 
@@ -20,58 +25,77 @@ summary {
   /* width: max-content; */
 }
 
-details > summary:first-of-type {
+details>summary:first-of-type {
   list-style-type: none;
 }
-details > summary {display:block;}
-summary::-webkit-details-marker { font-size:0px; }
-details > summary {
+
+details>summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  font-size: 0px;
+}
+
+details>summary {
   list-style: none;
 }
-details > summary::-webkit-details-marker {
+
+details>summary::-webkit-details-marker {
   display: none;
 }
 
-.active-mobile{
+.active-mobile {
   display: block;
 }
-.active-desktop{
+
+.active-desktop {
   display: none;
 }
-@media only screen and (min-width: 600px) {
-  .active-mobile{
+
+@media only screen and (min-width: 1024px) {
+  .active-mobile {
     display: none;
   }
-  .active-desktop{
+
+  .active-desktop {
     display: block;
   }
 }
 
 
 /* * navigace s ikonkama */
-.main-nav{
+.main-nav {
   width: 100%;
   padding-top: .3rem;
   padding-bottom: .2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.h1{
+
+.h1 {
   margin-top: 50px;
 }
 
 .nav-kategorie-layout .nav-ul,
-.nav-kategorie-admin-layout .nav-ul{
+.nav-kategorie-admin-layout .nav-ul {
   position: absolute;
   left: 0;
   background-color: var(--bg);
   width: 100%;
   padding-left: 25%;
 }
+
 .nav-kategorie-layout .nav-ul li,
-.main-nav-admin-mobile .nav-ul li{
+.main-nav-admin-mobile .nav-ul li {
   padding: 15px 0 15px 0;
 }
-.search-area{
+
+.nav-kategorie-layout .nav-ul li:first-of-type,
+.main-nav-admin-mobile .nav-ul li:first-of-type {
+  padding-top: 25px;
+}
+
+.search-area {
   position: absolute;
   left: 0;
   background-color: var(--bg);
@@ -79,21 +103,36 @@ details > summary::-webkit-details-marker {
   padding-top: 15px;
   padding-bottom: 10px;
 }
-.search-area input{
+
+.search-area input {
   background-color: var(--bg);
   border: none;
   padding-left: 15px;
   width: 80%;
   height: 30px;
 }
-.search-area .icon-search{
+
+.search-area .icon-search {
   opacity: .5;
 }
 
 /* * navigace admin */
-.main-nav-admin-mobile{
+.main-nav-admin-mobile {
   width: 100%;
   padding-top: .3rem;
   padding-bottom: .2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .nav-kategorie-layout .nav-ul,
+  .nav-kategorie-admin-layout .nav-ul {
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+    margin-left: 65%;
+    padding-left: 0px;
+  }
 }

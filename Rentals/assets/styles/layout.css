@@ -1,7 +1,8 @@
-body{
+body {
     width: 100%;
 }
-.main-container-layout{
+
+.main-container-layout {
     max-width: 1200px;
     width: 95%;
     margin: auto;
@@ -10,33 +11,60 @@ body{
 /* * navigace s ikonkama - zákazník */
 
 .main-nav,
-.main-nav-admin-layout{
+.main-nav-admin-layout {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--bg);
 }
-.main-nav-layout{
+
+.main-nav-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-columns: 2fr 1fr 4fr;
     align-items: center;
 }
-.nav-menu-layout .nav-ul{
+
+.nav-menu-layout .nav-ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* align-items: center; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
-.nav-menu-layout .nav-ul li{
+
+.nav-menu-layout .nav-ul li {
     justify-self: center;
 }
 
 /* * navigace admin */
-.main-container-layout .main-nav-admin-layout{
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  align-items: center;
+.main-container-layout .main-nav-admin-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-items: center;
 }
+
+@media only screen and (min-width: 768px) {
+
+    /* * navigace s ikonkama - zákazník */
+    .main-nav-layout {
+        grid-template-columns: 8fr 1fr 4fr;
+    }
+
+    .nav-menu-layout .nav-ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .nav-kategorie-layout {
+        margin: auto;
+    }
+
+    /* * navigace admin */
+    .main-container-layout .main-nav-admin-layout {
+        display: grid;
+        grid-template-columns: 8fr 1fr 1fr 1fr;
+    }
+}
+
+
 
 
 
@@ -58,42 +86,49 @@ body{
     display: grid;
     align-items: center;
 }
-.bg-line-1{
+
+.bg-line-1 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 7;
 }
-.bg-line-2{
+
+.bg-line-2 {
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 3;
 }
-.bg-line-3{
+
+.bg-line-3 {
     grid-column-start: 6;
     grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 7;
 }
-.bg-line-4{
+
+.bg-line-4 {
     grid-column-start: 3;
     grid-column-end: 6;
     grid-row-start: 6;
     grid-row-end: 7;
 }
+
 @media only screen and (max-width: 600px) {
     .login-container-layout {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
     .login-text-container-layout {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    .bg-line{
+
+    .bg-line {
         display: none;
     }
 }
