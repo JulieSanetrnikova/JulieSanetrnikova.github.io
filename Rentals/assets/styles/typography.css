@@ -18,12 +18,24 @@
 html * {
   font-family: "Hind", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .logo {
   font-family: "Playfair Display", serif;
+  font-size: var(--heading-3);
 }
+
+.h1{
+  font-size: var(--heading-2);
+}
+.h2{
+  font-size: var(--heading-3);
+}
+.product-title{
+  font-size: var(--heading-3);
+}
+
 
 .uppercase {
   text-transform: uppercase;
@@ -157,4 +169,8 @@ html * {
 
 .icon-heart-fill-blue::before {
   content: url(../icon/heart-fill-blue.svg);
+}
+
+.icon-menu::before{
+  content: url(../icon/menu.svg);
 }
