@@ -2,6 +2,9 @@ html *{
   margin: 0;
   padding: 0;
 }
+html, body{
+  overflow-x: hidden;
+}
 ul {
   list-style-type: none;
 }
@@ -48,5 +51,23 @@ details > summary:first-of-type {
   padding-left: 25%;
 }
 .nav-kategorie-layout .nav-ul li{
-  padding: 10px 0 10px 0;
+  padding: 15px 0 15px 0;
+}
+.search-area{
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.search-area input{
+  background-color: var(--bg);
+  border: none;
+  padding-left: 15px;
+  width: 80%;
+  height: 30px;
+}
+.search-area .icon-search{
+  opacity: .5;
 }
