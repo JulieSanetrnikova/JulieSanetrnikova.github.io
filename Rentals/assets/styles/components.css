@@ -23,6 +23,14 @@ summary {
 details > summary:first-of-type {
   list-style-type: none;
 }
+details > summary {display:block;}
+summary::-webkit-details-marker { font-size:0px; }
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 
 .active-mobile{
   display: block;
