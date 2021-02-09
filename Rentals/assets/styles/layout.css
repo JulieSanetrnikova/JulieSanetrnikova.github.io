@@ -3,7 +3,7 @@ body{
 }
 .main-container-layout{
     max-width: 1200px;
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -13,16 +13,20 @@ body{
     display: grid;
     grid-template-columns: 2fr 1fr 5fr;
     align-items: center;
-
 }
 .nav-menu-layout .nav-ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 .nav-menu-layout .nav-ul li{
     justify-self: center;
 }
+/* .nav-kategorie-layout .nav-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+} */
 
 
 

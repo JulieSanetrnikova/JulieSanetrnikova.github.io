@@ -36,3 +36,17 @@ details > summary:first-of-type {
 
 
 /* * navigace s ikonkama */
+.main-nav-layout{
+  margin-top: .3rem;
+}
+
+.nav-kategorie-layout .nav-ul{
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding-left: 25%;
+}
+.nav-kategorie-layout .nav-ul li{
+  padding: 10px 0 10px 0;
+}
