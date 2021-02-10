@@ -207,3 +207,21 @@ details>summary::-webkit-details-marker {
     border-bottom: var(--lightBorder);
   }
 }
+
+
+/* ? footer */
+.main-footer{
+  padding: 10px 0px;
+}
+.logout-btn{
+  display: inline-block;
+  border: var(--btnBorder);
+  padding: 5px 40px;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .logout-btn{
+  margin-bottom: 0px;
+  padding: 5px 60px;
+  }
+}
