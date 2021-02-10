@@ -8,10 +8,13 @@ body {
     margin: auto;
 }
 
+
+
 /* * navigace s ikonkama - zákazník */
 
-.main-nav,
-.main-nav-admin-layout {
+/* .main-nav-layout, */
+.main-nav-container-layout {
+    display: grid;
     position: fixed;
     top: 0;
     left: 0;
@@ -30,6 +33,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
+.nav-menu-layout .nav-ul-admin {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 
 .nav-menu-layout .nav-ul li {
     justify-self: center;
@@ -42,15 +48,40 @@ body {
     align-items: center;
 }
 
+@media only screen and (min-width: 520px) {
+
+    /* * navigace admin */
+    .main-container-layout .main-nav-admin-layout {
+        grid-template-columns: 5fr 1fr 1fr 1fr;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
+    .main-container-layout {
+        width: 90%;
+    }
+
+    .main-nav-admin-layout {
+        grid-column-start: 2;
+    }
+
     /* * navigace s ikonkama - zákazník */
+
+    .main-nav-container-layout {
+        grid-template-columns: 1fr 18fr 1fr;
+    }
+
     .main-nav-layout {
+        grid-column-start: 2;
         grid-template-columns: 8fr 1fr 4fr;
     }
 
     .nav-menu-layout .nav-ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .nav-menu-layout .nav-ul-admin {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .nav-kategorie-layout {
@@ -64,9 +95,119 @@ body {
     }
 }
 
+@media only screen and (min-width: 1024px) {
 
+    .main-nav-layout {
+        grid-template-columns: 2fr 5fr 2fr;
+    }
 
+    /* .nav-kategorie-layout .nav-ul,
+    .nav-kategorie-admin-layout .nav-ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    } */
 
+    /* * navigace admin */
+
+    .main-nav-container-layout .main-nav-admin-mobile {
+        display: none;
+    }
+
+    .main-container-layout .main-nav-admin-container-desktop-layout {
+        display: grid;
+        align-items: center;
+    }
+
+    .main-container-layout .secondary-main-nav-admin-desktop-layout {
+        display: grid;
+        align-items: center;
+        /* grid-row-start: 2; */
+    }
+
+    .main-container-layout .main-nav-admin-desktop-layout-row {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 9fr;
+        grid-column-start: 2;
+        grid-template-rows: repeat(2, 50px);
+    }
+    .main-container-layout .main-nav-admin-desktop-layout{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 9fr;
+        grid-column-start: 2;
+    }
+
+    .main-container-layout .nav-menu-admin-desktop-layout {
+        display: grid;
+        align-items: center;
+    }
+
+    .nav-ul-admin-layout {
+        display: grid;
+        justify-items: center;
+        grid-column-start: 2;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .secondary-main-nav-admin-desktop-layout {
+        display: grid;
+        align-items: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+    }
+
+    .nav-ul-desktop-admin {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1333px) {
+    .main-nav-container-layout {
+        display: grid;
+        grid-template-columns: 1fr 1200px 1fr;
+        position: fixed;
+    }
+
+    .main-nav-layout {
+        width: 1200px;
+        grid-column-start: 2;
+    }
+}
+
+/* ? footer */
+.main-footer-layout{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 30px;
+    
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    align-items: center;
+}
+.main-footer-container-layout{
+    width: 100%;
+    display: grid;
+    grid-column-start: 2;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+}
+.logout-btn{
+    display: grid;
+    justify-items: end;
+}
+
+@media only screen and (min-width: 1333px) {
+.main-footer-layout{
+    grid-template-columns: 1fr 1200px 1fr;
+}
+}
 
 /* * login */
 

@@ -26,7 +26,7 @@
 
 <body>
     <div class="main-container-layout">
-        <nav class="main-nav-layout main-nav">
+        <!-- <nav class="main-nav-layout main-nav">
             <div class="logo">
                 <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
             </div>
@@ -52,7 +52,46 @@
                     <li><a href="../zakaznik/profil.html"><span class="icon-user-black"></span></a></li>
                 </ul>
             </nav>
-        </nav>
+        </nav> -->
+
+        <div class="main-nav-container-layout">
+            <nav class="main-nav-layout main-nav">
+                <div class="logo">
+                    <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+                </div>
+                <details class="nav-kategorie-layout nav-kategorie uppercase">
+                    <summary><span class="icon-arrow-down icon active-desktop"> Kategorie</span><span
+                            class="icon-filter icon active-mobile"></span></summary>
+                    <nav>
+                        <ul class="nav-ul">
+                            <li><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
+                            <li><a href="#"><span class="icon-dot-border icon"></span>Těla fotoaparátů</a></li>
+                            <li><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a></li>
+                            <li><a href="#"><span class="icon-dot-border icon"></span>Stativy</a></li>
+                            <li><a href="#"><span class="icon-dot-border icon"></span>Příslušenství</a></li>
+                        </ul>
+                    </nav>
+                </details>
+
+                <nav class="nav-menu-layout nav-menu">
+                    <ul class="nav-ul">
+                        <li>
+                            <details class="nav-search-layout">
+                                <summary><span class="icon-search icon"></span></summary>
+                                <form class="search-area" action="">
+                                    <input type="text" placeholder="HLEDAT" name="search">
+                                    <a href="#"><span class="icon-search icon"></span></a>
+                                </form>
+                            </details>
+                        </li>
+                        <!-- <li class="admin"><a href="../admin/prehled/probihajici.html"><span class="icon-settings icon"></span></a></li> -->
+                        <li><a href="../zakaznik/wishlist.html"><span class="icon-wishlist icon"></span></a></li>
+                        <li><a href="../zakaznik/kosik.html"><span class="icon-cart-blue icon"></span></a></li>
+                        <li><a href="../zakaznik/profil.html"><span class="icon-user-black icon"></span></a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
 
         <header>
             <h1 class="h1">Obsah košíku</h1>
