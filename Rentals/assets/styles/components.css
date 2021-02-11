@@ -26,7 +26,7 @@ a {
   text-align: center;
 }
 
-.h2{
+.h2 {
   text-align: center;
 }
 
@@ -275,7 +275,7 @@ mezi desktopem a mobilem */
   padding: 10px 0px;
 }
 
-.main-footer-layout{
+.main-footer-layout {
   border-top: var(--lightBorder);
 }
 
@@ -292,11 +292,11 @@ mezi desktopem a mobilem */
     padding: 5px 60px;
   }
 
-  .footer-text{
+  .footer-text {
     padding-left: 10px;
   }
 
-  .logout-btn-container-layout{
+  .logout-btn-container-layout {
     padding-right: 10px;
   }
 }
@@ -308,11 +308,11 @@ mezi desktopem a mobilem */
   position: relative;
 }
 
-.product-item{
+.product-item {
   background-color: #fff;
 }
 
-.product-item:hover{
+.product-item:hover {
   box-shadow: var(--boxShadowLight);
 }
 
@@ -383,42 +383,52 @@ mezi desktopem a mobilem */
 }
 
 /* ? detail-produktu */
-.predmet-info-layout{
+.predmet-info-layout {
   margin-top: 45px;
 }
+
+.predmet-detil-img {
+  background-color: #fff;
+}
+
 .predmet-detil-img img,
-.calendar img{
+.calendar img {
   width: 100%;
 }
-.predmet-detail-texty{
+
+.predmet-detail-texty {
   padding: 0px 10px;
 }
-.predmet-detail-texty .h2{
+
+.predmet-detail-texty .h2 {
   text-align: start;
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
 }
-.pocet-kusu-border-btn{
+
+.pocet-kusu-border-btn {
   height: 20px;
   width: 120px;
   text-align: center;
   border: var(--basicBorder);
   padding: 10px 0px 4px 0px;
-  margin: auto;
+  /* margin: auto; */
   margin-bottom: 20px;
 }
-.pocet-kusu-border-btn .icon{
+
+.pocet-kusu-border-btn .icon {
   padding: 0px 20px;
   cursor: pointer;
 }
 
-.predmet-detail-kosik-btn a{
+.predmet-detail-kosik-btn a {
   color: #fff;
 }
-.predmet-detail-kosik-btn .icon-cart-white-min{
+
+.predmet-detail-kosik-btn .icon-cart-white-min {
   padding-right: 10px;
 }
 
-.predmet-detail-kosik-btn{
+.predmet-detail-kosik-btn {
   display: inline-block;
   text-align: center;
   /* width: 80%; */
@@ -426,7 +436,28 @@ mezi desktopem a mobilem */
   background-color: var(--blue);
 }
 
-.detail-predmetu-layout .h2{
-  margin-top: 45px;
+.detail-predmetu-layout .h2 {
+  margin-top: 24px;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 960px) {
+  .predmet-info-layout {
+    padding-top: 20px;
+  }
+  .detail-predmetu-layout .h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  .predmet-detail-texty .h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .calendar img {
+    width: calc(46rem + 30px);
+}
+.predmet-detail-texty{
+  max-width: 23rem;
+}
+
 }

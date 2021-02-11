@@ -429,25 +429,100 @@ body {
     }
 }
 
-/* detail předmětu */
-.kosik-like-btn-layout{
+/* ? detail předmětu */
+.predmet-detil-img {
+    height: 45vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.kosik-like-btn-layout {
     display: grid;
     grid-template-columns: 6fr 1fr;
     column-gap: 10px;
+}
 
-  }
-  .kosik-like-btn-layout .like-btn{
-      display: grid;
-  }
-  .kosik-like-btn-layout .icon-heart-border-blue{
-      align-self: center;
-      justify-self: center;
-  }
+.kosik-like-btn-layout .like-btn {
+    display: grid;
+}
 
-  .predmet-detail-prislusenstvi-swipe-layout{
-      display: grid;
-      grid-template-columns: 1fr 180px 1fr;
-      justify-items: center;
-      align-items: center;
-  }
+.kosik-like-btn-layout .icon-heart-border-blue {
+    align-self: center;
+    justify-self: center;
+}
 
+.predmet-detail-prislusenstvi-swipe-layout {
+    display: grid;
+    grid-template-columns: 1fr 185px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 410px) {
+    .predmet-detail-prislusenstvi-swipe-layout {
+        grid-template-columns: 1fr auto 1fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .predmet-detail-prislusenstvi-swipe-layout {
+        grid-template-columns: 1fr repeat(3, 230px) 1fr;
+        column-gap: 30px;
+    }
+    .predmet-detail-prislusenstvi-swipe-layout .product-item-layout{
+        width: 100%;
+    }
+    .predmet-detail-prislusenstvi-swipe-layout .arrow-left{
+        display: grid;
+        justify-self: end;
+    }
+    .predmet-detail-prislusenstvi-swipe-layout .arrow-right{
+        display: grid;
+        justify-self: start;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .predmet-info-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        align-items: center;
+    }
+
+    .detail-predmetu-layout .h2 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .predmet-detil-img {
+        height: 23rem;
+        width: 23rem;
+        justify-self: end;
+    }
+
+    .kosik-like-btn-layout {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        column-gap: 10px;
+    }
+
+    .detail-predmetu-layout{
+        display: grid;
+
+    }
+
+    .kosik-like-btn-layout .icon-heart-border-blue {
+        justify-self: start;
+    }
+
+    .detail-predmetu-layout .calendar {
+        display: grid;
+        justify-items: center;
+    }
+
+    .detail-predmetu-layout .product-item-layout{
+        display: grid;
+    }
+}
