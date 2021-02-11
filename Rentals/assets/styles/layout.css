@@ -297,9 +297,9 @@ body {
         display: grid;
         grid-template-rows: 220px 80px auto;
     }
-    .product-item{
-        /* height: 300px; */
-    }
+    /* .product-item{
+        height: 300px;
+    } */
 }
 @media only screen and (min-width: 560px) {
     .product-item-layout{
