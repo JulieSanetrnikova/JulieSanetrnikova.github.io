@@ -72,9 +72,7 @@ details>summary::-webkit-details-marker {
   border-bottom: var(--lightBorder);
 }
 
-.h1 {
-  margin-top: 50px;
-}
+
 
 .nav-kategorie-layout .nav-ul,
 .nav-kategorie-admin-layout .nav-ul {
@@ -99,6 +97,7 @@ details>summary::-webkit-details-marker {
 .nav-menu-admin-desktop-layout .nav-ul li:first-of-type {
   padding-top: 25px;
 }
+
 .nav-kategorie-layout .nav-ul li:last-of-type,
 .main-nav-admin-mobile .nav-ul li:last-of-type,
 .nav-menu-admin-desktop-layout .nav-ul li:last-of-type {
@@ -202,7 +201,7 @@ details>summary::-webkit-details-marker {
     margin-top: 150px;
   }
 
-  .main-nav-admin-desktop{
+  .main-nav-admin-desktop {
     padding: 17px 0px 17px 0px;
     border-bottom: var(--lightBorder);
   }
@@ -210,18 +209,155 @@ details>summary::-webkit-details-marker {
 
 
 /* ? footer */
-.main-footer{
+.main-footer {
   padding: 10px 0px;
 }
-.logout-btn{
+
+.logout-btn {
   display: inline-block;
   border: var(--btnBorder);
-  padding: 5px 40px;
+  padding: 5px 40px 2px 40px;
   margin-bottom: 15px;
 }
+
 @media only screen and (min-width: 768px) {
-  .logout-btn{
-  margin-bottom: 0px;
-  padding: 5px 60px;
+  .logout-btn {
+    margin-bottom: 0px;
+    padding: 5px 60px;
   }
 }
+
+
+/*** produkt item */
+
+.product-image {
+  position: relative;
+}
+
+.heart-checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.heart-checkbox input[type="checkbox"],
+.heart-checkbox .checked {
+  display: none;
+}
+
+.heart-checkbox input[type="checkbox"],
+.heart-checkbox .checked {
+  display: none;
+}
+
+.heart-checkbox input[type="checkbox"]:checked~.checked {
+  display: inline-block;
+}
+
+.heart-checkbox input[type="checkbox"]:checked~.unchecked {
+  display: none;
+}
+@media only screen and (min-width: 410px) {
+  .heart-checkbox {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.product-title,
+.product-text {
+  padding: 0px 5px;
+}
+
+.pridat-do-kosiku-btn {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  /* height: 25px; */
+  padding: 8px 0px 7px 0px;
+  background-color: var(--blue);
+}
+
+.pridat-do-kosiku-btn .icon-cart-white-min {
+  padding-right: 5px;
+}
+
+
+/* .heart-checkbox input[type=checkbox] {
+  opacity: 0;
+  width: 21px;
+  height: 21px;
+}
+
+.heart-checkbox input[type=checkbox] ~ .checkmark {
+  position: absolute;
+  left: 3.5px;
+  top: 3.5px;
+  right: 3.5px;
+  bottom: 3.5px;
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+.heart-checkbox input[type=checkbox] ~ .checkmark {
+  width: 21px;
+  height: 21px;
+}
+
+.heart-checkbox input[type=checkbox] ~ .checked {
+  display: none;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .checked {
+  display: block;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+} */
+
+/* .product-image{
+  position: relative;
+}
+
+.heart-checkbox{
+  position: absolute;
+}
+
+.heart-input .icon-heart-border-blue{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heart-input:checked + .icon-heart-border-blue-checked{
+  background-image: url(../icon/heart-fill-blue.svg);
+  background-repeat: no-repeat;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 1;
+}
+
+.heart-input:checked + .icon-heart-border-blue{
+  opacity: 0;
+}
+
+.heart-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  z-index: 9999999;
+  opacity: 0;
+  cursor: pointer;
+} */

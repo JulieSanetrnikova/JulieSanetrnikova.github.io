@@ -181,9 +181,9 @@ body {
 
 /* ? footer */
 .main-footer-layout{
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
     width: 100%;
     /* min-height: 30px; */
     
@@ -227,6 +227,72 @@ body {
 .main-footer-layout{
     grid-template-columns: 1fr 1200px 1fr;
 }
+}
+
+/* ? obecný layout stránky  */
+.main-container-layout{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 30px;
+}
+.main-header-layout{
+   margin-top: 70px;
+}
+
+
+/* !! layout hlavní stránky s produktama */
+.container-list-product-layout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6px;
+    row-gap: 12px;
+}
+@media only screen and (min-width: 520px) {
+    /* možná už je udělat vyšší */
+    .container-list-product-layout{
+        column-gap: 24px;
+        row-gap: 32px;
+    }
+}
+
+.product-item{
+    background-color: #fff;
+}
+.product-image{
+    /* height: 180px; */
+    display: grid;
+    align-items: center;
+    overflow-x: hidden;
+}
+.img-nahled-product{
+    display: grid;
+    width: 120%;
+    height: 60%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 20%;
+
+    align-self: center;
+}
+.odkaz-nahled-img{
+    display: grid;
+    /* height: 180px; */
+    height: 100%;
+}
+.product-item-layout{
+    display: grid;
+    grid-template-rows: 180px 1fr auto;
+}
+.product-item{
+    position: relative;
+}
+
+@media only screen and (min-width: 410px) {
+    .product-item-layout{
+        display: grid;
+        grid-template-rows: 220px 80px auto;
+    }
 }
 
 /* * login */

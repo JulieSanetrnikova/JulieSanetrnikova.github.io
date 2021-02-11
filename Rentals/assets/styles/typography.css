@@ -53,6 +53,17 @@ html * {
   color: var(--blue);
   font-size: var(--smallFontSize);
 }
+.pridat-do-kosiku-btn a{
+  color: #fff;
+  font-size: var(--smallFontSize);
+}
+.product-title a{
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+}
+.product-text{
+  font-size: var(--smallFontSize);
+}
 
 @media only screen and (min-width: 768px) {
   html *{
@@ -155,6 +166,9 @@ html * {
   width: 25px;
   height: 25px;
   content: url(../icon/cart-white.svg);
+}
+.icon-cart-white-min::before {
+  content: url(../icon/min/cart-white-mobile.svg);
 }
 
 .icon-cart-blue::before {
