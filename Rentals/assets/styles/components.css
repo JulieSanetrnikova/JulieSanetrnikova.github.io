@@ -6,6 +6,7 @@ html * {
 html,
 body {
   overflow-x: hidden;
+  background-color: var(--bg);
 }
 
 ul {
@@ -14,17 +15,26 @@ ul {
 
 a {
   color: #000;
+  text-decoration: none;
 }
 
 .logo {
   padding-left: 5px;
 }
 
-summary {
-  cursor: pointer;
-  /* width: max-content; */
+.h1 {
+  text-align: center;
 }
 
+.h2{
+  text-align: center;
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* odstranění pojebaný šipky u dropdown věcí */
 details>summary:first-of-type {
   list-style-type: none;
 }
@@ -45,6 +55,8 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
+/* classy pro obecný vypínání/zapínání něčeho 
+mezi desktopem a mobilem */
 .active-mobile {
   display: block;
 }
@@ -63,6 +75,58 @@ details>summary::-webkit-details-marker {
   }
 }
 
+/* * loginpage */
+
+.login-text {
+  margin-bottom: 10rem;
+  font-size: 16px;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+
+  background-image: url(../img/login-bg.jpg);
+  background-size: cover;
+}
+
+.bg-line {
+  background-color: rgb(0, 119, 132, .7);
+}
+
+.login-text-container {
+  background-color: rgb(0, 119, 132, .7);
+}
+
+.login-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 56px;
+}
+
+.login-text {
+  margin-bottom: 4rem;
+  font-size: 24px;
+}
+
+.login-btn {
+  font-size: 18px;
+  color: #fff;
+  padding: 4px 15px 3px 20px;
+  margin-top: 50px;
+  border: 1px solid #fff;
+}
+
+.login-text-min {
+  margin-bottom: 1rem;
+}
+
+.login-text {
+  margin-bottom: 10rem;
+  font-size: 18px;
+}
 
 /* * navigace s ikonkama */
 .main-nav {
@@ -70,10 +134,6 @@ details>summary::-webkit-details-marker {
   padding-top: .35rem;
   padding-bottom: .2rem;
   border-bottom: var(--lightBorder);
-}
-
-.h1 {
-  text-align: center;
 }
 
 .nav-kategorie-layout .nav-ul,
@@ -215,6 +275,10 @@ details>summary::-webkit-details-marker {
   padding: 10px 0px;
 }
 
+.main-footer-layout{
+  border-top: var(--lightBorder);
+}
+
 .logout-btn {
   display: inline-block;
   border: var(--btnBorder);
@@ -227,6 +291,14 @@ details>summary::-webkit-details-marker {
     margin-bottom: 0px;
     padding: 5px 60px;
   }
+
+  .footer-text{
+    padding-left: 10px;
+  }
+
+  .logout-btn-container-layout{
+    padding-right: 10px;
+  }
 }
 
 
@@ -234,6 +306,10 @@ details>summary::-webkit-details-marker {
 
 .product-image {
   position: relative;
+}
+
+.product-item{
+  background-color: #fff;
 }
 
 .product-item:hover{
@@ -287,8 +363,6 @@ details>summary::-webkit-details-marker {
   }
 }
 
-
-
 .pridat-do-kosiku-btn {
   display: inline-block;
   text-align: center;
@@ -308,81 +382,51 @@ details>summary::-webkit-details-marker {
   }
 }
 
-
-/* .heart-checkbox input[type=checkbox] {
-  opacity: 0;
-  width: 21px;
-  height: 21px;
+/* ? detail-produktu */
+.predmet-info-layout{
+  margin-top: 45px;
+}
+.predmet-detil-img img,
+.calendar img{
+  width: 100%;
+}
+.predmet-detail-texty{
+  padding: 0px 10px;
+}
+.predmet-detail-texty .h2{
+  text-align: start;
+  padding: 20px 0px;
+}
+.pocet-kusu-border-btn{
+  height: 20px;
+  width: 120px;
+  text-align: center;
+  border: var(--basicBorder);
+  padding: 10px 0px 4px 0px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.pocet-kusu-border-btn .icon{
+  padding: 0px 20px;
+  cursor: pointer;
 }
 
-.heart-checkbox input[type=checkbox] ~ .checkmark {
-  position: absolute;
-  left: 3.5px;
-  top: 3.5px;
-  right: 3.5px;
-  bottom: 3.5px;
+.predmet-detail-kosik-btn a{
+  color: #fff;
+}
+.predmet-detail-kosik-btn .icon-cart-white-min{
+  padding-right: 10px;
+}
 
+.predmet-detail-kosik-btn{
   display: inline-block;
-  cursor: pointer;
+  text-align: center;
+  /* width: 80%; */
+  padding: 8px 0px 7px 0px;
+  background-color: var(--blue);
 }
 
-.heart-checkbox input[type=checkbox] ~ .checkmark {
-  width: 21px;
-  height: 21px;
+.detail-predmetu-layout .h2{
+  margin-top: 45px;
+  margin-bottom: 10px;
 }
-
-.heart-checkbox input[type=checkbox] ~ .checked {
-  display: none;
-}
-
-.heart-checkbox input[type=checkbox]:checked ~ .checked {
-  display: block;
-}
-
-.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
-  display: none;
-} */
-
-/* .product-image{
-  position: relative;
-}
-
-.heart-checkbox{
-  position: absolute;
-}
-
-.heart-input .icon-heart-border-blue{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.heart-input:checked + .icon-heart-border-blue-checked{
-  background-image: url(../icon/heart-fill-blue.svg);
-  background-repeat: no-repeat;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  opacity: 1;
-}
-
-.heart-input:checked + .icon-heart-border-blue{
-  opacity: 0;
-}
-
-.heart-input{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  z-index: 9999999;
-  opacity: 0;
-  cursor: pointer;
-} */

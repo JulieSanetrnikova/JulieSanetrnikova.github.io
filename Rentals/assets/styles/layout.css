@@ -8,7 +8,78 @@ body {
     margin: auto;
 }
 
+/* * login */
 
+.login-container-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.login-text-container-layout {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.bg-line {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .bg-line {
+        display: grid;
+    }
+
+    .login-container-layout {
+        display: grid;
+        grid-template-columns: 1fr 10px 20px 3fr 20px 10px 1fr;
+        grid-template-rows: 1fr 10px 20px 4fr 20px 10px 1fr;
+    }
+
+    .login-text-container-layout {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+    }
+
+    .bg-line-1 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 7;
+    }
+
+    .bg-line-2 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .bg-line-3 {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 7;
+    }
+
+    .bg-line-4 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+}
 
 /* * navigace s ikonkama - zákazník */
 
@@ -34,6 +105,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
+
 .nav-menu-layout .nav-ul-admin {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -81,6 +153,7 @@ body {
     .nav-menu-layout .nav-ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     .nav-menu-layout .nav-ul-admin {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
@@ -132,7 +205,8 @@ body {
         grid-column-start: 2;
         grid-template-rows: repeat(2, 50px);
     }
-    .main-container-layout .main-nav-admin-desktop-layout{
+
+    .main-container-layout .main-nav-admin-desktop-layout {
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 9fr;
@@ -181,94 +255,98 @@ body {
 }
 
 /* ? footer */
-.main-footer-layout{
-    /* position: absolute;
-    left: 0;
-    bottom: 0; */
+.main-footer-layout {
     width: 100%;
-    /* min-height: 30px; */
-    
-    display: grid;
-    grid-template-columns: 1fr 90% 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 90% 1fr; */
     align-items: center;
 }
 
-.main-footer-container-layout{
+.main-footer-container-layout {
     width: 100%;
     display: grid;
     grid-column-start: 2;
 }
-.logout-btn-container-layout{
+
+.logout-btn-container-layout {
     display: grid;
     grid-row-start: 1;
     justify-items: center;
 }
-.footer-text{
+
+.footer-text {
     display: grid;
     grid-row-start: 2;
     justify-items: center;
 }
 
 @media only screen and (min-width: 768px) {
-    .main-footer-container-layout{
+    .main-footer-container-layout {
         grid-template-columns: repeat(2, 1fr);
     }
-    .logout-btn-container-layout{
+
+    .logout-btn-container-layout {
         justify-items: end;
         align-items: center;
     }
-    .footer-text{
+
+    .footer-text {
         grid-row-start: 1;
         align-items: center;
-    justify-items: start;
+        justify-items: start;
     }
 }
 
 @media only screen and (min-width: 1333px) {
-.main-footer-layout{
-    grid-template-columns: 1fr 1200px 1fr;
-}
+    .main-footer-layout {
+        grid-template-columns: 1fr 1200px 1fr;
+    }
 }
 
 /* ? obecný layout stránky  */
-.main-container-layout{
+.main-container-layout {
     display: grid;
     grid-template-rows: auto auto auto;
     row-gap: 30px;
     min-height: 100vh;
 }
-.main-header-layout{
-   margin-top: 70px;
+
+.main-header-layout {
+    margin-top: 70px;
 }
 
 
 /* !! layout hlavní stránky s produktama */
-.container-list-product-layout{
+.container-list-product-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 6px;
     row-gap: 24px;
 }
+
 @media only screen and (min-width: 520px) {
+
     /* možná už je udělat vyšší */
-    .container-list-product-layout{
+    .container-list-product-layout {
         column-gap: 24px;
         row-gap: 32px;
     }
 }
 
 
-.product-item{
+.product-item {
     background-color: #fff;
     /* height: 290px; */
 }
-.product-image{
+
+.product-image {
     /* height: 180px; */
     display: grid;
     align-items: center;
     overflow-x: hidden;
 }
-.img-nahled-product{
+
+.img-nahled-product {
     display: grid;
     width: 120%;
     height: 60%;
@@ -279,130 +357,97 @@ body {
 
     align-self: center;
 }
-.odkaz-nahled-img{
+
+.odkaz-nahled-img {
     display: grid;
     /* height: 180px; */
     height: 100%;
 }
-.product-item-layout{
+
+.product-item-layout {
     display: grid;
     grid-template-rows: 180px 1fr auto;
 }
-.product-item{
+
+.product-item {
     position: relative;
 }
 
 @media only screen and (min-width: 410px) {
-    .product-item-layout{
+    .product-item-layout {
         display: grid;
         grid-template-rows: 220px 80px auto;
     }
+
     /* .product-item{
         height: 300px;
     } */
 }
+
 @media only screen and (min-width: 560px) {
-    .product-item-layout{
+    .product-item-layout {
         grid-template-rows: 240px 80px auto;
     }
-    .container-list-product-layout{
+
+    .container-list-product-layout {
         padding: 0px 30px;
     }
 }
+
 @media only screen and (min-width: 650px) {
-    .container-list-product-layout{
+    .container-list-product-layout {
         padding: 0px 50px;
     }
 }
+
 /* rozměry 720-920 nejsou řešeny */
 @media only screen and (min-width: 790px) {
-    .container-list-product-layout{
+    .container-list-product-layout {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 32px;
         row-gap: 46px;
     }
-    .container-list-product-layout{
+
+    .container-list-product-layout {
         padding: 0px 0px;
     }
 }
+
 @media only screen and (min-width: 1024px) {
-    .container-list-product-layout{
+    .container-list-product-layout {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 24px;
         row-gap: 32px;
     }
 }
+
 @media only screen and (min-width: 1333px) {
-    .container-list-product-layout{
+    .container-list-product-layout {
         column-gap: 35px;
         row-gap: 50px;
-
         padding: 0px 80px;
     }
 }
 
-
-/* * login */
-
-.login-container-layout {
+/* detail předmětu */
+.kosik-like-btn-layout{
     display: grid;
-    grid-template-columns: 1fr 10px 20px 3fr 20px 10px 1fr;
-    grid-template-rows: 1fr 10px 20px 4fr 20px 10px 1fr;
-}
+    grid-template-columns: 6fr 1fr;
+    column-gap: 10px;
 
-.login-text-container-layout {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
+  }
+  .kosik-like-btn-layout .like-btn{
+      display: grid;
+  }
+  .kosik-like-btn-layout .icon-heart-border-blue{
+      align-self: center;
+      justify-self: center;
+  }
 
-    height: 100%;
-    display: grid;
-    align-items: center;
-}
+  .predmet-detail-prislusenstvi-swipe-layout{
+      display: grid;
+      grid-template-columns: 1fr 180px 1fr;
+      justify-items: center;
+      align-items: center;
+  }
 
-.bg-line-1 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 7;
-}
-
-.bg-line-2 {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.bg-line-3 {
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 7;
-}
-
-.bg-line-4 {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-@media only screen and (max-width: 600px) {
-    .login-container-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .login-text-container-layout {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .bg-line {
-        display: none;
-    }
-}

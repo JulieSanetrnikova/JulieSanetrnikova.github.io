@@ -8,6 +8,7 @@
 
   --lightBorder: 1px solid rgba(0, 0, 0, 0.3);
   --btnBorder: 2px solid #007784;
+  --basicBorder: 1px solid #000;
   --boxShadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
   --boxShadowLight: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
@@ -64,6 +65,17 @@ html * {
   line-height: 1;
 }
 .product-text{
+  font-size: var(--smallFontSize);
+}
+
+.predmet-detail-dd{
+  font-weight: var(--bold);
+  padding-bottom: 10px;
+}
+.pocet-kusu-border-btn{
+  font-size: var(--baseFontSize);
+}
+.predmet-detail-kosik-btn{
   font-size: var(--smallFontSize);
 }
 
