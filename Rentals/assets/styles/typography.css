@@ -9,6 +9,7 @@
   --lightBorder: 1px solid rgba(0, 0, 0, 0.3);
   --btnBorder: 2px solid #007784;
   --boxShadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+  --boxShadowLight: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
   --baseFontSize: 1rem;
   --smallFontSize: 0.8rem;
@@ -60,6 +61,7 @@ html * {
 .product-title a{
   font-size: var(--baseFontSize);
   font-weight: var(--semibold);
+  line-height: 1;
 }
 .product-text{
   font-size: var(--smallFontSize);

@@ -235,6 +235,7 @@ body {
     display: grid;
     grid-template-rows: auto auto auto;
     row-gap: 30px;
+    min-height: 100vh;
 }
 .main-header-layout{
    margin-top: 70px;
@@ -246,7 +247,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 6px;
-    row-gap: 12px;
+    row-gap: 24px;
 }
 @media only screen and (min-width: 520px) {
     /* možná už je udělat vyšší */
@@ -256,8 +257,10 @@ body {
     }
 }
 
+
 .product-item{
     background-color: #fff;
+    /* height: 290px; */
 }
 .product-image{
     /* height: 180px; */
@@ -294,7 +297,50 @@ body {
         display: grid;
         grid-template-rows: 220px 80px auto;
     }
+    .product-item{
+        /* height: 300px; */
+    }
 }
+@media only screen and (min-width: 560px) {
+    .product-item-layout{
+        grid-template-rows: 240px 80px auto;
+    }
+    .container-list-product-layout{
+        padding: 0px 30px;
+    }
+}
+@media only screen and (min-width: 650px) {
+    .container-list-product-layout{
+        padding: 0px 50px;
+    }
+}
+/* rozměry 720-920 nejsou řešeny */
+@media only screen and (min-width: 790px) {
+    .container-list-product-layout{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+        row-gap: 46px;
+    }
+    .container-list-product-layout{
+        padding: 0px 0px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container-list-product-layout{
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 24px;
+        row-gap: 32px;
+    }
+}
+@media only screen and (min-width: 1333px) {
+    .container-list-product-layout{
+        column-gap: 35px;
+        row-gap: 50px;
+
+        padding: 0px 80px;
+    }
+}
+
 
 /* * login */
 
