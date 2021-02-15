@@ -277,6 +277,10 @@ mezi desktopem a mobilem */
 
 .main-footer-layout {
   border-top: var(--lightBorder);
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%); */
 }
 
 .logout-btn {
@@ -330,21 +334,21 @@ mezi desktopem a mobilem */
   }
 }
 
-.heart-checkbox input[type="checkbox"],
-.heart-checkbox .checked {
+input[type="checkbox"],
+.checked {
   display: none;
 }
 
-.heart-checkbox input[type="checkbox"],
-.heart-checkbox .checked {
+input[type="checkbox"],
+.checked {
   display: none;
 }
 
-.heart-checkbox input[type="checkbox"]:checked~.checked {
+input[type="checkbox"]:checked~.checked {
   display: inline-block;
 }
 
-.heart-checkbox input[type="checkbox"]:checked~.unchecked {
+input[type="checkbox"]:checked~.unchecked {
   display: none;
 }
 
@@ -445,19 +449,242 @@ mezi desktopem a mobilem */
   .predmet-info-layout {
     padding-top: 20px;
   }
+
   .detail-predmetu-layout .h2 {
     margin-top: 45px;
     margin-bottom: 15px;
   }
+
   .predmet-detail-texty .h2 {
     margin-top: 0px;
     margin-bottom: 10px;
   }
+
   .calendar img {
     width: calc(46rem + 30px);
-}
-.predmet-detail-texty{
-  max-width: 23rem;
+  }
+
+  .predmet-detail-texty {
+    max-width: 23rem;
+  }
 }
 
+
+/* ! obsah košíku */
+.kosik-item-layout {
+  border-top: var(--lightBorder);
+  padding: 10px 0;
+}
+
+.kosik-item-layout:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.kosik-mnozstvi {
+  padding-top: 5px;
+}
+
+.kosik-minus-icon {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.kosik-plus-icon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.kosik-img-container {
+  height: 65px;
+  background-color: #fff;
+}
+
+.kosik-nahled-img {
+  width: 100%;
+}
+
+.calendar,
+.datetime-picker,
+.poznamka,
+.ulozit-btn {
+  margin-top: 10px;
+  height: min-content;
+}
+
+.datetime-picker,
+.poznamka {
+  padding: 7px 10px 3px 10px;
+}
+
+.datetime-picker-true {
+  border: var(--greenBorder);
+}
+
+.datetime-picker:focus {
+  outline: none;
+}
+
+/* .datetime-picker-false{
+  border: var(--redBorder);
+} */
+.poznamka {
+  border: var(--lightBorder);
+  resize: none;
+}
+
+.poznamka:focus {
+  border: var(--basicBorder);
+  outline: none;
+}
+
+.ulozit-btn {
+  background-color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.ulozit-btn-odkaz {
+  padding: 12px 50px 6px 50px;
+  color: #fff;
+  display: block;
+}
+
+@media only screen and (min-width: 420px) {
+  .ulozit-btn-odkaz {
+    padding: 16px 60px 12px 60px;
+  }
+}
+
+@media only screen and (min-width: 440px) {
+  .kosik-texty-layout {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .kosik-img-container {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .kosik-specifikace-produktu {
+    padding-top: 5px;
+  }
+
+  .kosik-mnozstvi {
+    padding-top: 0px;
+  }
+}
+
+/* ? Profil */
+
+.header-logout {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.profil-order-nav {
+  padding-bottom: 10px;
+  opacity: .5;
+}
+
+.profil-h1 {
+  padding-bottom: 10px;
+}
+
+.order-item {
+  padding: 0 20px;
+}
+
+.vypujcka-jmeno,
+.vypujcka-datum,
+.vypujcka-stav {
+  padding-left: 5px;
+}
+
+.vypujcka-datum {
+  padding-top: 2px;
+}
+
+/* .vypujcka-stav {
+  padding-top: 7px;
+} */
+
+.vypujcka-item {
+  padding: 10px 0px;
+  border-top: var(--lightBorder);
+}
+
+.vypujcka-item:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.vypujcka-item:nth-child(even) {
+  background-color: #fff;
+}
+
+.detail-vypujcky-item,
+.vypujcka-item-poznamka {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.detail-vypujcky-specifikace {
+  padding-top: 5px;
+}
+
+.vypujcka-container-icon-mobile{
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 460px) {
+
+  .vypujcka-jmeno,
+  .vypujcka-datum,
+  .detail-vypujcky-texty,
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-left: 10px;
+  }
+
+  .vypujcka-item {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+
+  .vypujcka-jmeno,
+  .vypujcka-datum,
+  .detail-vypujcky-texty,
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-left: 20px;
+  }
+
+  .vypujcka-datum {
+    padding-top: 5px;
+  }
+
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
+
+.icon-active-desktop{
+  display: none;
+}
+.icon-active-mobile{
+  display: block;
+}
+@media only screen and (min-width: 560px) {
+  .icon-active-desktop{
+    display: block;
+  }
+  .icon-active-mobile{
+    display: none;
+  }
 }

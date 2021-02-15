@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -89,18 +91,18 @@
             </nav>
         </div>
 
-        <header>
-            <h1>Moje výpůjčky</h1>
-            <a class="logout" href="../zakaznik/login.html">Odhlásit se</a>
+        <header class="main-header-layout profil-header">
+            <h1 class="h1 profil-h1">Moje výpůjčky</h1>
+            <a class="header-logout" href="../zakaznik/login.html">Odhlásit se</a>
         </header>
 
-        <main>
-            <nav>
-                <a href="#" class="order uppercase">Jméno<span class="icon-order icon"></span></a>
-                <a href="#" class="order uppercase">Datum<span class="icon-order icon"></span></a>
-                <a href="#" class="order uppercase">Stav<span class="icon-order icon"></span></a>
-            </nav>
+        <main class="main-profil-layout">
             <div class="vypujcky-seznam-layout vypujcky-seznam">
+                <nav class="profil-order-nav">
+                    <a href="#" class="order-item uppercase">Jméno<span class="icon-order icon"></span></a>
+                    <a href="#" class="order-item uppercase">Datum<span class="icon-order icon"></span></a>
+                    <a href="#" class="order-item uppercase">Stav<span class="icon-order icon"></span></a>
+                </nav>
 
                 <!-- <div class="vypujcka-item-layout">
                     <p class="vypujcka-jmeno"><a href="../admin/zakaznik-detail.html">Novák František</a></p>
@@ -127,33 +129,173 @@
                 </div> -->
 
                 <div class="vypujcka-item-layout vypujcka-item">
-                    <div class="vypujcka-item-info-layout vypujcka-item-info">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
+                        <p class="vypujcka-jmeno">Novák František</p>
+                        <p class="vypujcka-datum">1. 3. (10:00) - 5. 3. (13:00)</p>
+                        <p class="vypujcka-stav stav-budouci uppercase">Budoucí</p>
+                        <div class="vypujcka-container-icon">
+                            <a class="icon-active-desktop" href="../../zakaznik/kosik-uprava.html"><span
+                                    class="icon-edit-pen"></span></a>
+                            <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
+                            <label class="plus-detail-checkbox">
+                                <input type="checkbox" onclick="hideShow()"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
+                        <div class="vypujcka-container-icon-mobile">
+                            <a class="icon-active-mobile icon-active-mobile-pen" href="../../zakaznik/kosik-uprava.html"><span
+                                    class="icon-edit-pen"></span></a>
+                            <a class="icon-active-mobile" href="#"><span class="icon-delete"></span></a>
+                        </div>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Videokamera
+                                        Panasonic
+                                        HC-X920</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 
+                <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
+                        <p class="vypujcka-jmeno">Novák František</p>
+                        <p class="vypujcka-datum">15. 2. (13:30) - 20. 3. (14:30)</p>
+                        <p class="vypujcka-stav stav-nevraceno uppercase">Nevráceno</p>
+                        <div class="vypujcka-container-icon">
+                            <label class="plus-detail-checkbox">
+                                <input type="checkbox" onclick="hideShow()"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Videokamera
+                                        Panasonic
+                                        HC-X920</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
+                        <p class="vypujcka-jmeno">Novák František</p>
+                        <p class="vypujcka-datum">15. 2. (13:30) - 20. 3. (14:30)</p>
+                        <p class="vypujcka-stav stav-vraceno uppercase">Vráceno</p>
+                        <div class="vypujcka-container-icon">
+                            <label class="plus-detail-checkbox">
+                                <input type="checkbox" onclick="hideShow()"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Videokamera
+                                        Panasonic
+                                        HC-X920</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
+                </div> -->
+
+                <!-- <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
                         <p class="vypujcka-jmeno">Novák František</p>
                         <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
                         <p class="vypujcka-stav budouci uppercase">Budoucí</p>
-                        <details class="detail-vypujcky-layout detail-vypujcky">
-                            <summary><span class="icon-plus"></span></summary>
-                            <div class="detail-vypujcky-item">
-                                <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                                <div class="kosik-texty">
-                                    <p class="kosik-nazev-produktu"><a href="./predmet-detail.html">Objektiv
-                                            SIGMA
-                                            17-50
-                                            mm 1:2.8</a></p>
-                                    <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
-                                    <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                                    <p class="kosik-pocet-kusu">1</p>
-                                    <dl>
-                                        <dt>Poznámka:</dt>
-                                        <dd class="poznamka">Poznámka k dané výpůjčce...</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </details>
-                        <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                        <a href="#"><span class="icon-delete"></span></a>
+                        <div class="vypujcka-container-icon">
+                            <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
+                            <a href="#"><span class="icon-delete"></span></a>
+                            <label id="toggle" class="plus-detail-checkbox">
+                                <input type="checkbox" onclick="hideShow()"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
                     </div>
-                </div>
+                    <div id="content" class="detail-vypujcky-layout detail-vypujcky">
+                        <div class="detail-vypujcky-item">
+                            <img src="../../assets/img/flycam_fd0f.jpg" alt="">
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
+                </div> -->
+
 
             </div>
 
@@ -171,6 +313,23 @@
         </footer>
     </div>
 
+    <!-- <script>
+        $("#toggle").on("click", function () {
+            $("#content").toggle();              
+        });
+    </script> -->
+
+
+    <script>
+        function hideShow() {
+            var x = document.getElementById("detailVypujcky");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>

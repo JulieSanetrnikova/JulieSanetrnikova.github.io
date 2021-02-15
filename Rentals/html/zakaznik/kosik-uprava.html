@@ -93,45 +93,79 @@
             </nav>
         </div>
 
-        <header>
-            <h1 class="h1">Úprava košíku</h1>
+        <header class="main-header-layout">
+            <h1 class="h1">Upravit obsah košíku</h1>
         </header>
 
-        <main>
+        <main class="main-kosik-layout">
             <div class="obsah-kosiku-layout">
 
                 <div class="kosik-item-layout">
-                    <img src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                    <div class="kosik-texty">
+                    <div class="kosik-img-container">
+                        <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                    </div>
+                    <div class="kosik-texty-layout">
                         <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Objektiv SIGMA 17-50
                                 mm 1:2.8</a></p>
                         <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                        <p class="kosik-pocet-kusu">1</p>
+                        <div class="kosik-mnozstvi">
+                            <span class="icon-minus-min icon kosik-minus-icon"></span> 1 <span
+                                class="icon-plus-min icon kosik-plus-icon"></span>
+                        </div>
                     </div>
-                    <div class="kosik-mnozstvi"><span class="icon-minus-min icon"></span> 1 <span
-                            class="icon-plus-min icon"></span></div>
-                    <a href="#"><span class="icon-delete"></span></a>
+                    <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
                 </div>
 
+                <div class="kosik-item-layout">
+                    <div class="kosik-img-container">
+                        <img class="kosik-nahled-img" src="../../assets/img/crane3Lab_1685.jpg" alt="">
+                    </div>
+                    <div class="kosik-texty-layout">
+                        <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Zhiyun Crane 3 LAB</a>
+                        </p>
+                        <p class="kosik-specifikace-produktu uppercase"></p>
+                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon"></span> 1 <span
+                                class="icon-plus-min icon kosik-plus-icon"></span></div>
+                    </div>
+                    <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
+                </div>
+
+                <div class="kosik-item-layout">
+                    <div class="kosik-img-container">
+                        <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
+                    </div>
+                    <div class="kosik-texty-layout">
+                        <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Videokamera Panasonic
+                                HC-X920</a></p>
+                        <p class="kosik-specifikace-produktu uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)</p>
+                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon"></span> 2 <span
+                                class="icon-plus-min icon kosik-plus-icon"></span></div>
+                    </div>
+                    <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
+                </div>
             </div>
 
             <div class="datepicker-layout">
                 <label class="h2">Začátek a konec výpůjčky</label>
-                <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                <input class="datetime-picker datetime-picker-true datetime-picker-false" type="text" name="datetimes"
+                    value="01/01/2018 - 01/15/2018" />
             </div>
 
             <details class="kalendar-layout">
-                <summary>Zkontrolovat dostupnost předmětů</summary>
-                <div class="calendar" id="calendar"></div>
+                <summary class="h2">Zobrazit dostupnost předmětů </br> <span class="icon-plus-min"></span></summary>
+                <div class="calendar" id="calendar">
+                    <img src="../../assets/img/calendar.jpg" alt="">
+                </div>
             </details>
 
             <div class="poznamka-layout">
                 <label class="h2" for="poznamka">Přidat poznámku</label>
-                <textarea class="poznamka" id="poznamka"></textarea>
+                <textarea class="poznamka" id="poznamka" placeholder="Vaše poznámka..."></textarea>
             </div>
+            <div class="ulozit-btn">
+                <a class="ulozit-btn-odkaz uppercase" href="../zakaznik/profil.html">Uložit</a>
 
-            <a href="../zakaznik/profil.html" class="ulozit-btn">Uložit</a>
-
+            </div>
         </main>
 
         <footer class="main-footer-layout main-footer">
@@ -148,10 +182,13 @@
 
     <script>
         $(function () {
-            $('input[name="daterange"]').daterangepicker({
-                opens: 'left'
-            }, function (start, end, label) {
-                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'DD/M hh:mm'
+                }
             });
         });
     </script>

@@ -4,11 +4,14 @@
   --red: #d05555;
   --green: #00ae7c;
   --yellow: #d0b055;
-  --blue-classic: #5586d0;
+  --blueClassic: #5586d0;
 
   --lightBorder: 1px solid rgba(0, 0, 0, 0.3);
   --btnBorder: 2px solid #007784;
   --basicBorder: 1px solid #000;
+  --boldBorder: 2px solid #000;
+  --greenBorder: 2px solid #00ae7c;
+  --redBorder: 2px solid #d05555;
   --boxShadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
   --boxShadowLight: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
@@ -21,6 +24,7 @@
 
   --semibold: 400;
   --bold: 500;
+  --xtrabold: 600;
 }
 
 html * {
@@ -82,6 +86,63 @@ html * {
   font-weight: var(--bold);
 }
 
+.kosik-nazev-produktu a{
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.kosik-specifikace-produktu{
+  font-size: var(--smallFontSize);
+  opacity: .7;
+}
+
+.vypujcka-jmeno{
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.detail-vypujcky-nazev-produktu a{
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+}
+
+.detail-vypujcky-specifikace{
+  font-size: var(--smallFontSize);
+  opacity: .7;
+}
+
+.vypujcka-stav{
+  font-size: var(--baseFontSize);
+  font-weight: var(--xtrabold);
+}
+
+.stav-budouci{
+  color: var(--blueClassic);
+}
+
+.stav-nevraceno{
+  color: var(--red);
+}
+
+.stav-nevypujceno{
+  color: var(--yellow);
+}
+
+.stav-vypujceno{
+  color: var(--blue);
+}
+
+.stav-vraceno{
+  color: var(--green);
+}
+
+.poznamka-dt{
+  /* color: var(--blue); */
+  font-weight: var(--bold);
+}
+
 @media only screen and (min-width: 768px) {
   html *{
   font-size: 16px;
@@ -127,6 +188,7 @@ html * {
 
 .icon-plus::before {
   content: url(../icon/plus.svg);
+  cursor: pointer;
 }
 
 .icon-plus-min::before {
@@ -135,6 +197,7 @@ html * {
 
 .icon-minus::before {
   content: url(../icon/minus.svg);
+  cursor: pointer;
 }
 
 .icon-minus-min::before {

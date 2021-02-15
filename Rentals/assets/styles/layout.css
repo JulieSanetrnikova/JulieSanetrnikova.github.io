@@ -258,8 +258,11 @@ body {
 .main-footer-layout {
     width: 100%;
     /* display: grid; */
-    /* grid-template-columns: 1fr 90% 1fr; */
-    align-items: center;
+    /* position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center; */
 }
 
 .main-footer-container-layout {
@@ -281,6 +284,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+
     .main-footer-container-layout {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -292,6 +296,7 @@ body {
 
     .footer-text {
         grid-row-start: 1;
+        grid-column-start: 1;
         align-items: center;
         justify-items: start;
     }
@@ -306,7 +311,7 @@ body {
 /* ? obecný layout stránky  */
 .main-container-layout {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: min-content auto min-content;
     row-gap: 30px;
     min-height: 100vh;
 }
@@ -351,9 +356,8 @@ body {
     width: 120%;
     height: 60%;
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 20%;
+    object-fit: contain;
+    object-position: 20%;
 
     align-self: center;
 }
@@ -470,14 +474,17 @@ body {
         grid-template-columns: 1fr repeat(3, 230px) 1fr;
         column-gap: 30px;
     }
-    .predmet-detail-prislusenstvi-swipe-layout .product-item-layout{
+
+    .predmet-detail-prislusenstvi-swipe-layout .product-item-layout {
         width: 100%;
     }
-    .predmet-detail-prislusenstvi-swipe-layout .arrow-left{
+
+    .predmet-detail-prislusenstvi-swipe-layout .arrow-left {
         display: grid;
         justify-self: end;
     }
-    .predmet-detail-prislusenstvi-swipe-layout .arrow-right{
+
+    .predmet-detail-prislusenstvi-swipe-layout .arrow-right {
         display: grid;
         justify-self: start;
     }
@@ -508,7 +515,7 @@ body {
         column-gap: 10px;
     }
 
-    .detail-predmetu-layout{
+    .detail-predmetu-layout {
         display: grid;
 
     }
@@ -522,7 +529,228 @@ body {
         justify-items: center;
     }
 
-    .detail-predmetu-layout .product-item-layout{
+    .detail-predmetu-layout .product-item-layout {
         display: grid;
     }
 }
+
+/* * obsah košíku */
+.main-kosik-layout {
+    display: grid;
+    justify-items: center;
+    row-gap: 30px;
+    /* min-height: 100vh; */
+}
+
+.kosik-img-container {
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    width: 80px;
+}
+
+.obsah-kosiku-layout {
+    display: grid;
+    width: 100%;
+}
+
+.kosik-item-layout {
+    display: grid;
+    grid-template-columns: auto 5fr 1fr;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.kosik-delete-item {
+    text-align: center;
+}
+
+.datepicker-layout,
+.kalendar-layout,
+.poznamka-layout {
+    display: grid;
+    justify-items: center;
+}
+
+@media only screen and (min-width: 680px) {
+    .kosik-img-container {
+        margin-left: 20px;
+    }
+
+    .kosik-texty-layout {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+
+    .kosik-nazev-produktu,
+    .kosik-specifikace-produktu {
+        grid-column-start: 1;
+    }
+
+    .kosik-mnozstvi{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .obsah-kosiku-layout{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1333px) {
+    .obsah-kosiku-layout{
+        width: 70%;
+    }
+}
+
+
+/* ? Profil */
+
+.profil-header{
+   text-align: center;
+}
+
+.vypujcka-item-main-layout{
+    display: grid;
+    grid-template-columns: max-content 3fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 10px;
+}
+
+.vypujcka-jmeno,
+.vypujcka-datum{
+    grid-column-start: 1;
+}
+
+.vypujcka-container-icon{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+}
+
+.vypujcka-stav{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.vypujcka-container-icon-mobile{
+    display: grid;
+    /* grid-template-columns: 2fr 1fr 1fr 2fr; */
+    grid-template-columns: 1fr 1fr 4fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon-active-mobile-pen{
+    grid-column-start: 1;
+}
+
+.vypujcka-container-icon{
+    /* grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 4; */
+
+    display: grid;
+    /* justify-content: space-around; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: 1fr; */
+    align-items: center;
+    justify-items: center;
+}
+
+/* .plus-detail-checkbox{
+    grid-column-end: 4;
+} */
+
+detail-vypujcky-container-layout{
+    display: grid;
+}
+
+.detail-vypujcky-item{
+    display: grid;
+    grid-column-start: 1;
+
+    grid-template-columns: min-content auto;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.detail-vypujcky-texty{
+    display: grid;
+}
+
+.vypujcka-item-poznamka{
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 5px;
+}
+
+@media only screen and (min-width: 460px) {
+    .vypujcka-item-main-layout{
+        grid-template-columns: max-content min-content auto;
+        grid-template-rows: repeat(2, min-content);
+    }
+
+    .vypujcka-stav{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        align-self: center;
+        justify-self: center;
+    }
+    .vypujcka-container-icon{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+@media only screen and (min-width: 560px) {
+    .vypujcka-item-main-layout{
+        grid-template-columns: max-content auto auto;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .profil-header{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+    
+    .profil-h1{
+        grid-column-start: 2;
+    }
+
+    .header-logout{
+        justify-self: start;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .vypujcka-item-main-layout{
+        grid-template-columns: max-content 2fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .vypujcka-item-main-layout{
+        grid-template-columns: max-content 3fr 1fr;
+    }
+
+    .vypujcky-seznam-layout{
+        width: 80%;
+        margin: auto;
+    }
+}
+
