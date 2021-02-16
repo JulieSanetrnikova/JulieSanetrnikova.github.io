@@ -142,10 +142,9 @@
                 </nav>
             </nav>
         </div>
-        
-        <header>
-            <h1>Správci</h1>
-            <a href="../admin/nova-pozvanka.html">Vytvořit novou pozvánku</a>
+
+        <header class="main-header-layout main-header-layout-admin">
+            <h1 class="h1">Správci</h1>
         </header>
 
         <main>
@@ -153,20 +152,100 @@
             <div class="spravci-layout">
 
                 <div class="spravci-item-layout spravci-item">
-                    <p><a href="../admin/zakaznik-detail.html">Novák František</a></p>
-                    <p><a href="#">frantisek.novak@pslib.cz</a></p>
-                    <p>Správce <a href="#"><span class="icon-delete"></span></a></p>
-                    <p>Admin <a href="#"><span class="icon-delete"></span></a></p>
-                    <p>Zákazník <a href="#"><span class="icon-delete"></span></a></p>
+                    <p class="spravci-jmeno"><a class="spravci-jmeno" href="../admin/zakaznik-detail.html">Novák
+                            František</a></p>
+                    <p class="spravci-mail"><a class="spravci-mail" href="#">frantisek.novak@pslib.cz</a></p>
+                    <div class="spravci-role-container">
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zaměstnanec</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Admin</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zákazník</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="spravci-item-layout spravci-item">
-                    <p><a href="../admin/zakaznik-detail.html">Černý Lukáš</a></p>
-                    <p><a href="#">lukas.cerny@pslib.cz</a></p>
-                    <p>Správce <a href="#"><span class="icon-delete"></span></a></p>
-                    <p>Zákazník <a href="#"><span class="icon-delete"></span></a></p>
+                    <p class="spravci-jmeno"><a class="spravci-jmeno" href="../admin/zakaznik-detail.html">Vlk
+                            Jan</a></p>
+                    <p class="spravci-mail"><a class="spravci-mail" href="#">jan.vlk@pslib.cz</a></p>
+                    <div class="spravci-role-container">
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zaměstnanec</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Admin</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zákazník</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spravci-item-layout spravci-item">
+                    <p class="spravci-jmeno"><a class="spravci-jmeno" href="../admin/zakaznik-detail.html">Černý Lukáš</a></p>
+                    <p class="spravci-mail"><a class="spravci-mail" href="#">lukas.cerny@pslib.cz</a></p>
+                    <div class="spravci-role-container">
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zaměstnanec</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Admin</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="spravci-role">
+                            <p class="spravci-role-hodnota">Zákazník</p>
+                            <label class="toggle">
+                                <input type="checkbox" id="cToggle" />
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+            <h2 class="h2 h2-pozvanka">Pozvánky</h2>
+            <div class="pozvanka-layout">
+                <a class="nova-pozvanka-btn" href="../admin/nova-pozvanka.html">Vytvořit novou pozvánku</a>
+            </div>
+
+
+
+
 
 
             <!-- <table class="table">
@@ -213,6 +292,13 @@
         </footer>
     </div>
 
+    <script>
+        function check() {
+            var checkbox = document.getElementById("cToggle");
+            if (checkbox.checked) { alert("CHECKED"); }
+            else { alert("NOT CHECKED"); }
+        }
+    </script>
 </body>
 
 </html>

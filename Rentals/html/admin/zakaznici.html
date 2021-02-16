@@ -144,41 +144,49 @@
             </nav>
         </div>
         
-        <header>
-            <h1>Zákazníci</h1>
+        <header class="main-header-layout main-header-layout-admin">
+            <h1 class="h1">Zákazníci</h1>
         </header>
 
         <main>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Jméno<span class="icon-order icon"></span></th>
-                        <th>Mail<span class="icon-order icon"></span></th>
-                        <th>Třída<span class="icon-order icon"></span></th>
-                        <th>Výpůjčka<span class="icon-order icon"></span></th>
+            <table class="table table-seznam-zakazniku-layout">
+                <thead class="thead-nav-zakaznici">
+                    <tr class="nav-seznam-zakazniku-layout nav-seznam-zakazniku uppercase">
+                        <th class="thead-th-zakaznik thead-th-zakaznik-jmeno">Jméno<span class="icon-order icon"></span></th>
+                        <th class="thead-th-zakaznik thead-th-zakaznik-mail active-tablet">Mail<span class="icon-order icon"></span></th>
+                        <th class="thead-th-zakaznik">Třída<span class="icon-order icon"></span></th>
+                        <th class="thead-th-zakaznik">Výpůjčka<span class="icon-order icon"></span></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th><a href="../admin/zakaznik-detail.html">Novák František</a></th>
-                        <td>frantisek.novak@pslib.cz</td>
-                        <td>L4</td>
-                        <td>25. 12. 2020</td>
+                <tbody class="seznam-zakazniku">
+                    <tr class="zakaznik-tr">
+                        <th class="th-zakaznik-jmeno-odkaz"><a class="zakaznik-jmeno-odkaz" href="../admin/zakaznik-detail.html">Novák František</a></th>
+                        <td class="td-zakaznik-mail active-tablet">frantisek.novak@pslib.cz</td>
+                        <td class="td-zakaznik-trida">L4</td>
+                        <td class="td-zakaznik-vypujcka-datum">25. 12. 2020</td>
                     </tr>
-                    <tr>
-                        <th><a href="../admin/zakaznik-detail.html">Černý Lukáš</a></th>
-                        <td>lukas.cerny@pslib.cz</td>
-                        <td>P4</td>
-                        <td>20. 11. 2020</td>
+                    <tr class="zakaznik-tr">
+                        <th class="th-zakaznik-jmeno-odkaz"><a class="zakaznik-jmeno-odkaz" href="../admin/zakaznik-detail.html">Černý Lukáš</a></th>
+                        <td class="td-zakaznik-mail active-tablet">lukas.cerny@pslib.cz</td>
+                        <td class="td-zakaznik-trida">P4</td>
+                        <td class="td-zakaznik-vypujcka-datum">20. 11. 2020</td>
                     </tr>
-                    <tr>
-                        <th><a href="../admin/zakaznik-detail.html">Vlk Jan</a></th>
-                        <td>jan.vlk@pslib.cz</td>
-                        <td>S4A</td>
-                        <td>20. 6. 2020</td>
+                    <tr class="zakaznik-tr">
+                        <th class="th-zakaznik-jmeno-odkaz"><a class="zakaznik-jmeno-odkaz" href="../admin/zakaznik-detail.html">Vlk Jan</a></th>
+                        <td class="td-zakaznik-mail active-tablet">jan.vlk@pslib.cz</td>
+                        <td class="td-zakaznik-trida">S4A</td>
+                        <td class="td-zakaznik-vypujcka-datum">20. 6. 2020</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="btn-zobrazit-dalsi-layout">
+                <a class="btn-dalsi" href="#">Zobrazit další</a>
+            </div>
+            <div class="no-active paginace-layout">
+                <div class="paginace-container">
+                    <a class="icon-arrow-left-min pointer" href="#"></a><p>Strana 1 z 8</p><a class="icon-arrow-right-min pointer" href="#"></a>
+                </div>
+            </div>
         </main>
 
         <footer class="main-footer-layout main-footer">
@@ -193,11 +201,11 @@
         </footer>
     </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script> -->
 
-  <script>
+  <!-- <script>
     var table = new simpleDatatables.DataTable("table");
-  </script>
+  </script> -->
 </body>
 
 </html>

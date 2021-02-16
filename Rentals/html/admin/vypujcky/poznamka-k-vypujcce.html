@@ -143,57 +143,89 @@
             </nav>
         </div>
 
-        <header>
-            <h1>Přidat poznámku k výpůjčce</h1>
-            <a href="#" onclick="window.history.back()">Zrušit</a>
+        <header class="main-header-layout main-header-layout-admin profil-header">
+            <h1 class="h1 profil-h1">Přidat poznámku k výpůjčce</h1>
+            <a class="header-logout" href="#" onclick="window.history.back()">Zrušit</a>
         </header>
 
-        <main>
-            <div class="vypujcka-item-layout vypujcka-item">
-                <div class="vypujcka-item-info-layout vypujcka-item-info">
-                    <p class="vypujcka-jmeno"><a href="../../admin/zakaznik-detail.html">Novák František</a>
-                    </p>
-                    <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
-                    <details class="vypujcka-stav budouci uppercase">
-                        <summary>Budoucí</summary>
-                        <ul>
-                            <li class="vypujceno-stav"><a href="#">Vypůjčeno</a></li>
-                            <li class="nevypujceno-stav"><a href="#">Nevypůjčeno</a></li>
-                            <li class="vraceno-stav"><a href="#">Vráceno</a></li>
-                        </ul>
-                    </details>
-                    <details class="detail-vypujcky-layout detail-vypujcky">
-                        <summary><span class="icon-plus"></span></summary>
+        <main class="main-kosik-layout">
+            <div class="vypujcky-seznam-layout vypujcky-seznam">
+
+                <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
+                        <a class="vypujcka-jmeno" href="../../admin/zakaznik-detail.html">Novák František</a>
+                        <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
+                        <details class="vypujcka-stav uppercase">
+                            <summary class="stav-budouci vypujcka-stav">Budoucí</summary>
+                            <ul class="nabidka-stav-vypujcky">
+                                <li class="vypujcka-stav-vyber"><a class="stav-vypujceno" href="#">Vypůjčeno</a></li>
+                                <li class="vypujcka-stav-vyber"><a class="stav-nevypujceno" href="#">Nevypůjčeno</a>
+                                </li>
+                                <li class="vypujcka-stav-vyber"><a class="stav-vraceno" href="#">Vráceno</a></li>
+                            </ul>
+                        </details>
+                        <div class="vypujcka-container-icon-prehled">
+                            <a class="icon-active-desktop" href="#"><span class="icon-notification"></span></a>
+                            <a class="icon-active-desktop" href="../zakaznik/kosik-uprava.html"><span
+                                    class="icon-edit-pen"></span></a>
+                            <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
+                            <label class="plus-detail-checkbox plus-detail-checkbox-prehled">
+                                <input type="checkbox" class="toggle-detail"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
+                        <div class="vypujcka-container-icon-mobile-prehled">
+                            <a class="icon-active-mobile" href="#"><span class="icon-notification"></span></a>
+                            <a class="icon-active-mobile icon-active-mobile-pen-prehled"
+                                href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
+                            <a class="icon-active-mobile" href="#"><span class="icon-delete"></span></a>
+                        </div>
                         <div class="detail-vypujcky-item">
-                            <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                            <div class="kosik-texty">
-                                <p class="kosik-nazev-produktu"><a href="../../zakaznik/predmet-detail.html">Objektiv
-                                        SIGMA
-                                        17-50
-                                        mm 1:2.8</a></p>
-                                <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
-                                <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                                <p class="kosik-pocet-kusu">1</p>
-                                <dl>
-                                    <dt>Poznámka:</dt>
-                                    <dd class="poznamka">Poznámka k dané výpůjčce...</dd>
-                                </dl>
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../../assets/img/Panasonic_HC-X920_7ce7.jpg"
+                                    alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Videokamera
+                                        Panasonic
+                                        HC-X920</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
+                                </p>
                             </div>
                         </div>
-                    </details>
-                    <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                    <a href="#"><span class="icon-delete"></span></a>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../../assets/img/Sigma18-50_f918-min-min.jpg"
+                                    alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
                 </div>
-
             </div>
 
-            <label for="poznamka" class="h2">Přidat poznámku</label>
-            <input id="poznamka" type="text" name="poznamka">
+            <div class="poznamka-layout">
+                <label class="h2" for="poznamka">Přidat poznámku</label>
+                <textarea class="poznamka" id="poznamka" placeholder="Vaše poznámka..."></textarea>
+            </div>
 
-            <a href="#" class="ulozit-btn" onclick="window.history.back()">Uložit</a>
+            <div class="ulozit-btn">
+                <a class="ulozit-btn-odkaz uppercase" href="#" onclick="window.history.back()">Uložit</a>
+            </div>
 
         </main>
-        
+
         <footer class="main-footer-layout main-footer">
             <div class="main-footer-container-layout">
                 <p class="footer-text">© Aplikace pro správu vybavení školního ateliéru</p>

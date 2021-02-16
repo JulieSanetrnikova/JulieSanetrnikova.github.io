@@ -21,6 +21,7 @@
   --heading-1: 1.953rem;
   --heading-2: 1.563rem;
   --heading-3: 1.25rem;
+  --biggerFontSize: 1.125rem;
 
   --semibold: 400;
   --bold: 500;
@@ -33,6 +34,14 @@ html * {
   font-size: 14px;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
+.no-active{
+  display: none !important;
+}
+
 .logo a{
   font-family: "Playfair Display", serif;
   font-size: var(--heading-3);
@@ -41,14 +50,16 @@ html * {
 .h1{
   font-size: var(--heading-1);
 }
-.h2{
+.h2,
+.h2-varianty-predmetu{
   font-size: var(--heading-2);
 }
 .product-title{
   font-size: var(--heading-3);
 }
 .nav-target{
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
+  color: var(--blue);
 }
 .main-nav-admin-container-desktop-layout li a,
 .main-nav-admin-container-desktop-layout summary,
@@ -98,7 +109,7 @@ html * {
 }
 
 .vypujcka-jmeno{
-  font-size: var(--baseFontSize);
+  font-size: var(--biggerFontSize);
   font-weight: var(--bold);
   color: var(--blue);
 }
@@ -141,6 +152,59 @@ html * {
 .poznamka-dt{
   /* color: var(--blue); */
   font-weight: var(--bold);
+}
+
+.h3-nahled-nazev-predmetu{
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.zakaznik-jmeno-odkaz{
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.td-zakaznik-mail,
+.td-zakaznik-trida,
+.td-zakaznik-vypujcka-datum{
+  font-size: var(--baseFontSize);
+}
+
+.dt-zakaznik{
+  font-size: var(--smallFontSize);
+}
+
+.dd-zakaznik{
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+  color: var(--blue);
+}
+
+.dd-zakaznik-jmeno{
+  font-weight: var(--xtrabold);
+}
+
+.spravci-jmeno{
+  font-size: var(--biggerFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.spravci-mail{
+  font-size: var(--baseFontSize);
+}
+
+.spravci-role-hodnota{
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+}
+
+.varianta-predmetu{
+  font-size: var(--biggerFontSize);
+  font-weight: var(--semibold);
+  text-decoration: underline;
+  color: var(--blue);
 }
 
 @media only screen and (min-width: 768px) {
@@ -299,4 +363,12 @@ html * {
 
 .icon-timer-blue::before{
   content: url(../icon/timer-blue.svg);
+}
+
+.icon-arrow-left-min::before{
+  content: url(../icon/arrow-left-min.svg);
+}
+
+.icon-arrow-right-min::before{
+  content: url(../icon/arrow-right-min.svg);
 }

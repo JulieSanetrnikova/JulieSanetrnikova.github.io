@@ -239,6 +239,7 @@ body {
         justify-items: center;
         grid-template-columns: repeat(5, 1fr);
     }
+
 }
 
 @media only screen and (min-width: 1333px) {
@@ -319,6 +320,17 @@ body {
 .main-header-layout {
     margin-top: 70px;
 }
+
+@media only screen and (min-width: 1024px) {
+    .main-header-layout-prehled {
+        margin-top: 120px;
+    }
+
+    .main-header-layout-admin {
+        margin-top: 100px;
+    }
+}
+
 
 
 /* !! layout hlavní stránky s produktama */
@@ -589,7 +601,7 @@ body {
         grid-column-start: 1;
     }
 
-    .kosik-mnozstvi{
+    .kosik-mnozstvi {
         grid-column-start: 2;
         grid-row-start: 1;
         grid-row-end: 3;
@@ -597,13 +609,13 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
-    .obsah-kosiku-layout{
+    .obsah-kosiku-layout {
         width: 80%;
     }
 }
 
 @media only screen and (min-width: 1333px) {
-    .obsah-kosiku-layout{
+    .obsah-kosiku-layout {
         width: 70%;
     }
 }
@@ -611,11 +623,17 @@ body {
 
 /* ? Profil */
 
-.profil-header{
-   text-align: center;
+.profil-header {
+    text-align: center;
 }
 
-.vypujcka-item-main-layout{
+.profil-order-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.vypujcka-item-main-layout {
     display: grid;
     grid-template-columns: max-content 3fr 1fr;
     grid-template-rows: repeat(2, min-content);
@@ -623,18 +641,19 @@ body {
 }
 
 .vypujcka-jmeno,
-.vypujcka-datum{
+.vypujcka-datum {
     grid-column-start: 1;
 }
 
-.vypujcka-container-icon{
+.vypujcka-container-icon,
+.vypujcka-container-icon-prehled {
     grid-column-start: 3;
     grid-row-start: 1;
     grid-row-end: 3;
     align-self: center;
 }
 
-.vypujcka-stav{
+.vypujcka-stav {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -642,7 +661,7 @@ body {
     justify-self: center;
 }
 
-.vypujcka-container-icon-mobile{
+.vypujcka-container-icon-mobile {
     display: grid;
     /* grid-template-columns: 2fr 1fr 1fr 2fr; */
     grid-template-columns: 1fr 1fr 4fr;
@@ -650,11 +669,12 @@ body {
     align-items: center;
 }
 
-.icon-active-mobile-pen{
+.icon-active-mobile-pen {
     grid-column-start: 1;
 }
 
-.vypujcka-container-icon{
+.vypujcka-container-icon,
+.vypujcka-container-icon-prehled {
     /* grid-column-start: 3;
     grid-row-start: 1;
     grid-row-end: 4; */
@@ -671,11 +691,11 @@ body {
     grid-column-end: 4;
 } */
 
-detail-vypujcky-container-layout{
-    display: grid;
+.detail-vypujcky-container {
+    display: none;
 }
 
-.detail-vypujcky-item{
+.detail-vypujcky-item {
     display: grid;
     grid-column-start: 1;
 
@@ -684,17 +704,17 @@ detail-vypujcky-container-layout{
     align-items: center;
 }
 
-.detail-vypujcky-texty{
+.detail-vypujcky-texty {
     display: grid;
 }
 
-.vypujcka-item-poznamka{
+.vypujcka-item-poznamka {
     display: grid;
     grid-template-columns: min-content auto;
     column-gap: 5px;
 }
 
-@media only screen and (min-width: 460px) {
+/* @media only screen and (min-width: 460px) {
     .vypujcka-item-main-layout{
         grid-template-columns: max-content min-content auto;
         grid-template-rows: repeat(2, min-content);
@@ -713,44 +733,192 @@ detail-vypujcky-container-layout{
         grid-row-start: 1;
         grid-row-end: 3;
     }
-}
+} */
 
 @media only screen and (min-width: 560px) {
-    .vypujcka-item-main-layout{
+    .vypujcka-item-main-layout {
         grid-template-columns: max-content auto auto;
+    }
+
+    .vypujcka-container-icon {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .plus-detail-checkbox {
+        grid-column-end: 4;
+    }
+
+    .profil-order-nav {
+        display: grid;
+        grid-template-columns: repeat(3, max-content) auto;
+        justify-items: center;
     }
 }
 
 @media only screen and (min-width: 680px) {
-    .profil-header{
+    .profil-header {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-      }
-    
-    .profil-h1{
+    }
+
+    .profil-h1 {
         grid-column-start: 2;
     }
 
-    .header-logout{
+    .header-logout {
         justify-self: start;
         align-self: center;
     }
 }
 
 @media only screen and (min-width: 860px) {
-    .vypujcka-item-main-layout{
+    .vypujcka-item-main-layout {
         grid-template-columns: max-content 2fr 1fr;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .vypujcka-item-main-layout{
+    .vypujcka-item-main-layout {
         grid-template-columns: max-content 3fr 1fr;
     }
 
-    .vypujcky-seznam-layout{
+    .vypujcky-seznam-layout {
         width: 80%;
         margin: auto;
     }
 }
 
+/* ? přehled - budoucnost */
+
+.vypujcka-container-icon-mobile-prehled {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 560px) {
+    .vypujcka-container-icon-prehled {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .plus-detail-checkbox-prehled {
+        grid-column-end: 5;
+    }
+}
+
+
+/* * zákazníci */
+
+.btn-zobrazit-dalsi-layout,
+.paginace-layout,
+.pozvanka-layout {
+    display: grid;
+    justify-items: center;
+}
+
+.paginace-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.table-seznam-zakazniku-layout {
+    width: 100%;
+}
+
+.thead-nav-zakaznici {
+    width: 100%;
+}
+
+.nav-seznam-zakazniku-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+}
+
+.zakaznik-tr {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+}
+
+@media only screen and (min-width: 560px) {
+    .nav-seznam-zakazniku-layout {
+        grid-template-columns: 3fr 200px 2fr 2fr;
+    }
+
+    .zakaznik-tr {
+        grid-template-columns: 3fr 200px 2fr 2fr;
+    }
+}
+
+/* * detail zákazníka */
+
+.dl-zakaznik {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .header-zakaznik-info,
+    .spravci-layout,
+    .table-seznam-zakazniku-layout {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* * stránka - správci */
+
+.spravci-item-layout {
+    text-align: center;
+}
+
+.spravci-role-container{
+    display: grid;
+    justify-items: center;
+}
+
+.spravci-role {
+    width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+}
+
+.toggle {
+    justify-self: end;
+}
+
+@media only screen and (min-width: 560px) {
+    .spravci-item-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .spravci-jmeno,
+    .spravci-mail {
+        align-self: center;
+        justify-self: start;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .spravci-jmeno {
+        padding-left: 5px;
+    }
+    .spravci-role {
+        width: 150px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+}
+
+/* * nová pozvánka */
+
+.vyber-zakaznika{
+    display: grid;
+    justify-items: center;
+}

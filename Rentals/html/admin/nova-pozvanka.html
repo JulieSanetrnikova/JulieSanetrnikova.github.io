@@ -17,6 +17,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -142,16 +147,19 @@
                 </nav>
             </nav>
         </div>
-        <header>
-            <h1>Nová pozvánka</h1>
-            <a href="#" onclick="window.history.back()">Zrušit</a>
-        </header>
-        <main>
 
-            <label class="h2" for="name">Vytvořit novou pozvánku pro</label>
+
+        <header class="main-header-layout main-header-layout-admin profil-header">
+            <h1 class="h1">Nová pozvánka</h1>
+            <a class="header-logout" href="#" onclick="window.history.back()">Zrušit</a>
+        </header>
+
+        <main class="main-kosik-layout">
+
             <form class="vyber-zakaznika" method="get">
-                <input id="name" type="text" placeholder="Příjmení Jméno">
-                <datalist>
+                <label class="h2" for="names">Pro</label>
+                <input class="text-input" list="name" name="name" id="name" placeholder="Novák František">
+                <datalist id="name">
                     <option value="Novák František">
                     <option value="Černý Lukáš">
                     <option value="Dvořáková Alice">
@@ -159,22 +167,40 @@
                 </datalist>
             </form>
 
-            <div>
-                <label class="h2" for="platnost">Platnost pozvánky do</label>
-                <input id="platnost" type="date">
+            <div class="datepicker-layout">
+                <label class="h2">Platnost</label>
+                <input class="datetime-picker datetime-picker-true datetime-picker-false" type="text" name="datetimes"
+                    value="01/01/2018 - 01/15/2018" />
             </div>
 
             <label class="h2">Role pozvaného</label>
-            <div>
-                <input type="checkbox" id="role1" name="role1" value="Admin">
-                <label for="role1"> Admin</label><br>
-                <input type="checkbox" id="role2" name="role2" value="Zaměstnanec">
-                <label for="role2"> Zaměstnanec</label><br>
-                <input type="checkbox" id="role3" name="role3" value="Zákazník">
-                <label for="role3"> Zákazník</label><br>
+            <div class="spravci-role-container">
+                <div class="spravci-role">
+                    <p class="spravci-role-hodnota">Zaměstnanec</p>
+                    <label class="toggle">
+                        <input type="checkbox" id="cToggle" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="spravci-role">
+                    <p class="spravci-role-hodnota">Admin</p>
+                    <label class="toggle">
+                        <input type="checkbox" id="cToggle" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="spravci-role">
+                    <p class="spravci-role-hodnota">Zákazník</p>
+                    <label class="toggle">
+                        <input type="checkbox" id="cToggle" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
 
-            <a href="#" class="ulozit-btn" onclick="window.history.back()">Odeslat pozvánku</a>
+            <div class="ulozit-btn">
+                <a href="#" class="ulozit-btn-odkaz uppercase" onclick="window.history.back()">Odeslat</a>
+            </div>
 
         </main>
 
@@ -190,7 +216,18 @@
         </footer>
     </div>
 
-
+    <script>
+        $(function () {
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'DD/M hh:mm'
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
