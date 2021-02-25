@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../../assets/styles/typography.css">
     <link rel="stylesheet" href="../../assets/styles/layout.css">
     <link rel="stylesheet" href="../../assets/styles/components.css">
-    <link rel="stylesheet" href="../../assets/styles/style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -26,33 +25,6 @@
 
 <body>
     <div class="main-container-layout">
-        <!-- <nav class="main-nav-layout main-nav">
-            <div class="logo">
-                <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
-            </div>
-            <details class="nav-kategorie-layout uppercase">
-                <summary><span class="icon-arrow-down icon"></span> Kategorie</summary>
-                <nav>
-                    <ul class="nav-ul">
-                        <li><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
-                        <li><a href="#"><span class="icon-dot-border icon"></span>Těla fotoaparátů</a></li>
-                        <li><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a></li>
-                        <li><a href="#"><span class="icon-dot-border icon"></span>Stativy</a></li>
-                        <li><a href="#"><span class="icon-dot-border icon"></span>Příslušenství</a></li>
-                    </ul>
-                </nav>
-            </details>
-            <nav class="nav-menu-layout">
-                <ul class="nav-ul">
-                    <li><a href="#"><span class="icon-search"></span></a></li>
-                    <li class="admin"><a href="../admin/prehled/probihajici.html"><span
-                                class="icon-settings"></span></a></li>
-                    <li><a href="../zakaznik/wishlist.html"><span class="icon-wishlist"></span></a></li>
-                    <li><a href="../zakaznik/kosik.html"><span class="icon-cart-blue"></span></a></li>
-                    <li><a href="../zakaznik/profil.html"><span class="icon-user-black"></span></a></li>
-                </ul>
-            </nav>
-        </nav> -->
 
         <div class="main-nav-container-layout">
             <nav class="main-nav-layout main-nav">
@@ -60,34 +32,34 @@
                     <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                 </div>
                 <details class="nav-kategorie-layout nav-kategorie uppercase">
-                    <summary><span class="icon-arrow-down icon active-desktop"> Kategorie</span><span
+                    <summary><span class="icon-arrow-down icon active-desktop-block"> Kategorie</span><span
                             class="icon-filter icon active-mobile"></span></summary>
                     <nav>
-                        <ul class="nav-ul">
-                            <li><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
-                            <li><a href="#"><span class="icon-dot-border icon"></span>Těla fotoaparátů</a></li>
-                            <li><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a></li>
-                            <li><a href="#"><span class="icon-dot-border icon"></span>Stativy</a></li>
-                            <li><a href="#"><span class="icon-dot-border icon"></span>Příslušenství</a></li>
+                        <ul class="nav-ul nav-kategorie-layout-ul">
+                            <li class="nav-li"><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
+                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Těla fotoaparátů</a></li>
+                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a></li>
+                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Stativy</a></li>
+                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Příslušenství</a></li>
                         </ul>
                     </nav>
                 </details>
 
                 <nav class="nav-menu-layout nav-menu">
-                    <ul class="nav-ul">
-                        <li>
+                    <ul class="nav-ul nav-menu-layout-ul">
+                        <li class="nav-menu-layout-li">
                             <details class="nav-search-layout">
                                 <summary><span class="icon-search icon"></span></summary>
                                 <form class="search-area" action="">
-                                    <input type="text" placeholder="HLEDAT" name="search">
-                                    <a href="#"><span class="icon-search icon"></span></a>
+                                    <input class="search-input" type="text" placeholder="HLEDAT" name="search">
+                                    <a href="#"><span class="icon-search icon-search-input icon"></span></a>
                                 </form>
                             </details>
                         </li>
                         <!-- <li class="admin"><a href="../admin/prehled/probihajici.html"><span class="icon-settings icon"></span></a></li> -->
-                        <li><a href="../zakaznik/wishlist.html"><span class="icon-wishlist icon"></span></a></li>
-                        <li><a href="../zakaznik/kosik.html"><span class="icon-cart-blue icon"></span></a></li>
-                        <li><a href="../zakaznik/profil.html"><span class="icon-user-black icon"></span></a></li>
+                        <li class="nav-menu-layout-li"><a href="../zakaznik/wishlist.html"><span class="icon-wishlist icon"></span></a></li>
+                        <li class="nav-menu-layout-li"><a href="../zakaznik/kosik.html"><span class="icon-cart-blue icon"></span></a></li>
+                        <li class="nav-menu-layout-li"><a href="../zakaznik/profil.html"><span class="icon-user-black icon"></span></a></li>
                     </ul>
                 </nav>
             </nav>
@@ -105,11 +77,11 @@
                         <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
                     </div>
                     <div class="kosik-texty-layout">
-                        <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Objektiv SIGMA 17-50
+                        <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../zakaznik/predmet-detail.html">Objektiv SIGMA 17-50
                                 mm 1:2.8</a></p>
                         <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
                         <div class="kosik-mnozstvi">
-                            <span class="icon-minus-min icon kosik-minus-icon"></span> 1 <span
+                            <span class="icon-minus-min icon kosik-minus-icon pointer"></span> 1 <span
                                 class="icon-plus-min icon kosik-plus-icon"></span>
                         </div>
                     </div>
@@ -121,10 +93,10 @@
                         <img class="kosik-nahled-img" src="../../assets/img/crane3Lab_1685.jpg" alt="">
                     </div>
                     <div class="kosik-texty-layout">
-                        <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Zhiyun Crane 3 LAB</a>
+                        <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../zakaznik/predmet-detail.html">Zhiyun Crane 3 LAB</a>
                         </p>
                         <p class="kosik-specifikace-produktu uppercase"></p>
-                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon"></span> 1 <span
+                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon pointer"></span> 1 <span
                                 class="icon-plus-min icon kosik-plus-icon"></span></div>
                     </div>
                     <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
@@ -135,33 +107,34 @@
                         <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
                     </div>
                     <div class="kosik-texty-layout">
-                        <p class="kosik-nazev-produktu"><a href="../zakaznik/predmet-detail.html">Videokamera Panasonic
+                        <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../zakaznik/predmet-detail.html">Videokamera Panasonic
                                 HC-X920</a></p>
                         <p class="kosik-specifikace-produktu uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)</p>
-                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon"></span> 2 <span
+                        <div class="kosik-mnozstvi"><span class="icon-minus-min icon kosik-minus-icon pointer"></span> 2 <span
                                 class="icon-plus-min icon kosik-plus-icon"></span></div>
                     </div>
                     <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
                 </div>
             </div>
 
-            <div class="datepicker-layout">
+            <div class="datepicker-layout input-container">
                 <label class="h2">Začátek a konec výpůjčky</label>
                 <input class="datetime-picker datetime-picker-true datetime-picker-false" type="text" name="datetimes"
                     value="01/01/2018 - 01/15/2018" />
             </div>
 
-            <details class="kalendar-layout">
+            <details class="kalendar-layout input-container">
                 <summary class="h2">Zobrazit dostupnost předmětů </br> <span class="icon-plus-min"></span></summary>
                 <div class="calendar" id="calendar">
                     <img src="../../assets/img/calendar.jpg" alt="">
                 </div>
             </details>
 
-            <div class="poznamka-layout">
+            <div class="poznamka-layout input-container">
                 <label class="h2" for="poznamka">Přidat poznámku</label>
                 <textarea class="poznamka" id="poznamka" placeholder="Vaše poznámka..."></textarea>
             </div>
+
             <div class="ulozit-btn">
                 <a class="ulozit-btn-odkaz uppercase" href="../zakaznik/profil.html">Uložit</a>
             </div>

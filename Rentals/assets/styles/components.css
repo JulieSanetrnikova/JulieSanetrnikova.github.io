@@ -1,3 +1,4 @@
+/* ANCHOR alles  */
 html * {
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ ul {
 }
 
 a {
-  color: #000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -35,7 +36,7 @@ summary {
   cursor: pointer;
 }
 
-/* odstranění pojebaný šipky u dropdown věcí */
+/* ANCHOR odstranění pojebaný šipky u dropdown věcí */
 details>summary:first-of-type {
   list-style-type: none;
 }
@@ -56,13 +57,15 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
-/* classy pro obecný vypínání/zapínání něčeho 
-mezi desktopem a mobilem */
 .active-mobile {
-  display: block;
+  display: grid;
 }
 
 .active-desktop {
+  display: none;
+}
+
+.active-desktop-block {
   display: none;
 }
 
@@ -72,24 +75,27 @@ mezi desktopem a mobilem */
   }
 
   .active-desktop {
+    display: grid;
+  }
+
+  .active-desktop-block {
     display: block;
   }
 }
 
-/* * loginpage */
+/* NOTE loginpage */
 
 .login-text {
   margin-bottom: 10rem;
-  font-size: 16px;
 }
 
 .login-container {
   height: 100vh;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 
-  background-image: url(../img/login-bg.jpg);
+  background-image: url(../img/login-bg-min-min.jpg);
   background-size: cover;
 }
 
@@ -103,21 +109,18 @@ mezi desktopem a mobilem */
 
 .login-heading {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 56px;
+  margin-bottom: 10px;
 }
 
 .login-text {
   margin-bottom: 4rem;
-  font-size: 24px;
 }
 
 .login-btn {
-  font-size: 18px;
-  color: #fff;
+  color: var(--white);
   padding: 4px 15px 3px 20px;
   margin-top: 50px;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
 }
 
 .login-text-min {
@@ -126,19 +129,17 @@ mezi desktopem a mobilem */
 
 .login-text {
   margin-bottom: 10rem;
-  font-size: 18px;
 }
 
-/* * navigace s ikonkama */
+/* NOTE nav s ico */
+
 .main-nav {
   width: 100%;
-  padding-top: .35rem;
-  padding-bottom: .2rem;
+  padding: 5px 0 3px 0;
   border-bottom: var(--lightBorder);
 }
 
-.nav-kategorie-layout .nav-ul,
-.nav-kategorie-admin-layout .nav-ul {
+.nav-kategorie-admin-ul {
   position: absolute;
   left: 0;
   background-color: var(--bg);
@@ -146,39 +147,83 @@ mezi desktopem a mobilem */
   padding-left: 25%;
   box-shadow: var(--boxShadow);
   margin-top: 6px;
-
 }
 
-.nav-kategorie-layout .nav-ul li,
-.main-nav-admin-mobile .nav-ul li,
-.nav-menu-admin-desktop-layout .nav-ul li {
-  padding: 15px 0 15px 0;
+.nav-kategorie-admin-ul-menu-mobile {
+  margin-top: 9px;
 }
 
-.nav-kategorie-layout .nav-ul li:first-of-type,
-.main-nav-admin-mobile .nav-ul li:first-of-type,
-.nav-menu-admin-desktop-layout .nav-ul li:first-of-type {
-  padding-top: 25px;
-}
-
-.nav-kategorie-layout .nav-ul li:last-of-type,
-.main-nav-admin-mobile .nav-ul li:last-of-type,
-.nav-menu-admin-desktop-layout .nav-ul li:last-of-type {
-  padding-bottom: 25px;
-}
-
-.search-area {
+.nav-kategorie-layout-ul {
   position: absolute;
   left: 0;
   background-color: var(--bg);
   width: 100%;
-  padding-top: 10px;
-  margin-top: 8px;
-  padding-bottom: 10px;
+  padding-left: 25%;
+  box-shadow: var(--boxShadow);
+  margin-top: 4px;
+}
+
+.nav-li,
+.nav-mobile-li,
+.nav-menu-li {
+  padding: 15px 0 15px 0;
+}
+
+.nav-li:first-of-type,
+.nav-mobile-li:first-of-type,
+.nav-menu-li:first-of-type {
+  padding-top: 25px;
+}
+
+.nav-li:last-of-type,
+.nav-mobile-li:last-of-type,
+.nav-menu-li:last-of-type {
+  padding-bottom: 25px;
+}
+
+.main-nav-admin-desktop-layout-row,
+.main-nav-layout {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-bottom: var(--lightBorder);
+  }
+
+  .nav-kategorie-admin-ul,
+  .nav-kategorie-layout-ul {
+    margin-top: 12px;
+  }
+
+  .nav-kategorie-admin-ul-menu-mobile {
+    margin-top: 14px;
+  }
+}
+
+/* NOTE search  */
+
+.search-area,
+.search-area-admin {
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding: 15px 10px;
   box-shadow: var(--boxShadow);
 }
 
-.search-area input {
+.search-area {
+  margin-top: 8px;
+}
+
+.search-area-admin {
+  margin-top: 6px;
+}
+
+.search-input {
   background-color: var(--bg);
   border: none;
   padding-left: 15px;
@@ -186,42 +231,30 @@ mezi desktopem a mobilem */
   height: 30px;
 }
 
-.search-area .icon-search {
-  opacity: .5;
-  /* padding-top: 30px; */
-}
-
-/* * navigace admin */
-.main-nav-admin-mobile {
-  width: 100%;
-  padding-top: .3rem;
-  padding-bottom: .2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-
 @media only screen and (min-width: 768px) {
-
-  .nav-kategorie-layout .nav-ul,
-  .nav-kategorie-admin-layout .nav-ul {
-    position: absolute;
-    right: 0;
-    max-width: 50%;
-    margin-left: 65%;
-    padding-left: 20px;
-  }
 
   .search-area {
     position: absolute;
-    left: 50%;
+    left: 100%;
+    transform: translateX(-100%);
     width: 40%;
     padding-top: 10px;
-    margin-top: 5px;
+    margin-top: 16px;
     padding-bottom: 10px;
     box-shadow: var(--boxShadow);
   }
 
-  .search-area input {
+  .search-area-admin {
+    position: absolute;
+    left: 0;
+    width: 40%;
+    padding-top: 10px;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    box-shadow: var(--boxShadow);
+  }
+
+  .search-input {
     padding-left: 15px;
     width: 80%;
     height: 30px;
@@ -229,33 +262,89 @@ mezi desktopem a mobilem */
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .search-area {
+    width: 25%;
+    margin-top: 12px;
+  }
+
+  .search-area-admin {
+    width: 25%;
+    margin-top: 7px;
+  }
+}
+
+.icon-search-input {
+  opacity: .5;
+}
+
+/* NOTE nav admin */
+
+.main-nav-admin-mobile {
+  width: 100%;
+  padding-top: .3rem;
+  padding-bottom: .2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.main-nav-admin-layout {
+  padding: 5px 0 3px 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-nav-admin-layout {
+    position: relative;
+    padding: 10px 0 10px 0;
+  }
+
+  .nav-kategorie-layout-ul,
+  .nav-kategorie-admin-ul {
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+    margin-left: 65%;
+    padding-left: 20px;
+  }
+
+  .main-container-layout {
+    position: relative;
+  }
+
+  .main-nav-admin-desktop {
+    position: relative;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
   .logo {
     padding-left: 5px;
   }
 
-  .nav-kategorie-layout .nav-ul,
-  .nav-kategorie-admin-layout .nav-ul {
+  .nav-kategorie-layout-ul,
+  .nav-kategorie-admin-ul {
     position: absolute;
     width: 20%;
-    margin-top: 6px;
+    margin-top: 12px;
     margin-left: 40%;
     box-shadow: var(--boxShadow);
   }
 
-  .nav-menu-admin-desktop-layout .nav-ul {
+  .nav-menu-admin-desktop-ul {
     position: absolute;
-    left: 25%;
+    left: 18%;
     z-index: 99999;
     width: 20%;
-    margin-top: 16px;
+    margin-top: 17px;
     padding-left: 20px;
     background-color: var(--bg);
     box-shadow: var(--boxShadow);
   }
 
-  /* * navigace admin */
   .secondary-main-nav-admin-desktop {
-    padding: 17px 0px 17px 0px;
+    padding: 15px 0px 15px 0px;
     border-top: var(--lightBorder);
     border-bottom: var(--lightBorder);
   }
@@ -265,13 +354,19 @@ mezi desktopem a mobilem */
   }
 
   .main-nav-admin-desktop {
-    padding: 17px 0px 17px 0px;
+    padding: 5px 0px 5px 0px;
     border-bottom: var(--lightBorder);
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .nav-menu-admin-desktop-ul {
+    left: 25%;
+  }
+}
 
-/* ? footer */
+/* NOTE footer */
+
 .main-footer {
   padding: 10px 0px;
 }
@@ -307,14 +402,14 @@ mezi desktopem a mobilem */
 }
 
 
-/*** produkt item */
+/* NOTE produkt item */
 
 .product-image {
   position: relative;
 }
 
 .product-item {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .product-item:hover {
@@ -335,23 +430,7 @@ mezi desktopem a mobilem */
   }
 }
 
-input[type="checkbox"],
-.checked {
-  display: none;
-}
 
-input[type="checkbox"],
-.checked {
-  display: none;
-}
-
-input[type="checkbox"]:checked~.checked {
-  display: inline-block;
-}
-
-input[type="checkbox"]:checked~.unchecked {
-  display: none;
-}
 
 @media only screen and (min-width: 410px) {}
 
@@ -372,28 +451,40 @@ input[type="checkbox"]:checked~.unchecked {
   display: inline-block;
   text-align: center;
   width: 100%;
-  /* height: 25px; */
   padding: 8px 0px 7px 0px;
   background-color: var(--blue);
 }
 
-.pridat-do-kosiku-btn .icon-cart-white-min {
+.pridat-do-kosiku-btn-pridano {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 8px 0px 7px 0px;
+  border: var(--btnBorder);
+  box-sizing: border-box;
+}
+
+.like-btn {
+  cursor: pointer;
+}
+
+.icon-cart-btn {
   padding-right: 5px;
 }
 
 @media only screen and (min-width: 650px) {
-  .pridat-do-kosiku-btn .icon-cart-white-min {
+  .icon-cart-btn {
     padding-right: 12px;
   }
 }
 
-/* ? detail-produktu */
+/* NOTE detail produktu */
 .predmet-info-layout {
   margin-top: 45px;
 }
 
 .predmet-detil-img {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .predmet-detil-img img,
@@ -405,9 +496,8 @@ input[type="checkbox"]:checked~.unchecked {
   padding: 0px 10px;
 }
 
-.predmet-detail-texty .h2 {
+.detail-heading {
   text-align: start;
-  /* padding: 20px 0px; */
 }
 
 .pocet-kusu-border-btn {
@@ -416,29 +506,32 @@ input[type="checkbox"]:checked~.unchecked {
   text-align: center;
   border: var(--basicBorder);
   padding: 10px 0px 4px 0px;
-  /* margin: auto; */
   margin-bottom: 20px;
 }
 
-.pocet-kusu-border-btn .icon {
+.icon-pocet-kusu {
   padding: 0px 20px;
-  cursor: pointer;
 }
 
-.predmet-detail-kosik-btn a {
-  color: #fff;
-}
-
-.predmet-detail-kosik-btn .icon-cart-white-min {
+.icon-cart-btn {
   padding-right: 10px;
 }
 
 .predmet-detail-kosik-btn {
   display: inline-block;
   text-align: center;
-  /* width: 80%; */
-  padding: 8px 0px 7px 0px;
+  padding: 10px 0px 7px 0px;
   background-color: var(--blue);
+  border: var(--transparentBorder);
+  width: 100%;
+}
+
+.predmet-detail-kosik-btn-pridano {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0px 7px 0px;
+  border: var(--btnBorder);
+  width: 100%;
 }
 
 .detail-predmetu-layout .h2 {
@@ -471,7 +564,7 @@ input[type="checkbox"]:checked~.unchecked {
 }
 
 
-/* ! obsah košíku */
+/* NOTE obsah košíku */
 .kosik-item-layout {
   border-top: var(--lightBorder);
   padding: 10px 0;
@@ -497,24 +590,47 @@ input[type="checkbox"]:checked~.unchecked {
 
 .kosik-img-container {
   height: 65px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .kosik-nahled-img {
   width: 100%;
 }
 
+/* NOTE texttový pole a input  */
+
 .calendar,
 .datetime-picker,
 .poznamka,
-.ulozit-btn {
+.text-input,
+.select {
   margin-top: 10px;
   height: min-content;
 }
 
 .datetime-picker,
-.poznamka {
-  padding: 7px 10px 3px 10px;
+.poznamka,
+.text-input,
+.select {
+  padding: 8px 10px 4px 10px;
+  width: 220px;
+}
+
+.select {
+  width: 240px;
+  padding: 12px 10px 8px 10px;
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../icon/arrow-down.svg") white no-repeat;
+  background: url("../icon/arrow-down.svg") white no-repeat calc(100% - 10px);
+}
+
+.select::-ms-expand {
+  display: none;
 }
 
 .datetime-picker-true {
@@ -525,34 +641,35 @@ input[type="checkbox"]:checked~.unchecked {
   outline: none;
 }
 
-/* .datetime-picker-false{
-  border: var(--redBorder);
-} */
-.poznamka {
+.poznamka,
+.select,
+.text-input {
   border: var(--lightBorder);
   resize: none;
 }
 
-.poznamka:focus {
+.poznamka:focus,
+.text-input:focus,
+.select:focus {
   border: var(--basicBorder);
   outline: none;
 }
 
 .ulozit-btn {
   background-color: var(--blue);
+  margin-top: 10px;
   margin-bottom: 15px;
+  width: 150px;
+  height: 30px;
+  padding: 8px 10px 4px 10px;
 }
 
 .ulozit-btn-odkaz {
-  padding: 12px 50px 6px 50px;
-  color: #fff;
+  color: var(--white);
   display: block;
-}
-
-@media only screen and (min-width: 420px) {
-  .ulozit-btn-odkaz {
-    padding: 16px 60px 12px 60px;
-  }
+  padding: 5px 0px;
+  width: 150px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 440px) {
@@ -578,7 +695,7 @@ input[type="checkbox"]:checked~.unchecked {
   }
 }
 
-/* ? Profil */
+/* NOTE Profil */
 
 .header-logout {
   color: var(--blue);
@@ -594,8 +711,6 @@ input[type="checkbox"]:checked~.unchecked {
   padding-bottom: 10px;
 }
 
-
-
 .vypujcka-jmeno,
 .vypujcka-datum,
 .vypujcka-stav {
@@ -605,10 +720,6 @@ input[type="checkbox"]:checked~.unchecked {
 .vypujcka-datum {
   padding-top: 2px;
 }
-
-/* .vypujcka-stav {
-  padding-top: 7px;
-} */
 
 .vypujcka-item {
   padding: 20px 0px;
@@ -620,7 +731,7 @@ input[type="checkbox"]:checked~.unchecked {
 }
 
 .vypujcka-item:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .detail-vypujcky-item,
@@ -712,7 +823,17 @@ input[type="checkbox"]:checked~.unchecked {
   }
 }
 
-/* ? dialogový okno s náhledem dostupnosti předmětu 
+.active-bigger-tablet {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .active-bigger-tablet {
+    display: grid;
+  }
+}
+
+/* NOTE okno s náhledem dostupnosti předmětu 
 ? (zkrácená cesta k přidání do košíku) */
 .body {
   position: relative;
@@ -725,12 +846,11 @@ input[type="checkbox"]:checked~.unchecked {
   bottom: 0;
   left: 0;
   z-index: 9999999;
-
   background-color: rgb(0, 0, 0, .5);
 }
 
 .okno-nahled-dostupnosti {
-  background-color: #fff;
+  background-color: var(--white);
   width: 100%;
   position: fixed;
   top: 10%;
@@ -740,10 +860,6 @@ input[type="checkbox"]:checked~.unchecked {
   position: relative;
   width: 100%;
   height: 100%;
-
-  display: grid;
-  row-gap: 10px;
-  justify-items: center;
 }
 
 .nahled-calendar-img {
@@ -796,12 +912,12 @@ input[type="checkbox"]:checked~.unchecked {
   }
 }
 
-/* ? přehled - budoucnost */
+/* REVIEW přehled - budoucnost */
 
 .nabidka-stav-vypujcky {
   position: absolute;
   z-index: 2;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: var(--boxShadowLight);
   padding: 10px;
 }
@@ -810,7 +926,7 @@ input[type="checkbox"]:checked~.unchecked {
   margin: 15px 10px;
 }
 
-/* * zákazníci */
+/* NOTE zákazníci */
 
 .btn-dalsi {
   color: var(--blue);
@@ -849,7 +965,7 @@ input[type="checkbox"]:checked~.unchecked {
 }
 
 .zakaznik-tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .zakaznik-tr:last-of-type {
@@ -868,7 +984,6 @@ input[type="checkbox"]:checked~.unchecked {
   opacity: .5;
 }
 
-
 @media only screen and (min-width: 1024px) {
   .th-zakaznik-jmeno-odkaz {
     padding-left: 30px;
@@ -879,7 +994,7 @@ input[type="checkbox"]:checked~.unchecked {
   }
 }
 
-/* * detail zákazníka */
+/* NOTE detail zákazníka */
 
 .header-zakaznik-info {
   padding: 10px 0 0 10px;
@@ -893,7 +1008,7 @@ input[type="checkbox"]:checked~.unchecked {
   padding: 5px 0;
 }
 
-/* * stránka - správci */
+/* NOTE správci */
 
 .toggle input {
   display: none;
@@ -972,14 +1087,10 @@ input[type="checkbox"]:checked~.unchecked {
 }
 
 .spravci-item:nth-child(odd) {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
-/* * nová pozvánka */
-
-.text-input {
-  padding: 7px 10px 3px 10px;
-}
+/* NOTE historie předmětu */
 
 .predmet-info-layout-historie {
   margin-top: 0;
@@ -990,23 +1101,174 @@ input[type="checkbox"]:checked~.unchecked {
   padding: 0 20px;
 }
 
-@media only screen and (min-width: 680px) {
-  .main-header-icons {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-items: start;
-    align-items: center;
-  }
-}
+/* REVIEW PROČ JE LAYOUT V COMPONENTS? */
 
-.varianty-predmetu-layout{
+.varianty-predmetu-layout {
   text-align: center;
 }
 
-.varianta-predmetu{
+.varianta-predmetu {
   margin: 10px 0;
 }
 
-.h2-varianty-predmetu{
+.h2-varianty-predmetu {
   margin-top: 10px;
+}
+
+/* NOTE nový předmět, úprava předmětu */
+
+/* ANCHOR select checkbox  */
+.card {
+  background: var(--white);
+  padding: 10px 15px;
+  width: 90%;
+  height: 300px;
+  border: var(--lightBorder);
+  overflow-y: scroll;
+}
+
+.checkbox-select {
+  display: none;
+}
+
+.label {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  padding-top: 2px;
+  user-select: none;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.check-mark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--lightGrey);
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  top: 0;
+  border-radius: 2px;
+}
+
+.checkbox-select:checked+.check-mark {
+  background-color: var(--green);
+  transition: .1s;
+}
+
+.checkbox-select:checked+.check-mark:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  transition: .1s;
+  height: 3px;
+  background: var(--green);
+  top: 45%;
+  left: 50%;
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.secondary-select {
+  opacity: .7;
+}
+
+.check-arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url(../icon/arrow-down.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2px;
+  display: inline-block;
+  top: 5px;
+  padding-left: 5px;
+}
+
+
+@media only screen and (min-width: 760px) {
+  .card {
+    background: var(--white);
+    padding: 10px 15px;
+    width: 350px;
+  }
+}
+
+/* ANCHOR number input  */
+.number-input[type=number]::-webkit-inner-spin-button,
+.number-input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* .number-wrapper {
+  position: relative;
+}
+
+.number-wrapper:after,
+.number-wrapper:before {
+  position: absolute;
+  right: 6px;
+  width: 17px;
+  height: 10px;
+  font-size: 10px;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.number-wrapper:after {
+  content: url(../icon/arrow-up.svg);
+  top: 5px;
+}
+
+.number-wrapper:before {
+  content: url(../icon/arrow-down.svg);
+  bottom: 5px;
+}*/
+
+/* ANCHOR file input  */
+
+.file-input[type=file]::-webkit-file-upload-button {
+  border: none;
+  background-color: var(--bg);
+  padding: 8px 10px 4px 10px;
+  transition: 1s;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+}
+
+.file-input[type=file]::file-selector-button {
+  border: none;
+  background-color: var(--bg);
+  padding: 8px 10px 4px 10px;
+  transition: 1s;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+}
+
+.h2-uprava-predmetu {
+  margin-bottom: 20px;
+}
+
+/* ANCHOR checkbox display  */
+
+input[type="checkbox"],
+.checked {
+  display: none;
+}
+
+input[type="checkbox"]:checked~.checked {
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked~.unchecked {
+  display: none;
 }

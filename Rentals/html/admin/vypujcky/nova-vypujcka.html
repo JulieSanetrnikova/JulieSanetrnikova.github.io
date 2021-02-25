@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../../../assets/styles/typography.css">
     <link rel="stylesheet" href="../../../assets/styles/layout.css">
     <link rel="stylesheet" href="../../../assets/styles/components.css">
-    <link rel="stylesheet" href="../../../assets/styles/style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -27,46 +26,6 @@
 <body>
     <div class="main-container-layout">
 
-        <!-- <nav class="main-nav-layout main-nav">
-            <div class="logo">
-                <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
-            </div>
-            <nav class="nav-menu-layout">
-                <ul class="nav-ul uppercase">
-                    <li>
-                        <details class="nav-dropdown-layout">
-                            <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
-                            <ul class="nav-ul">
-                                <li><a href="#">Odeslat upozornění</a></li>
-                                <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
-                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li class="nav-prehled">
-                        <details class="nav-dropdown-layout">
-                            <summary><span class="icon-arrow-down icon"></span>Přehled</summary>
-                            <ul class="nav-ul">
-                                <li><a href="../prehled/probihajici.html">Probíhajíjcí</a></li>
-                                <li><a href="../prehled/budoucnost.html">Budoucnost</a></li>
-                                <li><a href="../prehled/historie.html">Historie</a></li>
-                                <li><a href="../prehled/nevracene.html">Nevrácené</a></li>
-                                <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li class="nav-kalendar"><a href="../kalendar.html"><span
-                                class="icon-dot-border icon"></span>Kalendář</a></li>
-                    <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
-                                class="icon-dot-border icon"></span>Seznam předmětů</a></li>
-                    <li class="nav-zakaznici"><a href="../zakaznici.html"><span
-                                class="icon-dot-border icon"></span>Zákazníci</a></li>
-                    <li class="nav-spravci"><a href="../spravci.html"><span
-                                class="icon-dot-border icon"></span>Správci</a></li>
-                </ul>
-            </nav>
-        </nav> -->
-
         <div class="main-nav-container-layout main-nav-admin-container-layout main-nav-admin-container-desktop-layout">
             <nav class="main-nav-admin-layout main-nav-admin-mobile active-mobile">
 
@@ -74,45 +33,53 @@
                     <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                 </div>
 
+                <details class="nav-search-layout active-mobile">
+                    <summary class="nav-summary search-icon-mobile"><span class="icon-search icon"></span></summary>
+                    <form class="search-area-admin" action="">
+                        <input class="search-input" type="text" placeholder="HLEDAT" name="search">
+                        <a href="#"><span class="icon-search icon-search-input icon"></span></a>
+                    </form>
+                </details>
+
                 <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary></span><span class="icon-timer icon"></span></summary>
+                    <summary class="nav-summary"></span><span class="icon-timer icon"></span></summary>
                     <nav>
-                        <ul class="nav-ul">
-                            <li><a href="../prehled/probihajici.html"><span
+                        <ul class="nav-ul nav-kategorie-admin-ul">
+                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/probihajici.html"><span
                                         class="icon-dot-border icon"></span>Probíhajíjcí</a></li>
-                            <li><a href="../prehled/budoucnost.html"><span
+                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/budoucnost.html"><span
                                         class="icon-dot-border icon"></span>Budoucnost</a></li>
-                            <li><a href="../prehled/historie.html"><span
+                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/historie.html"><span
                                         class="icon-dot-border icon"></span>Historie</a>
                             </li>
-                            <li><a href="../prehled/nevracene.html"><span
+                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/nevracene.html"><span
                                         class="icon-dot-border icon"></span>Nevrácené</a>
                             </li>
-                            <li><a href="../vypujcky/nova-vypujcka.html"><span class="icon-dot-border icon"></span>Nová
+                            <li class="nav-mobile-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html"><span class="icon-dot-border icon"></span>Nová
                                     výpůjčka</a></li>
                         </ul>
                     </nav>
                 </details>
                 <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary><span class="icon-plus icon"></span></summary>
-                    <ul class="nav-ul">
-                        <li><a href="#">Odeslat upozornění</a></li>
-                        <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
-                        <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                    <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
+                    <ul class="nav-ul nav-kategorie-admin-ul">
+                        <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
+                        <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                        <li class="nav-mobile-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
                     </ul>
                 </details>
                 <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary><span class="icon-menu icon"></span></summary>
-                    <ul class="nav-ul">
-                        <li class="nav-prehled"><a href="../prehled/probihajici.html"><span
+                    <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
+                    <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
+                        <li class="nav-mobile-li nav-prehled"><a class="nav-a" href="../prehled/probihajici.html"><span
                                     class="icon-dot-border icon"></span>Přehled</a></li>
-                        <li class="nav-kalendar"><a href="../kalendar.html"><span
+                        <li class="nav-mobile-li nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
                                     class="icon-dot-border icon"></span>Kalendář</a></li>
-                        <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                        <li class="nav-mobile-li nav-predmety"><a class="nav-a" href="../predmety/seznam-predmetu.html"><span
                                     class="icon-dot-border icon"></span>Seznam předmětů</a></li>
-                        <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                        <li class="nav-mobile-li nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
                                     class="icon-dot-border icon"></span>Zákazníci</a></li>
-                        <li class="nav-spravci"><a href="../spravci.html"><span
+                        <li class="nav-mobile-li nav-spravci"><a class="nav-a" href="../spravci.html"><span
                                     class="icon-dot-border icon"></span>Správci</a></li>
                     </ul>
                 </details>
@@ -123,76 +90,84 @@
                     <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                 </div>
                 <nav class="nav-menu-admin-desktop-layout active-desktop">
+                    <details class="nav-search-layout">
+                        <summary class="nav-summary search-icon-desktop"><span class="icon-search icon"></span></summary>
+                        <form class="search-area-admin" action="">
+                            <input class="search-input" type="text" placeholder="HLEDAT" name="search">
+                            <a href="#"><span class="icon-search icon-search-input icon"></span></a>
+                        </form>
+                    </details>
                     <ul class="nav-ul-admin-layout uppercase">
                         <li class="active-desktop">
                             <details class="nav-dropdown-layout">
-                                <summary><span class="icon-arrow-down icon"></span> Nástroje</summary>
-                                <ul class="nav-ul">
-                                    <li><a href="#">Odeslat upozornění</a></li>
-                                    <li><a href="../predmety/novy-predmet.html">Nový předmět</a></li>
-                                    <li><a href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
+                                <summary class="nav-summary"><span class="icon-arrow-down icon"></span> Nástroje</summary>
+                                <ul class="nav-ul nav-menu-admin-desktop-ul">
+                                    <li class="nav-menu-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
+                                    <li class="nav-menu-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový předmět</a></li>
+                                    <li class="nav-menu-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
                                 </ul>
                             </details>
                         </li>
-                        <li class="nav-prehled"><a href="../prehled/probihajici.html"><span
+                        <li class="nav-prehled"><a class="nav-a" href="../prehled/probihajici.html"><span
                                     class="icon-dot-border icon"></span>Přehled</a></li>
-                        <li class="nav-kalendar"><a href="../kalendar.html"><span
+                        <li class="nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
                                     class="icon-dot-border icon"></span>Kalendář</a></li>
-                        <li class="nav-predmety"><a href="../predmety/seznam-predmetu.html"><span
+                        <li class="nav-predmety"><a class="nav-a" href="../predmety/seznam-predmetu.html"><span
                                     class="icon-dot-border icon"></span>Seznam předmětů</a></li>
-                        <li class="nav-zakaznici"><a href="../zakaznici.html"><span
+                        <li class="nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
                                     class="icon-dot-border icon"></span>Zákazníci</a></li>
-                        <li class="nav-spravci"><a href="../spravci.html"><span
+                        <li class="nav-spravci"><a class="nav-a" href="../spravci.html"><span
                                     class="icon-dot-border icon"></span>Správci</a></li>
                     </ul>
                 </nav>
             </nav>
         </div>
 
-        <header>
-            <h1>Nová výpůjčka</h1>
-            <a href="#" onclick="window.history.back()">Zrušit</a>
+        <header class="main-header-layout main-header-layout-admin profil-header">
+            <h1 class="h1 profil-h1">Nová výpůjčka</h1>
+            <a class="header-logout" href="#" onclick="window.history.back()">Zrušit</a>
         </header>
 
-        <main>
+        <main class="main-kosik-layout">
 
             <div class="obsah-kosiku-layout">
 
                 <div class="kosik-item-layout">
-                    <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                    <div class="kosik-texty">
-                        <p class="kosik-nazev-produktu"><a href="../../zakaznik/predmet-detail.html">Objektiv SIGMA 17-50
-                                mm 1:2.8</a></p>
-                        <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
-                        <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                        <p class="kosik-pocet-kusu">1</p>
+                    <div class="kosik-img-container">
+                        <img class="kosik-nahled-img" src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
                     </div>
-                    <div class="kosik-mnozstvi"><span class="icon-minus-min icon"></span> 1 <span
-                            class="icon-plus-min icon"></span></div>
-                    <a href="#"><span class="icon-delete"></span></a>
+                    <div class="kosik-texty-layout">
+                        <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../../zakaznik/predmet-detail.html">Objektiv SIGMA
+                                17-50
+                                mm 1:2.8</a></p>
+                        <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
+                        <div class="kosik-mnozstvi">
+                            <span class="icon-minus-min icon kosik-minus-icon pointer"></span> 1 <span
+                                class="icon-plus-min icon kosik-plus-icon"></span>
+                        </div>
+                    </div>
+                    <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
                 </div>
 
             </div>
 
-            <label class="h2">Začátek a konec výpůjčky</label>
-            <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+            <div class="datepicker-layout input-container">
+                <label class="h2">Začátek a konec výpůjčky</label>
+                <input class="datetime-picker datetime-picker-true datetime-picker-false" type="text" name="datetimes"
+                    value="01/01/2018 - 01/15/2018" />
+            </div>
 
-            <h2 class="h2">Dostupnost předmětů</h2>
-            <div class="calendar" id="calendar"></div>
+            <details class="kalendar-layout input-container">
+                <summary class="h2">Zobrazit kalendář předmětů <br> <span class="icon-plus-min"></span></summary>
+                <div class="calendar" id="calendar">
+                    <img src="../../../assets/img/calendar.jpg" alt="">
+                </div>
+            </details>
+
 
             <!-- <div class="vyber-predmetu">
-                <label for="predmety">Přidat předměty</label>
-                <select id="predmety">
-                    <option value="Předmět 1">Předmět 1</option>
-                    <option value="Předmět 2">Předmět 2</option>
-                    <option value="Předmět 3">Předmět 3</option>
-                    <option value="Předmět 4">Předmět 4</option>
-                    <option value="Předmět 5">Předmět 5</option>
-                </select>
-            </div> -->
-            <div class="vyber-predmetu">
                 <details>
-                    <summary>Zobrazit dostupné předměty</summary>
+                    <summary class="h2">Přidat dostupné předměty </br> <span class="icon-plus-min"></span></summary>
                     <ul>
                         <li><span class="icon-minus-min icon"></span>Canon EOS 70D tělo
                             <ul>
@@ -223,34 +198,144 @@
                         <li><span class="icon-plus-min icon"></span>SD karta SanDisk 64 GB</li>
                     </ul>
                 </details>
-            </div>
+            </div> -->
+
+            <details class="vyber-predmetu input-container">
+                <summary class="h2">Přidat dostupné předměty <br> <span class="icon-plus-min"></span></summary>
+                <!-- validnější varianta, která však nefunguje -->
+                <!-- <ul class="card">
+                        <li class="label">
+                            <input type="checkbox" checked="checked" class="checkbox-select" />
+                            <span class="check-mark"></span>
+                            <span class="select-nazev-predmetu">Red</span>
+                        </li>
+                        <li class="label">
+                            <input type="checkbox" checked="checked" class="checkbox-select" />
+                            <span class="check-mark"></span>
+                            <span class="select-nazev-predmetu">Blue</span>
+                        </li>
+                        <li class="label">
+                            <input type="checkbox" class="checkbox-select" />
+                            <span class="check-mark"></span>
+                            <ul class="select-nazev-predmetu"><li>Black</li>
+                                <li class="label">
+                                    <input type="checkbox" class="checkbox-select" />
+                                    <span class="check-mark"></span>
+                                    <span class="select-nazev-predmetu">Black</span>
+                                </li>
+                                <li class="label">
+                                    <input type="checkbox" class="checkbox-select" />
+                                    <span class="check-mark"></span>
+                                    <span class="select-nazev-predmetu">Black</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul> -->
+
+                <!-- "méně" validní varianta, která funguje... -->
+                <div class="card">
+                    <label class="label">
+                        <input type="checkbox" checked="checked" class="checkbox-select" />
+                        <span class="check-mark"></span>
+                        <span class="select-nazev-predmetu">Zhiyun Crane 3 LAB</span>
+                    </label>
+                    <label class="label">
+                        <input type="checkbox" checked="checked" class="checkbox-select" />
+                        <span class="check-mark"></span>
+                        <span class="select-nazev-predmetu">Objektiv SIGMA 17-50 mm 1:2.8 (1)</span>
+                    </label>
+                    <label class="label">
+                        <input type="checkbox" checked="checked" class="checkbox-select" />
+                        <span class="check-mark"></span>
+                        <span class="select-nazev-predmetu">Objektiv SIGMA 17-50 mm 1:2.8 (2)</span>
+                    </label>
+                    <label class="label label-vice-kusu">
+                        <input type="checkbox" class="checkbox-select" />
+                        <span class="check-arrow"></span>
+                        <details class="select-nazev-predmetu"><summary class="select-nazev-predmetu-heading">Baterie SONY NP FV30 500mAh</summary>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Baterie SONY NP FV30 500mAh (1)</span>
+                            </label>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Baterie SONY NP FV30 500mAh (2)</span>
+                            </label>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Baterie SONY NP FV30 500mAh (3)</span>
+                            </label>
+                        </details>
+                    </label>
+                    <label class="label">
+                        <input type="checkbox" checked="checked" class="checkbox-select" />
+                        <span class="check-mark"></span>
+                        <span class="select-nazev-predmetu">Bateriový grip Phottix BG 70D</span>
+                    </label>
+                    <label class="label">
+                        <input type="checkbox" checked="checked" class="checkbox-select" />
+                        <span class="check-mark"></span>
+                        <span class="select-nazev-predmetu">SD karta Kingston SD10G3 32 GB</span>
+                    </label>
+                    <label class="label label-vice-kusu">
+                        <input type="checkbox" class="checkbox-select" />
+                        <span class="check-arrow"></span>
+                        <details class="select-nazev-predmetu"><summary class="select-nazev-predmetu-heading">Stativ Rig Spider FT-10</summary>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Stativ Rig Spider FT-10 (1)</span>
+                            </label>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Stativ Rig Spider FT-10 (2)</span>
+                            </label>
+                            <label class="label">
+                                <input type="checkbox" class="checkbox-select" />
+                                <span class="check-mark"></span>
+                                <span class="select-nazev-predmetu secondary-select">Stativ Rig Spider FT-10 (3)</span>
+                            </label>
+                        </details>
+                    </label>
+                </div>
+            </details>
 
 
-            <div class="vyber-zakaznika">
-                <label for="name">Autor výpůjčky</label>
-                <input id="name" list="jmeno" type="text" placeholder="Příjmení Jméno">
-                <datalist id="jmeno">
+
+            <form class="vyber-zakaznika input-container" method="get">
+                <label class="h2" for="names">Autor výpůjčky</label>
+                <input class="text-input" list="name" name="name" id="name" placeholder="Novák František">
+                <datalist id="name">
                     <option value="Novák František">
                     <option value="Černý Lukáš">
                     <option value="Dvořáková Alice">
                     <option value="Růžička Květoslav">
                 </datalist>
-            </div>
+            </form>
 
-            <div class="vyber-stav-vypujcky">
-                <label for="stav">Stav výpůjčky</label>
-                <select id="stav">
-                    <option value="Nezapůjčeno">Nezapůjčeno</option>
-                    <option value="Vráceno">Vráceno</option>
-                    <option value="Vypůjčeno">Vypůjčeno</option>
-                    <option value="Budoucí">Budoucí</option>
+            <div class="vyber-stav-vypujcky input-container">
+                <label class="h2" for="stav">Stav výpůjčky</label>
+                <select class="select select-stav" id="stav">
+                    <option class="vypujcka-stav stav-nevypujceno" value="Nevypůjčeno">Nevypůjčeno</option>
+                    <option class="vypujcka-stav stav-vraceno" value="Vráceno">Vráceno</option>
+                    <option class="vypujcka-stav stav-vypujceno" value="Vypůjčeno">Vypůjčeno</option>
+                    <option class="vypujcka-stav stav-budouci" value="Budoucí">Budoucí</option>
+                    <option class="vypujcka-stav stav-nevraceno" value="Nevráceno">Nevráceno</option>
                 </select>
             </div>
-           
-            <label for="poznamka" class="h2">Přidat poznámku</label>
-            <input id="poznamka" type="text" name="poznamka">
 
-            <a href="#" class="ulozit-btn" onclick="window.history.back()">Uložit</a>
+            <div class="poznamka-layout input-container">
+                <label class="h2" for="poznamka">Přidat poznámku</label>
+                <textarea class="poznamka" id="poznamka" placeholder="Vaše poznámka..."></textarea>
+            </div>
+
+            <div class="ulozit-btn">
+                <a class="ulozit-btn-odkaz uppercase" href="#" onclick="window.history.back()">Uložit</a>
+            </div>
 
         </main>
 
@@ -270,10 +355,13 @@
 
     <script>
         $(function () {
-            $('input[name="daterange"]').daterangepicker({
-                opens: 'left'
-            }, function (start, end, label) {
-                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'DD/M (hh:mm)'
+                }
             });
         });
     </script>

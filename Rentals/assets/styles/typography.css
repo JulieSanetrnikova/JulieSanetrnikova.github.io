@@ -5,23 +5,29 @@
   --green: #00ae7c;
   --yellow: #d0b055;
   --blueClassic: #5586d0;
+  --lightGrey: rgb(238, 238, 238);
+  --white: #fff;
+  --black: #000;
 
+  --transparentBorder: 2px solid transparent;
   --lightBorder: 1px solid rgba(0, 0, 0, 0.3);
   --btnBorder: 2px solid #007784;
   --basicBorder: 1px solid #000;
   --boldBorder: 2px solid #000;
   --greenBorder: 2px solid #00ae7c;
   --redBorder: 2px solid #d05555;
+
   --boxShadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
   --boxShadowLight: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
-  --baseFontSize: 1rem;
-  --smallFontSize: 0.8rem;
   --smallestFontSize: 0.64rem;
-  --heading-1: 1.953rem;
-  --heading-2: 1.563rem;
-  --heading-3: 1.25rem;
+  --smallFontSize: 0.8rem;
+  --baseFontSize: 1rem;
   --biggerFontSize: 1.125rem;
+  --heading-3: 1.25rem;
+  --heading-2: 1.563rem;
+  --heading-1: 1.953rem;
+  --xtraHeading: 3.052rem;
 
   --semibold: 400;
   --bold: 500;
@@ -34,132 +40,220 @@ html * {
   font-size: 14px;
 }
 
-.pointer{
+@media only screen and (min-width: 768px) {
+  html * {
+    font-size: 16px;
+  }
+}
+
+.pointer {
   cursor: pointer;
 }
 
-.no-active{
+.uppercase {
+  text-transform: uppercase;
+}
+
+.no-active {
   display: none !important;
 }
 
-.logo a{
+.label{
+  font-size: var(--baseFontSize);
+}
+
+.file-input[type=file]::-webkit-file-upload-button,
+.file-input[type=file]::file-selector-button{
+  font-size: var(--baseFontSize);
+}
+
+/* NOTE navigace  */
+
+.logo {
   font-family: "Playfair Display", serif;
   font-size: var(--heading-3);
 }
 
-.h1{
-  font-size: var(--heading-1);
-}
-.h2,
-.h2-varianty-predmetu{
-  font-size: var(--heading-2);
-}
-.product-title{
-  font-size: var(--heading-3);
-}
-.nav-target{
+.nav-target {
   font-weight: var(--bold);
   color: var(--blue);
 }
-.main-nav-admin-container-desktop-layout li a,
-.main-nav-admin-container-desktop-layout summary,
-.footer-text{
+
+.nav-a,
+.nav-summary,
+.footer-text {
   font-size: var(--smallFontSize);
 }
-.logout-btn-text{
+
+/* NOTE nadpisy  */
+
+.h1 {
+  font-size: var(--heading-1);
+}
+
+.h2,
+.h2-varianty-predmetu {
+  font-size: var(--heading-2);
+}
+
+.h2-uprava-predmetu {
+  color: var(--blue);
+  font-weight: var(--bold);
+}
+
+.h3-nahled-nazev-predmetu {
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.select-nazev-predmetu-heading {
+  font-weight: var(--semibold);
+}
+
+
+/* NOTE loginpage */
+
+.login-text {
+  font-size: var(--baseFontSize);
+}
+
+.login-heading{
+  font-size: var(--xtraHeading);
+}
+
+.login-text{
+  font-size: var(--biggerFontSize);
+}
+
+.login-btn {
+  font-size: var(--biggerFontSize);
+}
+
+.logout-btn-text {
   color: var(--blue);
   font-size: var(--smallFontSize);
 }
-.pridat-do-kosiku-btn a{
-  color: #fff;
+
+/* NOTE produkt item */
+
+.product-title {
+  font-size: var(--heading-3);
+}
+
+.btn-kosik-text-pridano {
+  color: var(--blue);
+  font-weight: var(--semibold);
+}
+
+.btn-homepage-text-pridano {
+  color: var(--blue);
+  font-size: var(--smallFontSize);
+  font-weight: var(--semibold);
+}
+
+.pridat-do-kosiku-btn-a {
+  color: var(--white);
   font-size: var(--smallFontSize);
 }
-.product-title a{
+
+.btn-homepage-text-pridano{
+  color: var(--blue);
+}
+
+.product-title-a {
   font-size: var(--baseFontSize);
   font-weight: var(--semibold);
   line-height: 1;
 }
-.product-text{
+
+.product-text {
   font-size: var(--smallFontSize);
 }
 
-.predmet-detail-dd{
+/* NOTE detail předmětu  */
+
+.predmet-detail-dd {
   font-weight: var(--bold);
   padding-bottom: 10px;
 }
-.pocet-kusu-border-btn{
+
+.pocet-kusu-border-btn {
   font-size: var(--baseFontSize);
 }
-.predmet-detail-kosik-btn{
+
+.predmet-detail-kosik-btn {
   font-size: var(--smallFontSize);
 }
-.detail-heading{
+
+.detail-heading {
   font-weight: var(--bold);
 }
 
-.kosik-nazev-produktu a{
+.btn-kosik-text {
+  color: var(--white);
+}
+
+.kosik-nazev-produktu-a {
   font-size: var(--baseFontSize);
   font-weight: var(--bold);
   color: var(--blue);
 }
 
-.kosik-specifikace-produktu{
+.kosik-specifikace-produktu {
   font-size: var(--smallFontSize);
   opacity: .7;
 }
 
-.vypujcka-jmeno{
+/* NOTE výpůjčka  */
+
+.vypujcka-jmeno {
   font-size: var(--biggerFontSize);
   font-weight: var(--bold);
   color: var(--blue);
 }
 
-.detail-vypujcky-nazev-produktu a{
+.detail-vypujcky-nazev-produktu-a {
   font-size: var(--baseFontSize);
   font-weight: var(--bold);
 }
 
-.detail-vypujcky-specifikace{
+.detail-vypujcky-specifikace {
   font-size: var(--smallFontSize);
   opacity: .7;
 }
 
-.vypujcka-stav{
+.vypujcka-stav {
   font-size: var(--baseFontSize);
   font-weight: var(--xtrabold);
 }
 
-.stav-budouci{
+.stav-budouci {
   color: var(--blueClassic);
 }
 
-.stav-nevraceno{
+.stav-nevraceno {
   color: var(--red);
 }
 
-.stav-nevypujceno{
+.stav-nevypujceno {
   color: var(--yellow);
 }
 
-.stav-vypujceno{
+.stav-vypujceno {
   color: var(--blue);
 }
 
-.stav-vraceno{
+.stav-vraceno {
   color: var(--green);
 }
 
-.poznamka-dt{
-  /* color: var(--blue); */
+.poznamka-dt {
   font-weight: var(--bold);
 }
 
-.h3-nahled-nazev-predmetu{
-  font-weight: var(--bold);
-  color: var(--blue);
-}
+/* NOTE zákazníci + detail zákazníka */
 
-.zakaznik-jmeno-odkaz{
+.zakaznik-jmeno-odkaz {
   font-size: var(--baseFontSize);
   font-weight: var(--bold);
   color: var(--blue);
@@ -167,56 +261,52 @@ html * {
 
 .td-zakaznik-mail,
 .td-zakaznik-trida,
-.td-zakaznik-vypujcka-datum{
+.td-zakaznik-vypujcka-datum {
   font-size: var(--baseFontSize);
 }
 
-.dt-zakaznik{
+.dt-zakaznik {
   font-size: var(--smallFontSize);
 }
 
-.dd-zakaznik{
+.dd-zakaznik {
   font-size: var(--baseFontSize);
   font-weight: var(--semibold);
   color: var(--blue);
 }
 
-.dd-zakaznik-jmeno{
+.dd-zakaznik-jmeno {
   font-weight: var(--xtrabold);
 }
 
-.spravci-jmeno{
+/* NOTE správci  */
+
+.spravci-jmeno {
   font-size: var(--biggerFontSize);
   font-weight: var(--bold);
   color: var(--blue);
 }
 
-.spravci-mail{
+.spravci-mail {
   font-size: var(--baseFontSize);
 }
 
-.spravci-role-hodnota{
+.spravci-role-hodnota {
   font-size: var(--baseFontSize);
   font-weight: var(--semibold);
 }
 
-.varianta-predmetu{
+/* NOTE historie předmetu  */
+
+.varianta-predmetu {
   font-size: var(--biggerFontSize);
   font-weight: var(--semibold);
   text-decoration: underline;
   color: var(--blue);
 }
 
-@media only screen and (min-width: 768px) {
-  html *{
-  font-size: 16px;
-  }
-}
 
-
-.uppercase {
-  text-transform: uppercase;
-}
+/* NOTE ikony  */
 
 .icon {
   padding: 5px;
@@ -311,8 +401,13 @@ html * {
   height: 25px;
   content: url(../icon/cart-white.svg);
 }
+
 .icon-cart-white-min::before {
   content: url(../icon/min/cart-white-mobile.svg);
+}
+
+.icon-cart-blue-min::before {
+  content: url(../icon/cart-blue-min.svg);
 }
 
 .icon-cart-blue::before {
@@ -353,22 +448,22 @@ html * {
   content: url(../icon/heart-fill-blue.svg);
 }
 
-.icon-menu::before{
+.icon-menu::before {
   content: url(../icon/menu.svg);
 }
 
-.icon-timer::before{
+.icon-timer::before {
   content: url(../icon/timer.svg);
 }
 
-.icon-timer-blue::before{
+.icon-timer-blue::before {
   content: url(../icon/timer-blue.svg);
 }
 
-.icon-arrow-left-min::before{
+.icon-arrow-left-min::before {
   content: url(../icon/arrow-left-min.svg);
 }
 
-.icon-arrow-right-min::before{
+.icon-arrow-right-min::before {
   content: url(../icon/arrow-right-min.svg);
 }
