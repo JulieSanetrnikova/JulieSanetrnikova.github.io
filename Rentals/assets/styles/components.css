@@ -58,7 +58,7 @@ details>summary::-webkit-details-marker {
 }
 
 .active-mobile {
-  display: grid;
+  display: flex;
 }
 
 .active-desktop {
@@ -75,7 +75,7 @@ details>summary::-webkit-details-marker {
   }
 
   .active-desktop {
-    display: grid;
+    display: flex;
   }
 
   .active-desktop-block {
@@ -188,8 +188,8 @@ details>summary::-webkit-details-marker {
 
 @media only screen and (min-width: 768px) {
   .main-nav {
-    width: 100%;
-    padding: 10px 0 10px 0;
+    width: 90%;
+    padding: 10px 0 8px 0;
     border-bottom: var(--lightBorder);
   }
 
@@ -470,6 +470,13 @@ details>summary::-webkit-details-marker {
 
 .icon-cart-btn {
   padding-right: 5px;
+  display: none;
+}
+
+@media only screen and (min-width: 340px) {
+  .icon-cart-btn {
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -1271,4 +1278,8 @@ input[type="checkbox"]:checked~.checked {
 
 input[type="checkbox"]:checked~.unchecked {
   display: none;
+}
+
+.detail-vypujcky-container-checked{
+  display: block;
 }

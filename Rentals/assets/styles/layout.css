@@ -82,9 +82,18 @@ body {
 
 }
 
+/* NOTE max-width pro body */
+
+@media only screen and (min-width: 768px) {
+
+    .main-container-layout {
+        width: 90%;
+    }
+}
+
 /* NOTE nav s ico - zákazník */
 
-.main-nav-container-layout {
+/* .main-nav-container-layout {
     display: grid;
     position: fixed;
     top: 0;
@@ -114,11 +123,11 @@ body {
 
 .nav-menu-layout-li {
     justify-self: center;
-}
+} */
 
 /* NOTE nav admin */
 /* REVIEW important, .active-mobile má display block v components totiž */
-.main-nav-admin-mobile {
+/* .main-nav-admin-mobile {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -128,10 +137,10 @@ body {
 
     .main-nav-admin-mobile {
         grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-    }
+    } */
 
     /* * navigace s ikonkama - zákazník */
-
+/* 
     .main-nav-layout {
         grid-template-columns: 6fr 1fr 4fr;
     }
@@ -145,10 +154,10 @@ body {
 
     .main-nav-admin-layout {
         grid-column-start: 2;
-    }
+    } */
 
     /* * navigace s ikonkama - zákazník */
-
+/* 
     .main-nav-container-layout {
         grid-template-columns: 1fr 18fr 1fr;
     }
@@ -258,6 +267,129 @@ body {
         width: 1200px;
         grid-column-start: 2;
     }
+} */
+
+/* REVIEW navigace flexem */
+
+/* NOTE nav admin - mobile  */
+
+.main-nav-container-layout {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    background-color: var(--bg);
+}
+.main-nav-admin-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-nav-ico-admin-container{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (min-width: 490px) {
+    .main-nav-ico-admin-container{
+        width: 230px;
+    }
+}
+
+/* NOTE nav admin - desktop  */
+
+.main-nav-admin-desktop-layout-row{
+    display: flex;
+    flex-flow: column;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.main-nav-admin-desktop-layout{
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.primary-nav-admin-desktop-layout{
+    display: flex;
+    padding: 14px 0px 12px 0px;
+    align-items: center;
+    width: 100%;
+}
+.nav-menu-admin-desktop-layout{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 50px;
+}
+.nav-ul-admin-layout{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.nav-ul-desktop-admin{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.secondary-main-nav-admin-desktop-layout{
+    display: flex;
+}
+
+/* NOTE nav zákazník - mobile  */
+
+.main-nav-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu-layout-ul{
+    display: flex;
+    width: 220px;
+    align-items: center;
+}
+
+.nav-menu-layout-li{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav-layout{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 340px) {
+    .nav-menu-layout-ul{
+        width: 250px;
+    }
+}
+
+/* NOTE nav zákazník - desktop  */
+
+.logo-zakaznik{
+    width: 250px;
+}
+
+/* NOTE nav max-width všech navigací */
+
+@media only screen and (min-width: 1333px) {
+
+    /* .main-nav-container-layout { */
+    /* .main-nav-admin-desktop-layout-row{
+        ma
+        position: fixed;
+    } */
 }
 
 /* NOTE search  */

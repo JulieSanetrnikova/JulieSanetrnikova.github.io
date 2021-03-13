@@ -21,176 +21,198 @@
 <body>
     <div class="main-container-layout">
 
-        <div class="main-nav-container-layout main-nav-admin-container-layout main-nav-admin-container-desktop-layout">
-            <nav class="main-nav-admin-layout main-nav-admin-mobile active-mobile">
+        <header class="main-header-layout main-header-layout-prehled">
+            <div
+                class="main-nav-container-layout main-nav-admin-container-layout main-nav-admin-container-desktop-layout">
+                <nav class="main-nav-admin-layout main-nav-admin-mobile active-mobile">
 
-                <div class="logo active-mobile">
-                    <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
-                </div>
+                    <div class="logo active-mobile">
+                        <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+                    </div>
 
-                <details class="nav-search-layout active-mobile">
+                    <!-- <details class="nav-search-layout active-mobile">
                     <summary class="nav-summary search-icon-mobile"><span class="icon-search icon"></span></summary>
                     <form class="search-area-admin" action="">
                         <input class="search-input" type="text" placeholder="HLEDAT" name="search">
                         <a href="#"><span class="icon-search icon-search-input icon"></span></a>
                     </form>
-                </details>
+                </details> -->
+                    <div class="main-nav-ico-admin-container">
+                        <details class="nav-kategorie-admin-layout uppercase active-mobile">
+                            <summary class="nav-summary"></span><span class="icon-timer-blue icon"></span></summary>
+                            <nav>
+                                <ul class="nav-ul nav-kategorie-admin-ul">
+                                    <li class="nav-mobile-li"><a class="nav-a nav-target"
+                                            href="../prehled/probihajici.html"><span
+                                                class="icon-dot-blue icon"></span>Probíhajíjcí</a></li>
+                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/budoucnost.html"><span
+                                                class="icon-dot-border icon"></span>Rezervace</a></li>
+                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/historie.html"><span
+                                                class="icon-dot-border icon"></span>Historie</a>
+                                    </li>
+                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/nevracene.html"><span
+                                                class="icon-dot-border icon"></span>Nevrácené</a>
+                                    </li>
+                                    <li class="nav-mobile-li"><a class="nav-a"
+                                            href="../vypujcky/nova-vypujcka.html"><span
+                                                class="icon-dot-border icon"></span>Nová
+                                            výpůjčka</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+                        <details class="nav-kategorie-admin-layout uppercase active-mobile">
+                            <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
+                            <ul class="nav-ul nav-kategorie-admin-ul">
+                                <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
+                                <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový
+                                        předmět</a></li>
+                                <li class="nav-mobile-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html">Nová
+                                        výpůjčka</a></li>
+                            </ul>
+                        </details>
+                        <details class="nav-kategorie-admin-layout uppercase active-mobile">
+                            <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
+                            <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
+                                <li class="nav-mobile-li nav-prehled"><a class="nav-a nav-target"
+                                        href="../prehled/probihajici.html"><span
+                                            class="icon-dot-blue icon"></span>Přehled</a></li>
+                                <li class="nav-mobile-li nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
+                                            class="icon-dot-border icon"></span>Kalendář</a></li>
+                                <li class="nav-mobile-li nav-predmety"><a class="nav-a"
+                                        href="../predmety/seznam-predmetu.html"><span
+                                            class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                                <li class="nav-mobile-li nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
+                                            class="icon-dot-border icon"></span>Zákazníci</a></li>
+                                <li class="nav-mobile-li nav-spravci"><a class="nav-a" href="../spravci.html"><span
+                                            class="icon-dot-border icon"></span>Správci</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </nav>
 
-                <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary class="nav-summary"></span><span class="icon-timer-blue icon"></span></summary>
-                    <nav>
-                        <ul class="nav-ul nav-kategorie-admin-ul">
-                            <li class="nav-mobile-li"><a class="nav-a nav-target" href="../prehled/probihajici.html"><span
-                                        class="icon-dot-blue icon"></span>Probíhajíjcí</a></li>
-                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/budoucnost.html"><span
-                                        class="icon-dot-border icon"></span>Budoucnost</a></li>
-                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/historie.html"><span
-                                        class="icon-dot-border icon"></span>Historie</a>
-                            </li>
-                            <li class="nav-mobile-li"><a class="nav-a" href="../prehled/nevracene.html"><span
-                                        class="icon-dot-border icon"></span>Nevrácené</a>
-                            </li>
-                            <li class="nav-mobile-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html"><span class="icon-dot-border icon"></span>Nová
-                                    výpůjčka</a></li>
-                        </ul>
-                    </nav>
-                </details>
-                <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
-                    <ul class="nav-ul nav-kategorie-admin-ul">
-                        <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
-                        <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový předmět</a></li>
-                        <li class="nav-mobile-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
-                    </ul>
-                </details>
-                <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                    <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
-                    <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
-                        <li class="nav-mobile-li nav-prehled"><a class="nav-a nav-target" href="../prehled/probihajici.html"><span
-                                    class="icon-dot-blue icon"></span>Přehled</a></li>
-                        <li class="nav-mobile-li nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
-                                    class="icon-dot-border icon"></span>Kalendář</a></li>
-                        <li class="nav-mobile-li nav-predmety"><a class="nav-a" href="../predmety/seznam-predmetu.html"><span
-                                    class="icon-dot-border icon"></span>Seznam předmětů</a></li>
-                        <li class="nav-mobile-li nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
-                                    class="icon-dot-border icon"></span>Zákazníci</a></li>
-                        <li class="nav-mobile-li nav-spravci"><a class="nav-a" href="../spravci.html"><span
-                                    class="icon-dot-border icon"></span>Správci</a></li>
-                    </ul>
-                </details>
-            </nav>
-
-            <nav class="main-nav-admin-desktop-layout-row main-nav-admin-desktop-row active-desktop">
-                <div class="logo active-desktop">
-                    <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
-                </div>
-                <nav class="nav-menu-admin-desktop-layout active-desktop">
-                    <details class="nav-search-layout">
+                <nav class="main-nav-admin-desktop-layout-row main-nav-admin-desktop-row active-desktop">
+                    <div class="primary-nav-admin-desktop-layout">
+                        <div class="logo active-desktop">
+                            <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+                        </div>
+                        <nav class="nav-menu-admin-desktop-layout active-desktop">
+                            <!-- <details class="nav-search-layout">
                         <summary class="nav-summary search-icon-desktop"><span class="icon-search icon"></span></summary>
                         <form class="search-area-admin" action="">
                             <input class="search-input" type="text" placeholder="HLEDAT" name="search">
                             <a href="#"><span class="icon-search icon-search-input icon"></span></a>
                         </form>
-                    </details>
-                    <ul class="nav-ul-admin-layout uppercase">
-                        <li class="active-desktop">
-                            <details class="nav-dropdown-layout">
-                                <summary class="nav-summary"><span class="icon-arrow-down icon"></span> Nástroje</summary>
-                                <ul class="nav-ul nav-menu-admin-desktop-ul">
-                                    <li class="nav-menu-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
-                                    <li class="nav-menu-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový předmět</a></li>
-                                    <li class="nav-menu-li"><a class="nav-a" href="../vypujcky/nova-vypujcka.html">Nová výpůjčka</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li class="nav-prehled"><a class="nav-a nav-target" href="../prehled/probihajici.html"><span
-                                    class="icon-dot-blue icon"></span>Přehled</a></li>
-                        <li class="nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
-                                    class="icon-dot-border icon"></span>Kalendář</a></li>
-                        <li class="nav-predmety"><a class="nav-a" href="../predmety/seznam-predmetu.html"><span
-                                    class="icon-dot-border icon"></span>Seznam předmětů</a></li>
-                        <li class="nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
-                                    class="icon-dot-border icon"></span>Zákazníci</a></li>
-                        <li class="nav-spravci"><a class="nav-a" href="../spravci.html"><span
-                                    class="icon-dot-border icon"></span>Správci</a></li>
-                    </ul>
-                </nav>
+                    </details> -->
+                            <ul class="nav-ul-admin-layout uppercase">
+                                <li class="active-desktop">
+                                    <details class="nav-dropdown-layout">
+                                        <summary class="nav-summary"><span class="icon-arrow-down icon"></span> Nástroje
+                                        </summary>
+                                        <ul class="nav-ul nav-menu-admin-desktop-ul">
+                                            <li class="nav-menu-li"><a class="nav-a" href="#">Odeslat upozornění</a>
+                                            </li>
+                                            <li class="nav-menu-li"><a class="nav-a"
+                                                    href="../predmety/novy-predmet.html">Nový
+                                                    předmět</a></li>
+                                            <li class="nav-menu-li"><a class="nav-a"
+                                                    href="../vypujcky/nova-vypujcka.html">Nová
+                                                    výpůjčka</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="nav-prehled"><a class="nav-a nav-target"
+                                        href="../prehled/probihajici.html"><span
+                                            class="icon-dot-blue icon"></span>Přehled</a></li>
+                                <li class="nav-kalendar"><a class="nav-a" href="../kalendar.html"><span
+                                            class="icon-dot-border icon"></span>Kalendář</a></li>
+                                <li class="nav-predmety"><a class="nav-a" href="../predmety/seznam-predmetu.html"><span
+                                            class="icon-dot-border icon"></span>Seznam předmětů</a></li>
+                                <li class="nav-zakaznici"><a class="nav-a" href="../zakaznici.html"><span
+                                            class="icon-dot-border icon"></span>Zákazníci</a></li>
+                                <li class="nav-spravci"><a class="nav-a" href="../spravci.html"><span
+                                            class="icon-dot-border icon"></span>Správci</a></li>
+                            </ul>
+                        </nav>
+                    </div>
 
-                <nav class="secondary-main-nav-admin-desktop-layout secondary-main-nav-admin-desktop active-desktop">
-                    <ul class="nav-ul-desktop-admin uppercase">
-                        <li><a class="nav-a nav-target" href="../prehled/probihajici.html"><span
-                                    class="icon-dot-blue icon"></span>Probíhajíjcí</a>
-                        </li>
-                        <li><a class="nav-a" href="../prehled/budoucnost.html"><span
-                                    class="icon-dot-border icon"></span>Budoucnost</a>
-                        </li>
-                        <li><a class="nav-a" href="../prehled/historie.html"><span class="icon-dot-border icon"></span>Historie</a>
-                        </li>
-                        <li><a class="nav-a" href="../prehled/nevracene.html"><span class="icon-dot-border icon"></span>Nevrácené</a>
-                        </li>
-                        <li><a class="nav-a" href="../vypujcky/nova-vypujcka.html"><span class="icon-dot-border icon"></span>Nová
-                                výpůjčka</a>
-                        </li>
-                    </ul>
-                </nav>
-            </nav>
-        </div>
-
-
-        <header class="header header-prehled">
-            <h1 class="h1">Aktuálně probíhající výpůjčky</h1>
-        </header>
-
-        <main>
-            <div class="vypujcka-item-layout vypujcka-item">
-                <div class="vypujcka-item-info-layout vypujcka-item-info">
-                    <p class="vypujcka-jmeno"><a href="../../admin/zakaznik-detail.html">Novák František</a>
-                    </p>
-                    <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
-                    <details class="vypujcka-stav budouci uppercase">
-                        <summary>Budoucí</summary>
-                        <ul>
-                            <li class="vypujceno-stav"><a href="#">Vypůjčeno</a></li>
-                            <li class="nevypujceno-stav"><a href="#">Nevypůjčeno</a></li>
-                            <li class="vraceno-stav"><a href="#">Vráceno</a></li>
+                    <nav
+                        class="secondary-main-nav-admin-desktop-layout secondary-main-nav-admin-desktop active-desktop">
+                        <ul class="nav-ul-desktop-admin uppercase">
+                            <li><a class="nav-a nav-target" href="../prehled/probihajici.html"><span
+                                        class="icon-dot-blue icon"></span>Probíhajíjcí</a>
+                            </li>
+                            <li><a class="nav-a" href="../prehled/budoucnost.html"><span
+                                        class="icon-dot-border icon"></span>Rezervace</a>
+                            </li>
+                            <li><a class="nav-a" href="../prehled/historie.html"><span
+                                        class="icon-dot-border icon"></span>Historie</a>
+                            </li>
+                            <li><a class="nav-a" href="../prehled/nevracene.html"><span
+                                        class="icon-dot-border icon"></span>Nevrácené</a>
+                            </li>
+                            <li><a class="nav-a" href="../vypujcky/nova-vypujcka.html"><span
+                                        class="icon-dot-border icon"></span>Nová
+                                    výpůjčka</a>
+                            </li>
                         </ul>
-                    </details>
-                    <details class="detail-vypujcky-layout detail-vypujcky">
-                        <summary><span class="icon-plus"></span></summary>
-                        <div class="detail-vypujcky-item">
-                            <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                            <div class="kosik-texty">
-                                <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../../zakaznik/predmet-detail.html">Objektiv
-                                        SIGMA
-                                        17-50
-                                        mm 1:2.8</a></p>
-                                <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
-                                <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                                <p class="kosik-pocet-kusu">1</p>
-                                <dl>
-                                    <dt>Poznámka:</dt>
-                                    <dd class="poznamka">Poznámka k dané výpůjčce...</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </details>
-                    <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                    <a href="#"><span class="icon-delete"></span></a>
-                </div>
+                    </nav>
+                </nav>
             </div>
 
-        </main>
+                <h1 class="h1">Aktuálně probíhající výpůjčky</h1>
+            </header>
 
-        <footer class="main-footer-layout main-footer">
-            <div class="main-footer-container-layout">
-                <p class="footer-text">© Aplikace pro správu vybavení školního ateliéru</p>
-                <div class="logout-btn-container-layout">
-                    <div class="logout-btn uppercase">
-                        <a href="../../zakaznik/login.html" class="logout-btn-text">Odhlásit se</a>
+            <main>
+                <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-info-layout vypujcka-item-info">
+                        <p class="vypujcka-jmeno"><a href="../../admin/zakaznik-detail.html">Novák František</a>
+                        </p>
+                        <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
+                        <details class="vypujcka-stav budouci uppercase">
+                            <summary>Budoucí</summary>
+                            <ul>
+                                <li class="vypujceno-stav"><a href="#">Vypůjčeno</a></li>
+                                <li class="nevypujceno-stav"><a href="#">Nevypůjčeno</a></li>
+                                <li class="vraceno-stav"><a href="#">Vráceno</a></li>
+                            </ul>
+                        </details>
+                        <details class="detail-vypujcky-layout detail-vypujcky">
+                            <summary><span class="icon-plus"></span></summary>
+                            <div class="detail-vypujcky-item">
+                                <img src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                                <div class="kosik-texty">
+                                    <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a"
+                                            href="../../zakaznik/predmet-detail.html">Objektiv
+                                            SIGMA
+                                            17-50
+                                            mm 1:2.8</a></p>
+                                    <p class="kosik-identifikator-produktu uppercase">17-50mm2.8_1</p>
+                                    <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
+                                    <p class="kosik-pocet-kusu">1</p>
+                                    <dl>
+                                        <dt>Poznámka:</dt>
+                                        <dd class="poznamka">Poznámka k dané výpůjčce...</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </details>
+                        <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
+                        <a href="#"><span class="icon-delete"></span></a>
                     </div>
                 </div>
-            </div>
-        </footer>
+
+            </main>
+
+            <footer class="main-footer-layout main-footer">
+                <div class="main-footer-container-layout">
+                    <p class="footer-text">© Aplikace pro správu vybavení školního ateliéru</p>
+                    <div class="logout-btn-container-layout">
+                        <div class="logout-btn uppercase">
+                            <a href="../../zakaznik/login.html" class="logout-btn-text">Odhlásit se</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
     </div>
 
 

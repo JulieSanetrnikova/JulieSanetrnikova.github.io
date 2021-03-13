@@ -23,46 +23,72 @@
 <body>
     <div class="main-container-layout main-container-layout-profil">
 
-        <div class="main-nav-container-layout"> 
-            <nav class="main-nav-layout main-nav">
-                <div class="logo">
-                    <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
-                </div>
-                <details class="nav-kategorie-layout nav-kategorie uppercase">
-                    <summary><span class="icon-arrow-down icon active-desktop-block"> Kategorie</span><span
-                            class="icon-filter icon active-mobile"></span></summary>
-                    <nav>
-                        <ul class="nav-ul nav-kategorie-layout-ul">
-                            <li class="nav-li"><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
-                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Těla fotoaparátů</a></li>
-                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a></li>
-                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Stativy</a></li>
-                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Příslušenství</a></li>
+        <header class="main-header-layout profil-header">
+            <div class="main-nav-container-layout">
+                <nav class="main-nav-layout main-nav">
+                    <div class="logo logo-zakaznik">
+                        <a href="../../html/zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
+                    </div>
+                    <details class="nav-kategorie-layout nav-kategorie active-desktop-block uppercase">
+                        <summary><span class="icon-arrow-down icon active-desktop-block"> Kategorie</span><span
+                                class="icon-filter icon active-mobile"></span></summary>
+                        <nav>
+                            <ul class="nav-ul nav-kategorie-layout-ul">
+                                <li class="nav-li"><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
+                                <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Těla
+                                        fotoaparátů</a></li>
+                                <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a>
+                                </li>
+                                <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Stativy</a>
+                                </li>
+                                <li class="nav-li"><a href="#"><span
+                                            class="icon-dot-border icon"></span>Příslušenství</a></li>
+                            </ul>
+                        </nav>
+                    </details>
+
+                    <nav class="nav-menu-layout nav-menu">
+                        <ul class="nav-ul nav-menu-layout-ul">
+                            <li class="nav-menu-layout-li active-mobile">
+                                <details class="nav-kategorie-layout nav-kategorie uppercase">
+                                    <summary><span class="icon-arrow-down icon active-desktop-block"> Kategorie</span><span
+                                            class="icon-filter icon active-mobile"></span></summary>
+                                    <nav>
+                                        <ul class="nav-ul nav-kategorie-layout-ul">
+                                            <li class="nav-li"><a href="#"><span class="icon-dot-blue icon"></span>Vše</a></li>
+                                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Těla
+                                                    fotoaparátů</a></li>
+                                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Objektivy</a>
+                                            </li>
+                                            <li class="nav-li"><a href="#"><span class="icon-dot-border icon"></span>Stativy</a>
+                                            </li>
+                                            <li class="nav-li"><a href="#"><span
+                                                        class="icon-dot-border icon"></span>Příslušenství</a></li>
+                                        </ul>
+                                    </nav>
+                                </details>
+                            </li>
+                            <li class="nav-menu-layout-li">
+                                <details class="nav-search-layout">
+                                    <summary><span class="icon-search icon"></span></summary>
+                                    <form class="search-area" action="">
+                                        <input class="search-input" type="text" placeholder="HLEDAT" name="search">
+                                        <a href="#"><span class="icon-search icon-search-input icon"></span></a>
+                                    </form>
+                                </details>
+                            </li>
+                            <!-- <li class="admin"><a href="../admin/prehled/probihajici.html"><span class="icon-settings icon"></span></a></li> -->
+                            <li class="nav-menu-layout-li"><a href="../zakaznik/wishlist.html"><span
+                                        class="icon-wishlist icon"></span></a></li>
+                            <li class="nav-menu-layout-li"><a href="../zakaznik/kosik.html"><span
+                                        class="icon-cart-black icon"></span></a></li>
+                            <li class="nav-menu-layout-li"><a href="../zakaznik/profil.html"><span
+                                        class="icon-user-blue icon"></span></a></li>
                         </ul>
                     </nav>
-                </details>
-
-                <nav class="nav-menu-layout nav-menu">
-                    <ul class="nav-ul nav-menu-layout-ul">
-                        <li class="nav-menu-layout-li">
-                            <details class="nav-search-layout">
-                                <summary><span class="icon-search icon"></span></summary>
-                                <form class="search-area" action="">
-                                    <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                                    <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                                </form>
-                            </details>
-                        </li>
-                        <!-- <li class="admin"><a href="../admin/prehled/probihajici.html"><span class="icon-settings icon"></span></a></li> -->
-                        <li class="nav-menu-layout-li"><a href="../zakaznik/wishlist.html"><span class="icon-wishlist icon"></span></a></li>
-                        <li class="nav-menu-layout-li"><a href="../zakaznik/kosik.html"><span class="icon-cart-black icon"></span></a></li>
-                        <li class="nav-menu-layout-li"><a href="../zakaznik/profil.html"><span class="icon-user-blue icon"></span></a></li>
-                    </ul>
                 </nav>
-            </nav>
-        </div>
+            </div>
 
-        <header class="main-header-layout profil-header">
             <h1 class="h1 profil-h1">Moje výpůjčky</h1>
             <a class="header-logout" href="../zakaznik/login.html">Odhlásit se</a>
         </header>
@@ -75,30 +101,6 @@
                     <a href="#" class="order-item uppercase">Stav<span class="icon-order icon"></span></a>
                 </nav>
 
-                <!-- <div class="vypujcka-item-layout">
-                    <p class="vypujcka-jmeno"><a href="../admin/zakaznik-detail.html">Novák František</a></p>
-                    <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
-                    <p class="vypujcka-stav budouci uppercase">Budoucí</p>
-                    <details>
-                        <summary><span class="icon-plus"></span></summary>
-                        <div class="detail-vypujcky-layout detail-vypujcky">
-                            <div class="detail-vypujcky-item">
-                                <img src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                                <div class="kosik-texty">
-                                    <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a" href="../zakaznik/predmet-detail.html">Objektiv
-                                            SIGMA
-                                            17-50
-                                            mm 1:2.8</a></p>
-                                    <p class="kosik-specifikace-produktu uppercase">Určen primárně do ateliéru!</p>
-                                    <p class="kosik-pocet-kusu">1</p>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-                    <a href="../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                    <a href="#"><span class="icon-delete"></span></a>
-                </div> -->
-
                 <div class="vypujcka-item-layout vypujcka-item">
                     <div class="vypujcka-item-main-layout vypujcka-item-main">
                         <p class="vypujcka-jmeno">Novák František</p>
@@ -109,7 +111,7 @@
                                     class="icon-edit-pen"></span></a>
                             <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox" onclick="hideShow()"></input>
+                                <input type="checkbox"></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -126,7 +128,8 @@
                                 <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
                             </div>
                             <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Videokamera
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Videokamera
                                         Panasonic
                                         HC-X920</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
@@ -138,50 +141,8 @@
                                 <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
                             </div>
                             <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Objektiv SIGMA
-                                        17-50mm 1:2.8</a></p>
-                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
-                            </div>
-                        </div>
-                        <dl class="vypujcka-item-poznamka">
-                            <dt class="poznamka-dt">Poznámka:</dt>
-                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
-                        </dl>
-                    </div>
-                </div>
-                
-                <div class="vypujcka-item-layout vypujcka-item">
-                    <div class="vypujcka-item-main-layout vypujcka-item-main">
-                        <p class="vypujcka-jmeno">Novák František</p>
-                        <p class="vypujcka-datum">15. 2. (13:30) - 20. 3. (14:30)</p>
-                        <p class="vypujcka-stav stav-nevraceno uppercase">Nevráceno</p>
-                        <div class="vypujcka-container-icon">
-                            <label class="plus-detail-checkbox">
-                                <input type="checkbox" onclick="hideShow()"></input>
-                                <span class="icon-minus checked"></span>
-                                <span class="icon-plus unchecked"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
-                        <div class="detail-vypujcky-item">
-                            <div class="kosik-img-container">
-                                <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
-                            </div>
-                            <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Videokamera
-                                        Panasonic
-                                        HC-X920</a></p>
-                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="detail-vypujcky-item">
-                            <div class="kosik-img-container">
-                                <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
-                            </div>
-                            <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Objektiv SIGMA
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Objektiv SIGMA
                                         17-50mm 1:2.8</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
                             </div>
@@ -193,7 +154,52 @@
                     </div>
                 </div>
 
-                
+                <div class="vypujcka-item-layout vypujcka-item">
+                    <div class="vypujcka-item-main-layout vypujcka-item-main">
+                        <p class="vypujcka-jmeno">Novák František</p>
+                        <p class="vypujcka-datum">15. 2. (13:30) - 20. 3. (14:30)</p>
+                        <p class="vypujcka-stav stav-nevraceno uppercase">Nevráceno</p>
+                        <div class="vypujcka-container-icon">
+                            <label class="plus-detail-checkbox">
+                                <input type="checkbox"></input>
+                                <span class="icon-minus checked"></span>
+                                <span class="icon-plus unchecked"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Videokamera
+                                        Panasonic
+                                        HC-X920</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-vypujcky-item">
+                            <div class="kosik-img-container">
+                                <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                            </div>
+                            <div class="detail-vypujcky-texty">
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Objektiv SIGMA
+                                        17-50mm 1:2.8</a></p>
+                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
+                            </div>
+                        </div>
+                        <dl class="vypujcka-item-poznamka">
+                            <dt class="poznamka-dt">Poznámka:</dt>
+                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
+                        </dl>
+                    </div>
+                </div>
+
+
 
                 <div class="vypujcka-item-layout vypujcka-item">
                     <div class="vypujcka-item-main-layout vypujcka-item-main">
@@ -202,7 +208,7 @@
                         <p class="vypujcka-stav stav-vraceno uppercase">Vráceno</p>
                         <div class="vypujcka-container-icon">
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox" onclick="hideShow()"></input>
+                                <input type="checkbox"></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -215,7 +221,8 @@
                                 <img class="kosik-nahled-img" src="../../assets/img/Panasonic_HC-X920_7ce7.jpg" alt="">
                             </div>
                             <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Videokamera
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Videokamera
                                         Panasonic
                                         HC-X920</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
@@ -227,7 +234,8 @@
                                 <img class="kosik-nahled-img" src="../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
                             </div>
                             <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Objektiv SIGMA
+                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
+                                        href="./predmet-detail.html">Objektiv SIGMA
                                         17-50mm 1:2.8</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
                             </div>
@@ -238,38 +246,6 @@
                         </dl>
                     </div>
                 </div>
-
-                <!-- <div class="vypujcka-item-layout vypujcka-item">
-                    <div class="vypujcka-item-main-layout vypujcka-item-main">
-                        <p class="vypujcka-jmeno">Novák František</p>
-                        <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
-                        <p class="vypujcka-stav budouci uppercase">Budoucí</p>
-                        <div class="vypujcka-container-icon">
-                            <a href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                            <a href="#"><span class="icon-delete"></span></a>
-                            <label id="toggle" class="plus-detail-checkbox">
-                                <input type="checkbox" onclick="hideShow()"></input>
-                                <span class="icon-minus checked"></span>
-                                <span class="icon-plus unchecked"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="content" class="detail-vypujcky-layout detail-vypujcky">
-                        <div class="detail-vypujcky-item">
-                            <img src="../../assets/img/flycam_fd0f.jpg" alt="">
-                            <div class="detail-vypujcky-texty">
-                                <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a" href="./predmet-detail.html">Objektiv SIGMA
-                                        17-50mm 1:2.8</a></p>
-                                <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
-                            </div>
-                        </div>
-                        <dl class="vypujcka-item-poznamka">
-                            <dt class="poznamka-dt">Poznámka:</dt>
-                            <dd class="poznamka-dd">Poznámka k dané výpůjčce...</dd>
-                        </dl>
-                    </div>
-                </div> -->
-
 
             </div>
 
@@ -287,22 +263,18 @@
         </footer>
     </div>
 
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        $("#toggle").on("click", function () {
-            $("#content").toggle();              
-        });
-    </script> -->
+        for (let block of document.getElementsByClassName("vypujcka-item")) {
+            for (let checkbox of block.getElementsByTagName("input")) {
+                checkbox.onclick = (e) => { checkboxClick(block.getElementsByClassName("detail-vypujcky-container").item(0)) }
+            }
+        }
 
-
-    <script>
-        function hideShow() {
-            var x = document.getElementById("detailVypujcky");
-            if (x.style.display === "block") {
-                x.style.display = "none";
+        function checkboxClick(elm) {
+            if (elm.classList.contains('detail-vypujcky-container-checked')) {
+                elm.classList.remove("detail-vypujcky-container-checked");
             } else {
-                x.style.display = "block";
+                elm.classList.add("detail-vypujcky-container-checked");
             }
         }
     </script>
