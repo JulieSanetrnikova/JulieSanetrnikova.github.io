@@ -381,10 +381,24 @@ body {
     }
 }
 
+@media only screen and (min-width: 345px) {
+    .nav-menu-layout-ul {
+        width: 260px;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .nav-menu-layout-ul {
+        width: 270px;
+    }
+}
+
 /* NOTE nav zákazník - desktop  */
 
 .logo-zakaznik {
     width: 250px;
+    text-align: left;
+
 }
 
 /* NOTE nav max-width všech navigací */
