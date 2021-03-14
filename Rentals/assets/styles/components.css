@@ -304,8 +304,12 @@ details>summary::-webkit-details-marker {
   padding-top: 2px;
 }
 
-.search-input:focus-visible{
+.search-input:focus-visible,
+.search-input:focus{
+  -webkit-appearance: none;
   outline-style: none;
+  border: none;
+  border-radius: none;
 }
 
 @media only screen and (min-width: 450px) {
