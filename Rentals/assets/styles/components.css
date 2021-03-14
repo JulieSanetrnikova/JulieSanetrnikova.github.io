@@ -32,7 +32,9 @@ a {
   text-align: center;
 }
 
-input{
+input,
+textarea,
+select{
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0; 
