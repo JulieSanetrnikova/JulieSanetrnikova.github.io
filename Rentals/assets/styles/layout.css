@@ -393,6 +393,12 @@ body {
     }
 }
 
+@media only screen and (min-width: 374px) {
+    .nav-menu-layout-ul {
+        width: 280px;
+    }
+}
+
 /* NOTE nav zákazník - desktop  */
 
 .logo-zakaznik {
