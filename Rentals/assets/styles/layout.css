@@ -1170,10 +1170,10 @@ body {
     bottom: 40px;
     left: 10px;
     display: block;
-    width: 260px;
+    width: 290px;
 }
 
-@media only screen and (min-width: 724px) {
+@media only screen and (min-width: 335px) {
     .help-info-content-container {
         width: 300px;
     }
