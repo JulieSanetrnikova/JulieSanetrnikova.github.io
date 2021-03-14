@@ -32,13 +32,7 @@
                         <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                     </div>
 
-                    <!-- <details class="nav-search-layout active-mobile">
-                    <summary class="nav-summary search-icon-mobile"><span class="icon-search icon"></span></summary>
-                    <form class="search-area-admin" action="">
-                        <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                        <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                    </form>
-                </details> -->
+                    
                     <div class="main-nav-ico-admin-container">
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
                             <summary class="nav-summary"></span><span class="icon-timer icon"></span></summary>
@@ -46,7 +40,7 @@
                                 <ul class="nav-ul nav-kategorie-admin-ul">
                                     <li class="nav-mobile-li"><a class="nav-a" href="../prehled/probihajici.html"><span
                                                 class="icon-dot-border icon"></span>Probíhajíjcí</a></li>
-                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/budoucnost.html"><span
+                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/rezervace.html"><span
                                                 class="icon-dot-border icon"></span>Rezervace</a></li>
                                     <li class="nav-mobile-li"><a class="nav-a" href="../prehled/historie.html"><span
                                                 class="icon-dot-border icon"></span>Historie</a>
@@ -62,7 +56,7 @@
                             </nav>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-plus icon"><span class="hidden-text">nástroje</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul">
                                 <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
                                 <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový
@@ -72,7 +66,7 @@
                             </ul>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-menu icon"><span class="hidden-text">menu</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
                                 <li class="nav-mobile-li nav-prehled"><a class="nav-a"
                                         href="../prehled/probihajici.html"><span
@@ -97,13 +91,7 @@
                             <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                         </div>
                         <nav class="nav-menu-admin-desktop-layout active-desktop">
-                            <!-- <details class="nav-search-layout">
-                        <summary class="nav-summary search-icon-desktop"><span class="icon-search icon"></span></summary>
-                        <form class="search-area-admin" action="">
-                            <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                            <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                        </form>
-                    </details> -->
+                            
                             <ul class="nav-ul-admin-layout uppercase">
                                 <li class="active-desktop">
                                     <details class="nav-dropdown-layout">
@@ -149,7 +137,7 @@
                         <a class="vypujcka-jmeno" href="../../admin/zakaznik-detail.html">Novák František</a>
                         <p class="vypujcka-datum">20. 11. (9:00) - 25. 11. (15:30)</p>
                         <details class="vypujcka-stav uppercase">
-                            <summary class="stav-budouci vypujcka-stav">Budoucí</summary>
+                            <summary class="stav-nevypujceno vypujcka-stav">Nevypůjčeno</summary>
                             <ul class="nabidka-stav-vypujcky">
                                 <li class="vypujcka-stav-vyber"><a class="stav-vypujceno" href="#">Vypůjčeno</a></li>
                                 <li class="vypujcka-stav-vyber"><a class="stav-nevypujceno" href="#">Nevypůjčeno</a>
@@ -158,32 +146,32 @@
                             </ul>
                         </details>
                         <div class="vypujcka-container-icon-prehled">
-                            <a class="icon-active-desktop" href="#"><span class="icon-notification"></span></a>
+                            <a class="icon-active-desktop" href="#"><span class="icon-notification"><span class="hidden-text">odeslat upozornění</span></span></a>
                             <a class="icon-active-desktop" href="../zakaznik/kosik-uprava.html"><span
-                                    class="icon-edit-pen"></span></a>
-                            <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
+                                    class="icon-edit-pen"><span class="hidden-text">editace</span></span></a>
+                            <a class="icon-active-desktop" href="#"><span class="icon-delete"><span class="hidden-text">smazat</span></span></a>
                             <label class="plus-detail-checkbox plus-detail-checkbox-prehled">
                                 <input type="checkbox" class="toggle-detail"></input>
-                                <span class="icon-minus checked"></span>
-                                <span class="icon-plus unchecked"></span>
+                                <span class="icon-minus checked"><span class="hidden-text">zobrazit méně</span></span>
+                                <span class="icon-plus unchecked"><span class="hidden-text">zobrazit více</span></span>
                             </label>
                         </div>
                     </div>
                     <div id="detailVypujcky" class="detail-vypujcky-container-layout detail-vypujcky-container">
                         <div class="vypujcka-container-icon-mobile-prehled">
-                            <a class="icon-active-mobile" href="#"><span class="icon-notification"></span></a>
+                            <a class="icon-active-mobile" href="#"><span class="icon-notification"><span class="hidden-text">odeslat upozornění</span></span></a>
                             <a class="icon-active-mobile icon-active-mobile-pen-prehled"
-                                href="../../zakaznik/kosik-uprava.html"><span class="icon-edit-pen"></span></a>
-                            <a class="icon-active-mobile" href="#"><span class="icon-delete"></span></a>
+                                href="../vypujcky/upravit-vypujcku.html"><span class="icon-edit-pen"><span class="hidden-text">editace</span></span></a>
+                            <a class="icon-active-mobile" href="#"><span class="icon-delete"><span class="hidden-text">smazat</span></span></a>
                         </div>
                         <div class="detail-vypujcky-item">
                             <div class="kosik-img-container">
                                 <img class="kosik-nahled-img" src="../../../assets/img/Panasonic_HC-X920_7ce7.jpg"
-                                    alt="">
+                                    alt="Videokamera Panasonic HC-X920">
                             </div>
                             <div class="detail-vypujcky-texty">
                                 <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
-                                        href="./predmet-detail.html">Videokamera
+                                        href="../predmety/historie-predmetu-detail.html">Videokamera
                                         Panasonic
                                         HC-X920</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">F1,5 f2,84-34,1mm (včetně akumulátoru)
@@ -193,11 +181,11 @@
                         <div class="detail-vypujcky-item">
                             <div class="kosik-img-container">
                                 <img class="kosik-nahled-img" src="../../../assets/img/Sigma18-50_f918-min-min.jpg"
-                                    alt="">
+                                    alt="Objektiv SIGMA 17-50 mm 1:2.8">
                             </div>
                             <div class="detail-vypujcky-texty">
                                 <p class="detail-vypujcky-nazev-produktu"><a class="detail-vypujcky-nazev-produktu-a"
-                                        href="./predmet-detail.html">Objektiv SIGMA
+                                        href="../predmety/historie-predmetu-detail.html">Objektiv SIGMA
                                         17-50mm 1:2.8</a></p>
                                 <p class="detail-vypujcky-specifikace uppercase">Určen primárně do ateliéru!</p>
                             </div>
@@ -233,6 +221,21 @@
         </footer>
     </div>
 
+    <script>
+        for (let block of document.getElementsByClassName("vypujcka-item")) {
+            for (let checkbox of block.getElementsByTagName("input")) {
+                checkbox.onclick = (e) => { checkboxClick(block.getElementsByClassName("detail-vypujcky-container").item(0)) }
+            }
+        }
+
+        function checkboxClick(elm) {
+            if (elm.classList.contains('detail-vypujcky-container-checked')) {
+                elm.classList.remove("detail-vypujcky-container-checked");
+            } else {
+                elm.classList.add("detail-vypujcky-container-checked");
+            }
+        }
+    </script>
 </body>
 
 </html>

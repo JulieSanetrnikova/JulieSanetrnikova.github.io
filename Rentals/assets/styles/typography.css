@@ -37,7 +37,13 @@
 html * {
   font-family: "Hind", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 350px) {
+  html * {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -168,6 +174,7 @@ html * {
 
 .product-text {
   font-size: var(--smallFontSize);
+  opacity: .7;
 }
 
 /* NOTE detail předmětu  */
@@ -207,9 +214,26 @@ html * {
 /* NOTE výpůjčka  */
 
 .vypujcka-jmeno {
-  font-size: var(--biggerFontSize);
+  font-size: var(--baseFontSize);
   font-weight: var(--bold);
   color: var(--blue);
+}
+
+.vypujcka-stav {
+  font-size: var(--smallFontSize);
+  font-weight: var(--xtrabold);
+}
+
+@media only screen and (min-width: 375px) {
+  .vypujcka-jmeno {
+    font-size: var(--biggerFontSize);
+    font-weight: var(--bold);
+    color: var(--blue);
+  }
+
+  .vypujcka-stav {
+    font-size: var(--baseFontSize);
+  }
 }
 
 .detail-vypujcky-nazev-produktu-a {
@@ -220,11 +244,6 @@ html * {
 .detail-vypujcky-specifikace {
   font-size: var(--smallFontSize);
   opacity: .7;
-}
-
-.vypujcka-stav {
-  font-size: var(--baseFontSize);
-  font-weight: var(--xtrabold);
 }
 
 .stav-budouci {
@@ -305,6 +324,37 @@ html * {
   color: var(--blue);
 }
 
+/* NOTE help info */
+
+.help-info-heading{
+  font-size: var(--baseFontSize);
+  font-weight: var(--xtrabold);
+}
+
+.help-info-text{
+  font-size: var(--baseFontSize);
+}
+
+.help-info-heading-1{
+  font-size: var(--biggerFontSize);
+  font-weight: var(--xtrabold);
+}
+
+.help-info-nevypujceno{
+  color: var(--yellow);
+}
+
+.help-info-vypujceno{
+  color: var(--blue);
+}
+
+.help-info-nevraceno{
+  color: var(--red);
+}
+
+.help-info-vraceno{
+  color: var(--green);
+}
 
 /* NOTE ikony  */
 
@@ -466,4 +516,8 @@ html * {
 
 .icon-arrow-right-min::before {
   content: url(../icon/arrow-right-min.svg);
+}
+
+.icon-search-min::before {
+  content: url(../icon/min/search-mobile.svg);
 }

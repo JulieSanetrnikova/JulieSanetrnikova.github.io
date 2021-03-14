@@ -21,7 +21,7 @@
 <body>
     <div class="main-container-layout">
 
-        <header class="main-header-layout main-header-layout-prehled">
+        <header class="main-header-layout main-header-layout-prehled main-header-search main-header-search-full-width">
             <div
                 class="main-nav-container-layout main-nav-admin-container-layout main-nav-admin-container-desktop-layout">
                 <nav class="main-nav-admin-layout main-nav-admin-mobile active-mobile">
@@ -30,16 +30,10 @@
                         <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                     </div>
 
-                    <!-- <details class="nav-search-layout active-mobile">
-                    <summary class="nav-summary search-icon-mobile"><span class="icon-search icon"></span></summary>
-                    <form class="search-area-admin" action="">
-                        <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                        <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                    </form>
-                </details> -->
+                    
                     <div class="main-nav-ico-admin-container">
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"></span><span class="icon-filter icon"></span></summary>
+                            <summary class="nav-summary"></span><span class="icon-filter icon"><span class="hidden-text">předměty menu</span></span></summary>
                             <nav>
                                 <ul class="nav-ul nav-kategorie-admin-ul">
                                     <li class="nav-mobile-li"><a class="nav-a nav-target" href="#"><span
@@ -60,7 +54,7 @@
                             </nav>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-plus icon"><span class="hidden-text">nástroje</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul">
                                 <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
                                 <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový
@@ -70,7 +64,7 @@
                             </ul>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-menu icon"><span class="hidden-text">menu</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
                                 <li class="nav-mobile-li nav-prehled"><a class="nav-a"
                                         href="../prehled/probihajici.html"><span
@@ -95,13 +89,7 @@
                             <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                         </div>
                         <nav class="nav-menu-admin-desktop-layout active-desktop">
-                            <!-- <details class="nav-search-layout">
-                        <summary class="nav-summary search-icon-desktop"><span class="icon-search icon"></span></summary>
-                        <form class="search-area-admin" action="">
-                            <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                            <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                        </form>
-                    </details> -->
+                            
                             <ul class="nav-ul-admin-layout uppercase">
                                 <li class="active-desktop">
                                     <details class="nav-dropdown-layout">
@@ -151,6 +139,14 @@
             </div>
 
             <h1 class="h1">Seznam předmětů</h1>
+
+            <div class="search-area-admin-layout-container">
+                <form class="search-area-admin" action="">
+                    <input class="search-input" type="search" placeholder="HLEDAT" name="search">
+                    <a href="#" class="search-ico-container"><span class="icon-search-min icon-search-input"><span
+                                class="hidden-text">hledat</span></span></a>
+                </form>
+            </div>
         </header>
 
         <main>
@@ -159,10 +155,11 @@
                 <div class="product-item-layout product-item">
                     <header class="product-image">
                         <label class="heart-checkbox">
-                            <a href="./uprava-predmetu.html"><img src="../../../assets/icon/edit-pen.svg" alt=""></a>
+                            <a href="./uprava-predmetu.html"><span class="icon-edit-pen"><span class="hidden-text">editace</span></span></a>
                         </label>
                         <a href="./historie-predmetu-detail.html" class="odkaz-nahled-img">
-                            <img src="../../../assets/img/Sigma18-50_f918-min.jpg" alt=""
+                            <img src="../../../assets/img/Sigma18-50_f918-min.jpg" alt="Objektiv SIGMA 17-50 mm
+                                1:2.8"
                                 class="img-nahled-product"></a>
                     </header>
                     <div class="product-description">
@@ -179,10 +176,11 @@
                 <div class="product-item-layout product-item">
                     <header class="product-image">
                         <label class="heart-checkbox">
-                            <a href="./uprava-predmetu.html"><img src="../../../assets/icon/edit-pen.svg" alt=""></a>
+                            <a href="./uprava-predmetu.html"><span class="icon-edit-pen"><span class="hidden-text">editace</span></span></a>
                         </label>
                         <a href="./historie-predmetu-detail.html" class="odkaz-nahled-img">
-                            <img src="../../../assets/img/Sigma18-50_f918-min.jpg" alt=""
+                            <img src="../../../assets/img/Sigma18-50_f918-min.jpg" alt="Objektiv SIGMA 17-50 mm
+                                1:2.8"
                                 class="img-nahled-product"></a>
                     </header>
                     <div class="product-description">
@@ -199,10 +197,10 @@
                 <div class="product-item-layout product-item">
                     <header class="product-image">
                         <label class="heart-checkbox">
-                            <a href="./uprava-predmetu.html"><img src="../../../assets/icon/edit-pen.svg" alt=""></a>
+                            <a href="./uprava-predmetu.html"><span class="icon-edit-pen"><span class="hidden-text">editace</span></span></a>
                         </label>
                         <a href="./historie-predmetu-souhrn.html" class="odkaz-nahled-img">
-                            <img src="../../../assets/img/BattLPE6_03b5.jpg" alt="" class="img-nahled-product"></a>
+                            <img src="../../../assets/img/BattLPE6_03b5.jpg" alt="BattLPE6" class="img-nahled-product"></a>
                     </header>
                     <div class="product-description">
                         <h2 class="product-title"><a class="product-title-a"

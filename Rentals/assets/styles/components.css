@@ -32,6 +32,18 @@ a {
   text-align: center;
 }
 
+input{
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0; 
+  -webkit-appearance: textfield;
+}
+
+::placeholder,
+::-moz-placeholder{
+  opacity: .3;
+}
+
 summary {
   cursor: pointer;
 }
@@ -69,6 +81,10 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
+.active-desktop-grid{
+  display: none;
+}
+
 @media only screen and (min-width: 1024px) {
   .active-mobile {
     display: none;
@@ -80,6 +96,10 @@ details>summary::-webkit-details-marker {
 
   .active-desktop-block {
     display: block;
+  }
+
+  .active-desktop-grid{
+    display: grid;
   }
 }
 
@@ -161,6 +181,7 @@ details>summary::-webkit-details-marker {
   padding-left: 25%;
   box-shadow: var(--boxShadow);
   margin-top: 4px;
+  text-align: left;
 }
 
 .nav-li,
@@ -203,10 +224,9 @@ details>summary::-webkit-details-marker {
   }
 }
 
-/* NOTE search  */
+/* NOTE search zákazník především */
 
-.search-area,
-.search-area-admin {
+.search-area {
   position: absolute;
   left: 0;
   background-color: var(--bg);
@@ -219,15 +239,10 @@ details>summary::-webkit-details-marker {
   margin-top: 8px;
 }
 
-.search-area-admin {
-  margin-top: 6px;
-}
-
 .search-input {
   background-color: var(--bg);
   border: none;
   padding-left: 15px;
-  width: 80%;
   height: 30px;
 }
 
@@ -240,16 +255,6 @@ details>summary::-webkit-details-marker {
     width: 40%;
     padding-top: 10px;
     margin-top: 16px;
-    padding-bottom: 10px;
-    box-shadow: var(--boxShadow);
-  }
-
-  .search-area-admin {
-    position: absolute;
-    left: 0;
-    width: 40%;
-    padding-top: 10px;
-    margin-top: 12px;
     padding-bottom: 10px;
     box-shadow: var(--boxShadow);
   }
@@ -267,15 +272,67 @@ details>summary::-webkit-details-marker {
     width: 25%;
     margin-top: 12px;
   }
-
-  .search-area-admin {
-    width: 25%;
-    margin-top: 7px;
-  }
+  
 }
 
 .icon-search-input {
   opacity: .5;
+}
+
+/* NOTE search admin */
+
+.search-area-admin {
+  background-color: var(--bg);
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+  padding: 5px 5px 3px 5px;
+  box-shadow: var(--boxShadowLight);
+}
+
+.search-ico-container{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon-search-min{
+  padding-top: 2px;
+}
+
+.search-input:focus-visible{
+  outline-style: none;
+}
+
+@media only screen and (min-width: 450px) {
+  .search-area-admin {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .search-area-admin {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .search-area-admin {
+    /* width: 40%; */
+    /* padding-top: 10px; */
+    margin-top: 12px;
+    /* padding-bottom: 10px; */
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .search-area-admin {
+    width: 230px;
+    margin-top: 0px;
+  }
 }
 
 /* NOTE nav admin */
@@ -330,11 +387,12 @@ details>summary::-webkit-details-marker {
     margin-top: 12px;
     margin-left: 40%;
     box-shadow: var(--boxShadow);
+    text-align: left;
   }
 
   .nav-menu-admin-desktop-ul {
     position: absolute;
-    left: 18%;
+    left: 15%;
     z-index: 99999;
     width: 20%;
     margin-top: 17px;
@@ -356,12 +414,6 @@ details>summary::-webkit-details-marker {
   .main-nav-admin-desktop {
     padding: 5px 0px 5px 0px;
     border-bottom: var(--lightBorder);
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .nav-menu-admin-desktop-ul {
-    left: 25%;
   }
 }
 
@@ -486,9 +538,6 @@ details>summary::-webkit-details-marker {
 }
 
 /* NOTE detail produktu */
-.predmet-info-layout {
-  margin-top: 45px;
-}
 
 .predmet-detil-img {
   background-color: var(--white);
@@ -501,6 +550,7 @@ details>summary::-webkit-details-marker {
 
 .predmet-detail-texty {
   padding: 0px 10px;
+  margin-top: 20px;
 }
 
 .detail-heading {
@@ -544,6 +594,13 @@ details>summary::-webkit-details-marker {
 .detail-predmetu-layout .h2 {
   margin-top: 24px;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 724px) {
+  .predmet-detail-texty {
+    padding: 0px 10px;
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -719,8 +776,7 @@ details>summary::-webkit-details-marker {
 }
 
 .vypujcka-jmeno,
-.vypujcka-datum,
-.vypujcka-stav {
+.vypujcka-datum {
   padding-left: 5px;
 }
 
@@ -927,10 +983,12 @@ details>summary::-webkit-details-marker {
   background-color: var(--white);
   box-shadow: var(--boxShadowLight);
   padding: 10px;
+  margin-top: 10px;
+  margin-left: -5px;
 }
 
 .vypujcka-stav-vyber {
-  margin: 15px 10px;
+  padding: 8px;
 }
 
 /* NOTE zákazníci */
@@ -1282,4 +1340,59 @@ input[type="checkbox"]:checked~.unchecked {
 
 .detail-vypujcky-container-checked{
   display: block;
+}
+
+/* NOTE help centrum */
+
+.help-info-icon-container{
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-image: url(../icon/information.svg);
+  object-fit: cover;
+  opacity: .6;
+}
+
+.help-info-content-container{
+  background-color: var(--white);
+  box-shadow: var(--boxShadow);
+}
+
+.help-info-content {
+  padding: 10px 20px;
+}
+
+.help-info-text{
+  padding-bottom: 10px;
+}
+
+.help-info-heading-1{
+  padding-top: 10px;
+}
+
+.help-info-container {
+  padding: 5px;
+  background-color: var(--white);
+  border: var(--transparentBorder);
+  border-radius: 50%;
+  box-shadow: var(--boxShadow);
+}
+
+@media only screen and (min-width: 1024px) {
+  .help-info-icon-container{
+    opacity: .5;
+  }
+  .help-info-container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.hidden-text{
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
 }

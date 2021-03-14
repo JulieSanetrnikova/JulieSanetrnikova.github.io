@@ -35,13 +35,7 @@
                         <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                     </div>
 
-                    <!-- <details class="nav-search-layout active-mobile">
-                    <summary class="nav-summary search-icon-mobile"><span class="icon-search icon"></span></summary>
-                    <form class="search-area-admin" action="">
-                        <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                        <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                    </form>
-                </details> -->
+                    
                     <div class="main-nav-ico-admin-container">
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
                             <summary class="nav-summary"></span><span class="icon-timer icon"></span></summary>
@@ -49,7 +43,7 @@
                                 <ul class="nav-ul nav-kategorie-admin-ul">
                                     <li class="nav-mobile-li"><a class="nav-a" href="../prehled/probihajici.html"><span
                                                 class="icon-dot-border icon"></span>Probíhajíjcí</a></li>
-                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/budoucnost.html"><span
+                                    <li class="nav-mobile-li"><a class="nav-a" href="../prehled/rezervace.html"><span
                                                 class="icon-dot-border icon"></span>Rezervace</a></li>
                                     <li class="nav-mobile-li"><a class="nav-a" href="../prehled/historie.html"><span
                                                 class="icon-dot-border icon"></span>Historie</a>
@@ -65,7 +59,7 @@
                             </nav>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-plus icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-plus icon"><span class="hidden-text">nástroje</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul">
                                 <li class="nav-mobile-li"><a class="nav-a" href="#">Odeslat upozornění</a></li>
                                 <li class="nav-mobile-li"><a class="nav-a" href="../predmety/novy-predmet.html">Nový
@@ -75,7 +69,7 @@
                             </ul>
                         </details>
                         <details class="nav-kategorie-admin-layout uppercase active-mobile">
-                            <summary class="nav-summary"><span class="icon-menu icon"></span></summary>
+                            <summary class="nav-summary"><span class="icon-menu icon"><span class="hidden-text">menu</span></span></summary>
                             <ul class="nav-ul nav-kategorie-admin-ul nav-kategorie-admin-ul-menu-mobile">
                                 <li class="nav-mobile-li nav-prehled"><a class="nav-a"
                                         href="../prehled/probihajici.html"><span
@@ -100,13 +94,7 @@
                             <a href="../../zakaznik/homepage-zakaznik.html" class="logo">Rentals</a>
                         </div>
                         <nav class="nav-menu-admin-desktop-layout active-desktop">
-                            <!-- <details class="nav-search-layout">
-                        <summary class="nav-summary search-icon-desktop"><span class="icon-search icon"></span></summary>
-                        <form class="search-area-admin" action="">
-                            <input class="search-input" type="text" placeholder="HLEDAT" name="search">
-                            <a href="#"><span class="icon-search icon-search-input icon"></span></a>
-                        </form>
-                    </details> -->
+                            
                             <ul class="nav-ul-admin-layout uppercase">
                                 <li class="active-desktop">
                                     <details class="nav-dropdown-layout">
@@ -150,7 +138,7 @@
 
                 <div class="kosik-item-layout">
                     <div class="kosik-img-container">
-                        <img class="kosik-nahled-img" src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="">
+                        <img class="kosik-nahled-img" src="../../../assets/img/Sigma18-50_f918-min-min.jpg" alt="Objektiv SIGMA 17-50 mm 1:2.8">
                     </div>
                     <div class="kosik-texty-layout">
                         <p class="kosik-nazev-produktu"><a class="kosik-nazev-produktu-a"
@@ -163,7 +151,7 @@
                                 class="icon-plus-min icon kosik-plus-icon"></span>
                         </div>
                     </div>
-                    <a class="kosik-delete-item" href="#"><span class="icon-delete"></span></a>
+                    <a class="kosik-delete-item" href="#"><span class="icon-delete"><span class="hidden-text">smazat</span></span></a>
                 </div>
 
             </div>
@@ -177,7 +165,7 @@
             <details class="kalendar-layout input-container">
                 <summary class="h2">Zobrazit kalendář předmětů <br> <span class="icon-plus-min"></span></summary>
                 <div class="calendar" id="calendar">
-                    <img src="../../../assets/img/calendar.jpg" alt="">
+                    <img src="../../../assets/img/calendar.jpg" alt="kalendář">
                 </div>
             </details>
 
@@ -343,10 +331,9 @@
                 <label class="h2" for="stav">Stav výpůjčky</label>
                 <select class="select select-stav" id="stav">
                     <option class="vypujcka-stav stav-nevypujceno" value="Nevypůjčeno">Nevypůjčeno</option>
-                    <option class="vypujcka-stav stav-vraceno" value="Vráceno">Vráceno</option>
                     <option class="vypujcka-stav stav-vypujceno" value="Vypůjčeno">Vypůjčeno</option>
-                    <option class="vypujcka-stav stav-budouci" value="Budoucí">Budoucí</option>
                     <option class="vypujcka-stav stav-nevraceno" value="Nevráceno">Nevráceno</option>
+                    <option class="vypujcka-stav stav-vraceno" value="Vráceno">Vráceno</option>
                 </select>
             </div>
 
