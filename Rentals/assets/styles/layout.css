@@ -1188,7 +1188,7 @@ body {
 .help-info-content-container {
     position: absolute;
     bottom: 40px;
-    left: 10px;
+    left: 0px;
     display: block;
     width: 290px;
 }

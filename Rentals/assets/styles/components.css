@@ -727,6 +727,11 @@ details>summary::-webkit-details-marker {
   outline: none;
 }
 
+.text-input,
+.datetime-picker{
+  height: 25px;
+}
+
 .ulozit-btn {
   background-color: var(--blue);
   margin-top: 10px;
@@ -1352,6 +1357,20 @@ input[type="checkbox"]:checked~.unchecked {
 
 /* NOTE help centrum */
 
+body{
+  position: relative;
+}
+
+.help-info-bg{
+  width: 150vw;
+  height: 150vh;
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  z-index: -10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .help-info-icon-container{
   width: 24px;
   height: 24px;
@@ -1359,11 +1378,13 @@ input[type="checkbox"]:checked~.unchecked {
   background-image: url(../icon/information.svg);
   object-fit: cover;
   opacity: .6;
+  z-index: 9999;  
 }
 
 .help-info-content-container{
   background-color: var(--white);
   box-shadow: var(--boxShadow);
+  /* z-index: 9999; */
 }
 
 .help-info-content {
@@ -1384,6 +1405,13 @@ input[type="checkbox"]:checked~.unchecked {
   border: var(--transparentBorder);
   border-radius: 50%;
   box-shadow: var(--boxShadow);
+}
+
+
+@media only screen and (min-width: 560px) {
+  .help-info-bg {
+      display: none;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
