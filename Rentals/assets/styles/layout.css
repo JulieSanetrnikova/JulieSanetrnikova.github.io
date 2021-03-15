@@ -447,7 +447,7 @@ body {
 
     .main-header-search{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 2fr 3fr 2fr;
         align-items: center;
 
         width: 80%;
@@ -457,7 +457,6 @@ body {
     .main-header-search-full-width{
         width: 100%;
         max-width: 1200px;
-        padding: 0 80px;
     }
 
     .search-area-admin-layout-container{
@@ -473,6 +472,11 @@ body {
     }
 }
 
+@media only screen and (min-width: 1333px) {
+    .main-header-search-full-width{
+        padding: 0 80px;
+    }
+}
 
 /* NOTE footer */
 

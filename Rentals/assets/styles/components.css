@@ -338,7 +338,7 @@ details>summary::-webkit-details-marker {
 @media only screen and (min-width: 1024px) {
 
   .search-area-admin {
-    width: 230px;
+    width: 210px;
     margin-top: 0px;
   }
 }
@@ -353,7 +353,7 @@ details>summary::-webkit-details-marker {
 }
 
 .main-nav-admin-layout {
-  padding: 5px 0 3px 0;
+  padding: 7px 0 3px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -802,7 +802,11 @@ details>summary::-webkit-details-marker {
   border-top: var(--lightBorder);
 }
 
+/* REVIEW border-bottom u poslední věci nefunguje někde  */
 .vypujcka-item:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+.vypujcky-seznam:last-child {
   border-bottom: var(--lightBorder);
 }
 
