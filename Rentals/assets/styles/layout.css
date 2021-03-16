@@ -445,7 +445,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
 
-    .main-header-search{
+    .main-header-search {
         display: grid;
         grid-template-columns: 2fr 3fr 2fr;
         align-items: center;
@@ -454,12 +454,12 @@ body {
         margin: auto;
     }
 
-    .main-header-search-full-width{
+    .main-header-search-full-width {
         width: 100%;
         max-width: 1200px;
     }
 
-    .search-area-admin-layout-container{
+    .search-area-admin-layout-container {
         display: grid;
         grid-column-start: 1;
         grid-row-start: 1;
@@ -467,13 +467,13 @@ body {
         align-items: center;
     }
 
-    .main-header-search > .h1{
+    .main-header-search>.h1 {
         grid-column-start: 2;
     }
 }
 
 @media only screen and (min-width: 1333px) {
-    .main-header-search-full-width{
+    .main-header-search-full-width {
         padding: 0 80px;
     }
 }
