@@ -85,191 +85,10 @@ body {
 /* NOTE max-width pro body */
 
 @media only screen and (min-width: 768px) {
-
     .main-container-layout {
         width: 90%;
     }
 }
-
-/* NOTE nav s ico - zákazník */
-
-/* .main-nav-container-layout {
-    display: grid;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
-    background-color: var(--bg);
-}
-
-.main-nav-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr 4fr;
-    align-items: center;
-}
-
-.nav-menu-layout-ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
-
-.nav-ul-admin {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
-
-.nav-menu-layout-li {
-    justify-self: center;
-} */
-
-/* NOTE nav admin */
-/* REVIEW important, .active-mobile má display block v components totiž */
-/* .main-nav-admin-mobile {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
-
-@media only screen and (min-width: 520px) {
-
-    .main-nav-admin-mobile {
-        grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-    } */
-
-/* * navigace s ikonkama - zákazník */
-/* 
-    .main-nav-layout {
-        grid-template-columns: 6fr 1fr 4fr;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-
-    .main-container-layout {
-        width: 90%;
-    }
-
-    .main-nav-admin-layout {
-        grid-column-start: 2;
-    } */
-
-/* * navigace s ikonkama - zákazník */
-/* 
-    .main-nav-container-layout {
-        grid-template-columns: 1fr 18fr 1fr;
-    }
-
-    .main-nav-layout {
-        grid-column-start: 2;
-        grid-template-columns: 8fr 1fr 4fr;
-    }
-
-    .nav-menu-layout-ul {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .nav-menu-layout-ul-admin {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .nav-kategorie {
-        margin: auto;
-    }
-
-    .main-nav-admin-layout {
-        display: grid;
-        grid-template-columns: 8fr 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-
-    .main-nav-layout {
-        grid-template-columns: 2fr 5fr 2fr;
-    }
-
-    .main-nav-admin-mobile {
-        display: none;
-    }
-
-    .main-nav-admin-container-desktop-layout {
-        display: grid;
-        align-items: center;
-    }
-
-    .secondary-main-nav-admin-desktop-layout {
-        display: grid;
-        align-items: center;
-    }
-
-    .main-nav-admin-desktop-layout-row {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 9fr;
-        grid-column-start: 2;
-        grid-template-rows: repeat(2, 50px);
-    }
-
-    .main-nav-admin-desktop-layout {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 9fr;
-        grid-column-start: 2;
-    }
-
-    .nav-menu-admin-desktop-layout {
-        display: grid;
-        align-items: center;
-    }
-
-    .nav-ul-admin-layout {
-        display: grid;
-        justify-items: center;
-        grid-column-start: 2;
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .secondary-main-nav-admin-desktop-layout {
-        display: grid;
-        align-items: center;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-    }
-
-    .nav-ul-desktop-admin {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .secondary-nav-seznam-predmetu-desktop-layout {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media only screen and (min-width: 1333px) {
-
-    .main-nav-container-layout {
-        display: grid;
-        grid-template-columns: 1fr 1200px 1fr;
-        position: fixed;
-    }
-
-    .main-nav-layout {
-        width: 1200px;
-        grid-column-start: 2;
-    }
-} */
-
-/* REVIEW navigace flexem */
 
 /* NOTE nav admin - mobile  */
 
@@ -407,17 +226,6 @@ body {
 
 }
 
-/* NOTE nav max-width všech navigací */
-
-@media only screen and (min-width: 1333px) {
-
-    /* .main-nav-container-layout { */
-    /* .main-nav-admin-desktop-layout-row{
-        ma
-        position: fixed;
-    } */
-}
-
 /* NOTE search */
 
 .search-area,
@@ -548,8 +356,6 @@ body {
         margin-top: 100px;
     }
 }
-
-
 
 /* NOTE homepage */
 
@@ -908,7 +714,6 @@ body {
 
 .vypujcka-container-icon-mobile {
     display: grid;
-    /* grid-template-columns: 2fr 1fr 1fr 2fr; */
     grid-template-columns: 1fr 1fr 4fr;
     justify-items: center;
     align-items: center;
@@ -920,21 +725,10 @@ body {
 
 .vypujcka-container-icon,
 .vypujcka-container-icon-prehled {
-    /* grid-column-start: 3;
-    grid-row-start: 1;
-    grid-row-end: 4; */
-
     display: grid;
-    /* justify-content: space-around; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-template-columns: 1fr; */
     align-items: center;
     justify-items: center;
 }
-
-/* .plus-detail-checkbox{
-    grid-column-end: 4;
-} */
 
 .detail-vypujcky-container {
     display: none;

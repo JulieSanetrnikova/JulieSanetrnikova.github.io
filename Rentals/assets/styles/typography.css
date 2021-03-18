@@ -1,3 +1,4 @@
+/* ANCHOR alles  */
 :root {
   --bg: #f7f7f7;
   --blue: #007784;
@@ -58,12 +59,12 @@ html * {
   display: none !important;
 }
 
-.label{
+.label {
   font-size: var(--baseFontSize);
 }
 
 .file-input[type=file]::-webkit-file-upload-button,
-.file-input[type=file]::file-selector-button{
+.file-input[type=file]::file-selector-button {
   font-size: var(--baseFontSize);
 }
 
@@ -117,11 +118,11 @@ html * {
   font-size: var(--baseFontSize);
 }
 
-.login-heading{
+.login-heading {
   font-size: var(--xtraHeading);
 }
 
-.login-text{
+.login-text {
   font-size: var(--biggerFontSize);
 }
 
@@ -156,7 +157,7 @@ html * {
   font-size: var(--smallFontSize);
 }
 
-.btn-homepage-text-pridano{
+.btn-homepage-text-pridano {
   color: var(--blue);
 }
 
@@ -320,33 +321,33 @@ html * {
 
 /* NOTE help info */
 
-.help-info-heading{
+.help-info-heading {
   font-size: var(--baseFontSize);
   font-weight: var(--xtrabold);
 }
 
-.help-info-text{
+.help-info-text {
   font-size: var(--baseFontSize);
 }
 
-.help-info-heading-1{
+.help-info-heading-1 {
   font-size: var(--biggerFontSize);
   font-weight: var(--xtrabold);
 }
 
-.help-info-nevypujceno{
+.help-info-nevypujceno {
   color: var(--yellow);
 }
 
-.help-info-vypujceno{
+.help-info-vypujceno {
   color: var(--blue);
 }
 
-.help-info-nevraceno{
+.help-info-nevraceno {
   color: var(--red);
 }
 
-.help-info-vraceno{
+.help-info-vraceno {
   color: var(--green);
 }
 

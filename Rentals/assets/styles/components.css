@@ -34,17 +34,17 @@ a {
 
 input,
 textarea,
-select{
+select {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  border-radius: 0; 
+  border-radius: 0;
   -webkit-appearance: textfield;
   outline: none;
   box-shadow: none;
 }
 
 ::placeholder,
-::-moz-placeholder{
+::-moz-placeholder {
   opacity: .3;
 }
 
@@ -52,7 +52,8 @@ summary {
   cursor: pointer;
 }
 
-/* ANCHOR odstranění pojebaný šipky u dropdown věcí */
+/* ANCHOR odstranění šipky u dropdown věcí */
+
 details>summary:first-of-type {
   list-style-type: none;
 }
@@ -85,7 +86,7 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
-.active-desktop-grid{
+.active-desktop-grid {
   display: none;
 }
 
@@ -102,7 +103,7 @@ details>summary::-webkit-details-marker {
     display: block;
   }
 
-  .active-desktop-grid{
+  .active-desktop-grid {
     display: grid;
   }
 }
@@ -276,7 +277,7 @@ details>summary::-webkit-details-marker {
     width: 25%;
     margin-top: 12px;
   }
-  
+
 }
 
 .icon-search-input {
@@ -294,18 +295,18 @@ details>summary::-webkit-details-marker {
   box-shadow: var(--boxShadowLight);
 }
 
-.search-ico-container{
+.search-ico-container {
   display: grid;
   align-items: center;
   justify-items: center;
 }
 
-.icon-search-min{
+.icon-search-min {
   padding-top: 2px;
 }
 
 .search-input:focus-visible,
-.search-input:focus{
+.search-input:focus {
   -webkit-appearance: none;
   outline-style: none;
   border: none;
@@ -327,10 +328,7 @@ details>summary::-webkit-details-marker {
 @media only screen and (min-width: 768px) {
 
   .search-area-admin {
-    /* width: 40%; */
-    /* padding-top: 10px; */
     margin-top: 12px;
-    /* padding-bottom: 10px; */
   }
 
 }
@@ -433,10 +431,6 @@ details>summary::-webkit-details-marker {
 
 .main-footer-layout {
   border-top: var(--lightBorder);
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(-50%); */
 }
 
 .logout-btn {
@@ -489,8 +483,6 @@ details>summary::-webkit-details-marker {
     right: 20px;
   }
 }
-
-
 
 @media only screen and (min-width: 410px) {}
 
@@ -635,8 +627,8 @@ details>summary::-webkit-details-marker {
   }
 }
 
-
 /* NOTE obsah košíku */
+
 .kosik-item-layout {
   border-top: var(--lightBorder);
   padding: 10px 0;
@@ -728,7 +720,7 @@ details>summary::-webkit-details-marker {
 }
 
 .text-input,
-.datetime-picker{
+.datetime-picker {
   height: 25px;
 }
 
@@ -802,10 +794,10 @@ details>summary::-webkit-details-marker {
   border-top: var(--lightBorder);
 }
 
-/* REVIEW border-bottom u poslední věci nefunguje někde  */
 .vypujcka-item:last-of-type {
   border-bottom: var(--lightBorder);
 }
+
 .vypujcky-seznam:last-child {
   border-bottom: var(--lightBorder);
 }
@@ -915,6 +907,7 @@ details>summary::-webkit-details-marker {
 
 /* NOTE okno s náhledem dostupnosti předmětu 
 ? (zkrácená cesta k přidání do košíku) */
+
 .body {
   position: relative;
 }
@@ -1183,8 +1176,6 @@ details>summary::-webkit-details-marker {
   padding: 0 20px;
 }
 
-/* REVIEW PROČ JE LAYOUT V COMPONENTS? */
-
 .varianty-predmetu-layout {
   text-align: center;
 }
@@ -1289,31 +1280,6 @@ details>summary::-webkit-details-marker {
   appearance: textfield;
 }
 
-/* .number-wrapper {
-  position: relative;
-}
-
-.number-wrapper:after,
-.number-wrapper:before {
-  position: absolute;
-  right: 6px;
-  width: 17px;
-  height: 10px;
-  font-size: 10px;
-  pointer-events: none;
-  cursor: pointer;
-}
-
-.number-wrapper:after {
-  content: url(../icon/arrow-up.svg);
-  top: 5px;
-}
-
-.number-wrapper:before {
-  content: url(../icon/arrow-down.svg);
-  bottom: 5px;
-}*/
-
 /* ANCHOR file input  */
 
 .file-input[type=file]::-webkit-file-upload-button {
@@ -1355,17 +1321,17 @@ input[type="checkbox"]:checked~.unchecked {
   display: none;
 }
 
-.detail-vypujcky-container-checked{
+.detail-vypujcky-container-checked {
   display: block;
 }
 
 /* NOTE help centrum */
 
-body{
+body {
   position: relative;
 }
 
-.help-info-bg{
+.help-info-bg {
   width: 150vw;
   height: 150vh;
   position: absolute;
@@ -1375,31 +1341,30 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.help-info-icon-container{
+.help-info-icon-container {
   width: 24px;
   height: 24px;
   display: block;
   background-image: url(../icon/information.svg);
   object-fit: cover;
   opacity: .6;
-  z-index: 9999;  
+  z-index: 9999;
 }
 
-.help-info-content-container{
+.help-info-content-container {
   background-color: var(--white);
   box-shadow: var(--boxShadow);
-  /* z-index: 9999; */
 }
 
 .help-info-content {
   padding: 10px 20px;
 }
 
-.help-info-text{
+.help-info-text {
   padding-bottom: 10px;
 }
 
-.help-info-heading-1{
+.help-info-heading-1 {
   padding-top: 10px;
 }
 
@@ -1414,21 +1379,22 @@ body{
 
 @media only screen and (min-width: 560px) {
   .help-info-bg {
-      display: none;
+    display: none;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .help-info-icon-container{
+  .help-info-icon-container {
     opacity: .5;
   }
+
   .help-info-container {
     background-color: transparent;
     box-shadow: none;
   }
 }
 
-.hidden-text{
+.hidden-text {
   visibility: hidden;
   width: 0;
   height: 0;
